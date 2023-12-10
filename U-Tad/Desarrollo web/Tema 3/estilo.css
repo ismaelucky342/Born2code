@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 960px;
+    height: 800px;
+    margin: 30px;
+    border: 2px dashed #000000;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.caja {
+    height: 50%;
+    width: 50%;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+}
+
+.caja:hover {
+    transform: scale(1.1);
+}
+
+.caja1 {
+    position: relative;
+    display: flex;
+}
+
+.subcaja {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px solid #000;
+}
+
+.caja2 { background-color: #FF5733; }
+.caja3 { background-color: #33FF57; }
+.caja4 { background-color: #5733FF; }
+.caja5 { background-color: #FF33A1; }
+.caja6 { background-color: #33A1FF; }
+.caja7 { background-color: #A1FF33; }

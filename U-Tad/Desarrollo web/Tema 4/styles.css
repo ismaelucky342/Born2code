@@ -1,0 +1,42 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    padding: 30px;
+    background: #333334;
+    color: #FFFFFF;
+    font-size: 4em;
+    text-align: center; /* Centrar el texto del encabezado */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around; /* Cambiado a space-around para centrar los enlaces */
+    background: #CCC;
+}
+
+nav a {
+    color: #555;
+    padding: 15px;
+    text-decoration: none; /* Eliminamos el subrayado predeterminado de los enlaces */
+    transition: background-color 0.3s, color 0.3s; /* Transición para el cambio de color */
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #FFF;
+}
+
+/* El enlace 3 ocupa el doble de espacio que el resto */
+nav a:nth-child(3) {
+    flex: 2;
+}
+
+/* Dos propiedades flexbox adicionales */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Mínimo 100% del viewport height para asegurar que el contenido se extienda al menos hasta el final de la ventana */
+}
