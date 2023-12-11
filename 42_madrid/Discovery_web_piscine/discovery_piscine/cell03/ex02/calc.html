@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+  <style>
+  .calculator {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.calculator input[type="text"],
+.calculator select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.calculator input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calculator input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.alert {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  
+  <input type="text" id="numero1" placeholder="numero 1">
+  
+  <select id="operador">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+  
+  <input type="text" id="numero2" placeholder="numero 2">
+  
+  <button onclick="calcular()">Try me!</button>
+  
+  <script src="calculadora.js"></script>
+</body>
+</html>

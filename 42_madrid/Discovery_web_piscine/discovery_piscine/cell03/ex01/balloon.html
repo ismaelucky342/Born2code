@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Globo Interactivo</title>
+  <style>
+    #globo {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="globo"></div>
+
+  <script>
+    //obtenemos el globo por su id  
+    var globo = document.getElementById("globo");
+    //definimos las variables iniciales 
+    var size = 200;
+    var colorIndex = 0;
+    var colors = ["red", "green", "blue"];
+    var maxSize = 420;
+// Agregamos un evento de clic al globo 
+    globo.addEventListener("click", function() {
+        // Aumentamos el tamaño del globo en 10px
+
+      size += 10;
+      // Si el tamaño supera el tamaño máximo, reiniciamos el tamaño y el color
+      if (size > maxSize) {
+        size = 200;
+        globo.style.backgroundColor = "red";
+      } else {
+        // Cambiamos el color del globo según el índice actual
+        globo.style.backgroundColor = colors[colorIndex];
+        // Incrementamos el índice para el siguiente color
+        colorIndex = (colorIndex + 1) % colors.length;
+      }
+      // Actualizamos el tamaño del globo
+      globo.style.width = size + "px";
+      globo.style.height = size + "px";
+    });
+// Agrego un evento de mouseenter al globo
+    globo.addEventListener("mouseenter", function() {
+        // Reducimos el tamaño del globo en 5px
+      size -= 5;
+       // Si el tamaño es menor que el tamaño mínimo, reiniciamos el tamaño y el color
+      if (size < 200) {
+    
+        size = 200;
+         globo.style.backgroundColor= "blue";
+      } else {
+         // Cambiamos el color del globo según el índice actual (en orden inverso)
+         globo.style.backgroundColor = colors[colorIndex];
+        // Decrementamos el índice para el siguiente color
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+      }
+      //lo vuelve a actualizar
+      
+      globo.style.width = size + "px";
+      globo.style.height = size + "px";
+    });
+  </script>
+
+</body>
+</html>
