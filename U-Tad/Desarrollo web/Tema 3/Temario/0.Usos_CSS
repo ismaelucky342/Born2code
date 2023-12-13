@@ -1,0 +1,24 @@
+OPCION 1 - En las etiquetas HTML (menos utilizado)
+
+<p style = "color:red"> uso de css en color rojo </p>
+
+OPCION 2 - dentro del documetno en <head>
+
+<head>
+        <style>
+        p {
+            color: red;
+            font-family:Verdana; 
+
+        }
+        </style>
+</head>
+<body> 
+        <p>Uso de CSS</p>
+</body>       
+
+OPCION 3 - Enlazada con la etiqueta <link>
+
+<head>
+    <link href = "ruta/archivo.css" rel="stykessheet" type="txt/css">
+</head>

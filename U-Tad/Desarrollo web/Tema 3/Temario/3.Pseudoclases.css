@@ -1,0 +1,27 @@
+/* Estilos por defecto para enlaces */
+a {
+    color: blue;
+    text-decoration: none; /* Quita el subrayado por defecto */
+  }
+  
+  /* Pseudo-clase :hover - Estilos cuando el mouse está sobre el enlace */
+  a:hover {
+    color: red; /* Cambia el color del texto a rojo */
+    text-decoration: underline; /* Subraya el texto al pasar el mouse */
+  }
+  
+  /* Pseudo-clase :active - Estilos cuando el enlace está siendo clicado */
+  a:active {
+    color: purple; /* Cambia el color del texto a morado */
+  }
+  
+  /* Pseudo-clase :visited - Estilos para enlaces visitados */
+  a:visited {
+    color: green; /* Cambia el color del texto a verde para enlaces visitados */
+  }
+  
+  /* Pseudo-clase :focus - Estilos cuando el enlace está enfocado (por ejemplo, seleccionado mediante teclado) */
+  a:focus {
+    outline: 2px solid orange; /* Agrega un contorno naranja cuando el enlace está enfocado */
+  }
+  
