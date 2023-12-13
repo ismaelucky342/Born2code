@@ -7,10 +7,17 @@ body {
   /* Estilos para la caja */
   .caja {
     width: 300px;
+    height: 150px;
     padding: 20px;
     border: 2px solid #333;
     background-color: #f4f4f4;
-    box-sizing: border-box; /* Importante para incluir padding y border en el ancho total */
+    box-sizing: border-box;
+    
+    /* Márgenes exteriores en direcciones específicas */
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
   }
   
   /* Estilos para los elementos dentro de la caja */

@@ -6,11 +6,12 @@ body {
   
   /* Estilos para la caja */
   .caja {
-    width: 300px;
+    width: 300px; /* Ancho de la caja */
+    height: 150px; /* Altura de la caja */
     padding: 20px;
     border: 2px solid #333;
     background-color: #f4f4f4;
-    box-sizing: border-box; /* Importante para incluir padding y border en el ancho total */
+    box-sizing: border-box;
   }
   
   /* Estilos para los elementos dentro de la caja */
