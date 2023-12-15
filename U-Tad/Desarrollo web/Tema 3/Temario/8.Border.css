@@ -21,7 +21,7 @@ body {
     border-left-style: double;   /* Estilo del borde izquierdo */
     
     border-color: #333;   /* Color del borde */
-    background-color: #f4f4f4;
+    background-color: #f4f4f4;/*Color fondo*/
     box-sizing: border-box;
     margin: 20px;
   }

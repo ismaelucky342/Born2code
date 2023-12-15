@@ -1,0 +1,48 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+  }
+  
+  /* Estilos para la caja */
+  .caja {
+    width: 400px;
+    padding: 20px;
+    border: 2px solid #333;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 20px auto; /* Centrar la caja en la página */
+  }
+  
+  /* Estilos para el texto de encabezado */
+  h2 {
+    color: #008080; /* Color del texto en hexadecimal */
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  /* Estilos para el párrafo */
+  p {
+    color: rgb(51, 51, 51); /* Color del texto en RGB */
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Estilos para el texto resaltado */
+  .resaltado {
+    font-weight: bold;
+    color: #ff0000; /* Color rojo */
+  }
+  
+  /* Estilos para la lista desordenada */
+  ul {
+    list-style-type: square; /* Tipo de viñeta cuadrada */
+    margin-top: 10px; /* Margen superior de la lista */
+  }
+  
+  /* Estilos para los elementos de la lista */
+  li {
+    color: #006400; /* Color verde oscuro */
+  }
+  
