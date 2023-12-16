@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ejemplo de Cadenas en JavaScript</title>
+        </head>
+    <body>
+
+    <!-- Aquí incluimos nuestro script de JavaScript -->
+        <script>
+        // Declarar una cadena de texto
+        let mensaje = "¡Hola, mundo!";
+
+        // Imprimir en la consola
+        console.log(mensaje);
+
+        // Concatenar cadenas
+        let nombre = "Juan";
+        let saludo = "¡Hola, " + nombre + "!";
+        console.log(saludo);
+
+        // Utilizar comillas simples y dobles
+        let comillasSimples = 'Texto con comillas simples';
+        let comillasDobles = "Texto con comillas dobles";
+
+        // Longitud de una cadena
+        let longitud = mensaje.length;
+        console.log("Longitud del mensaje: " + longitud);
+
+        // Acceder a caracteres específicos
+        let primerCaracter = mensaje[0];
+        console.log("Primer caracter del mensaje: " + primerCaracter);
+
+        // Métodos de cadena
+        let mayusculas = mensaje.toUpperCase();
+        console.log("Mensaje en mayúsculas: " + mayusculas);
+
+        let minusculas = mensaje.toLowerCase();
+        console.log("Mensaje en minúsculas: " + minusculas);
+
+        let subcadena = mensaje.substring(1, 5);
+        console.log("Subcadena desde el índice 1 al 4: " + subcadena);
+        </script>
+
+    </body>
+</html>

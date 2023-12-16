@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Tipos Booleanos en JavaScript</title>
+</head>
+<body>
+
+<!-- Aquí incluimos nuestro script de JavaScript -->
+<script>
+  // Declarar variables booleanas
+  let esVerdadero = true;
+  let esFalso = false;
+
+  // Imprimir en la consola
+  console.log("¿Es verdadero? " + esVerdadero); // Imprimirá: ¿Es verdadero? true
+  console.log("¿Es falso? " + esFalso); // Imprimirá: ¿Es falso? false
+
+  // Operadores de comparación que devuelven booleanos
+  let resultadoComparacion = 5 > 3; // Devuelve true, ya que 5 es mayor que 3
+  console.log("¿5 es mayor que 3? " + resultadoComparacion); // Imprimirá: ¿5 es mayor que 3? true
+
+  // Operadores lógicos
+  let condicion1 = true;
+  let condicion2 = false;
+
+  let resultadoAND = condicion1 && condicion2; // Devuelve false, ya que ambas condiciones deben ser verdaderas
+  console.log("Resultado de la operación AND: " + resultadoAND); // Imprimirá: Resultado de la operación AND: false
+
+  let resultadoOR = condicion1 || condicion2; // Devuelve true, ya que al menos una condición es verdadera
+  console.log("Resultado de la operación OR: " + resultadoOR); // Imprimirá: Resultado de la operación OR: true
+
+  // Negación (operador NOT)
+  let resultadoNOT = !esVerdadero; // Devuelve false, ya que negamos la condición original
+  console.log("Resultado de la operación NOT: " + resultadoNOT); // Imprimirá: Resultado de la operación NOT: false
+</script>
+
+</body>
+</html>

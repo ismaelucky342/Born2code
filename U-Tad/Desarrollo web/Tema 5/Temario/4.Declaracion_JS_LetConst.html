@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo let y const</title>
+</head>
+<body>
+
+<!-- Aquí incluimos nuestro script de JavaScript -->
+<script>
+  // Declarar una variable let sin asignarle un valor inicial
+  let miVariableLetSinValor;
+  console.log(miVariableLetSinValor); // Imprimirá: undefined
+
+  // Asignar un valor posteriormente a la variable let
+  miVariableLetSinValor = "Hola, soy let sin valor inicial";
+  console.log(miVariableLetSinValor); // Imprimirá: Hola, soy let sin valor inicial
+
+  // Declarar una variable const con valor
+  const miVariableConst = "Hola, soy const con valor";
+  console.log(miVariableConst); // Imprimirá: Hola, soy const con valor
+
+  // Intentar cambiar el valor de una constante generará un error
+  // miVariableConst = "Esto causará un error"; // Descomentar esta línea generará un error en la consola
+</script>
+
+</body>
+</html>
