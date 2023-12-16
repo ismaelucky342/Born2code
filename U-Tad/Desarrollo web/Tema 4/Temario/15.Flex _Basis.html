@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de flex-basis</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            justify-content: space-around; /* Distribuye los elementos con espacio alrededor */
+            align-items: center; /* Alinea los elementos al centro del eje transversal (vertical) */
+        }
+
+        .elemento-flex {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Configuración de flex-basis */
+        .elemento-1 {
+            flex-basis: 100px; /* Valor fijo */
+        }
+
+        .elemento-2 {
+            flex-basis: 50%; /* Valor porcentual */
+        }
+
+        .elemento-3 {
+            flex-basis: auto; /* El tamaño se determina por el contenido */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="elemento-flex elemento-1">Elemento 1</div>
+    <div class="elemento-flex elemento-2">Elemento 2</div>
+    <div class="elemento-flex elemento-3">Elemento 3<br>con contenido más largo</div>
+
+    <footer>
+        <p>Pie de Página</p>
+    </footer>
+
+</body>
+</html>

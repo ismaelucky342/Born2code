@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de Float Left y Float Right</title>
+    
+        <style>
+            /* Estilo básico para los elementos */
+            .contenedor {
+                overflow: hidden; /* Clearfix para evitar colapsos de contenedor */
+            }
+    
+            /* Elemento flotante a la izquierda */
+            .izquierda {
+                float: left;
+                width: 50%; /* Ocupa el 50% del ancho del contenedor */
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+    
+            /* Elemento flotante a la derecha */
+            .derecha {
+                float: right;
+                width: 50%; /* Ocupa el 50% del ancho del contenedor */
+                background-color: #ddd;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <div class="contenedor">
+            <!-- Elemento flotante a la izquierda -->
+            <div class="izquierda">
+                <h2>Elemento Izquierdo</h2>
+                <p>Contenido del elemento izquierdo...</p>
+            </div>
+    
+            <!-- Elemento flotante a la derecha -->
+            <div class="derecha">
+                <h2>Elemento Derecho</h2>
+                <p>Contenido del elemento derecho...</p>
+                <!--Al no caber se sobreponen uno encima del otro-->
+            </div>
+        </div>
+    
+    </body>
+   
+</html>

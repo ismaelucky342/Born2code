@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Flexbox</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column; /* Columna principal */
+            align-items: center; /* Centra los elementos a lo largo del eje transversal (vertical) */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .contenedor-flex {
+            display: flex;
+            justify-content: space-around; /* Distribuye los elementos con espacio alrededor */
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una línea */
+            align-items: flex-start; /* Alinea los elementos al inicio del eje transversal (vertical) */
+            align-content: space-between; /* Distribuye las líneas de elementos con espacio entre ellas */
+            padding: 20px;
+        }
+
+        .elemento-flex {
+            width: 150px;
+            height: 150px;
+            background-color: #f2f2f2;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Encabezado de la Página</h1>
+    </header>
+
+    <div class="contenedor-flex">
+        <!-- Elementos flexibles -->
+        <div class="elemento-flex">1</div>
+        <div class="elemento-flex">2</div>
+        <div class="elemento-flex">3</div>
+        <div class="elemento-flex">4</div>
+        <div class="elemento-flex">5</div>
+        <div class="elemento-flex">6</div>
+    </div>
+
+    <footer>
+        <p>Pie de Página</p>
+    </footer>
+
+</body>
+</html>

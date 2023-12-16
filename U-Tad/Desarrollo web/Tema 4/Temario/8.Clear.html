@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Clear en Float</title>
+
+    <style>
+        .flotante {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: #f2f2f2;
+            margin: 10px;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flotante">Flotante 1</div>
+    <div class="flotante">Flotante 2</div>
+    <div class="flotante">Flotante 3</div>
+
+    <div class="clearfix"></div>
+    
+    <p>Este párrafo está después de los flotantes y no se ve afectado por ellos debido a la propiedad clear.</p>
+
+</body>
+</html>

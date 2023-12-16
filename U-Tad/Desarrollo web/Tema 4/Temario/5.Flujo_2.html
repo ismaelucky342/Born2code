@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Navegación Desplegable</title>
+
+    <style>
+        /* Estilo básico para los elementos */
+        #menu {
+            display: none; /* Inicialmente oculto */
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 10px;
+            z-index: 1;
+        }
+
+        /* Estilo para el botón */
+        #boton {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>Menú de Navegación Desplegable</h2>
+
+        <!-- Botón para mostrar/ocultar el menú -->
+        <div id="boton" onclick="toggleMenu()">Mostrar Menú</div>
+
+        <!-- Menú de navegación desplegable -->
+        <div id="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Productos</a>
+            <a href="#">Contacto</a>
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar u ocultar el menú
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Flujo HTML</title>
+
+    <style>
+        /* Estilo básico para los elementos */
+        .elemento {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h2>Control de Visibilidad y Opacidad</h2>
+
+        <!-- Botones para controlar la visibilidad y opacidad -->
+        <button onclick="mostrarElemento()">Mostrar Elemento</button>
+        <button onclick="ocultarElemento()">Ocultar Elemento</button>
+        <button onclick="cambiarOpacidad()">Cambiar Opacidad</button>
+
+        <!-- Elemento que será modificado -->
+        <div id="miElemento" class="elemento">Este es el elemento</div>
+    </div>
+
+    <script>
+        // Función para mostrar el elemento
+        function mostrarElemento() {
+            document.getElementById("miElemento").style.display = "block";
+            document.getElementById("miElemento").style.visibility = "visible";
+        }
+
+        // Función para ocultar el elemento
+        function ocultarElemento() {
+            document.getElementById("miElemento").style.display = "none";
+            document.getElementById("miElemento").style.visibility = "hidden";
+        }
+
+        // Función para cambiar la opacidad del elemento
+        function cambiarOpacidad() {
+            var elemento = document.getElementById("miElemento");
+            var opacidadActual = window.getComputedStyle(elemento).opacity;
+            var nuevaOpacidad = (opacidadActual === "1") ? "0.5" : "1";
+            elemento.style.opacity = nuevaOpacidad;
+        }
+    </script>
+
+</body>
+</html>

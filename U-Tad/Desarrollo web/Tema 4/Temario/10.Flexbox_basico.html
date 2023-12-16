@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Flexbox</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Hace que el cuerpo sea un contenedor flex */
+            min-height: 100vh; /* Altura mínima del 100% de la ventana */
+            flex-direction: column; /* Orientación de los elementos flexibles (columna) */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .contenedor-flex {
+            display: flex;
+            justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+            flex: 1; /* Ocupa el espacio disponible restante */
+            padding: 20px;
+        }
+
+        /* Columna izquierda */
+        .columna-izquierda {
+            width: 30%; /* Ancho de la columna izquierda */
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-sizing: border-box; /* Incluir el relleno en el ancho total */
+        }
+
+        /* Columna derecha */
+        .columna-derecha {
+            width: 65%; /* Ancho de la columna derecha */
+            background-color: #ddd;
+            padding: 20px;
+            box-sizing: border-box; /* Incluir el relleno en el ancho total */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Encabezado de la Página</h1>
+    </header>
+
+    <div class="contenedor-flex">
+        <!-- Columna izquierda -->
+        <div class="columna-izquierda">
+            <h2>Columna Izquierda</h2>
+            <p>Contenido de la columna izquierda...</p>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="columna-derecha">
+            <h2>Columna Derecha</h2>
+            <p>Contenido de la columna derecha...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Pie de Página</p>
+    </footer>
+
+</body>
+</html>

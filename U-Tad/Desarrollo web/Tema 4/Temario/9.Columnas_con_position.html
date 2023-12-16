@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Diseño de Dos Columnas con Position</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .contenedor {
+            position: relative;
+            margin: 20px;
+        }
+
+        /* Columna izquierda */
+        .columna-izquierda {
+            position: absolute;
+            left: 0;
+            width: 30%; /* Ancho de la columna izquierda */
+            background-color: #f2f2f2;
+            padding: 20px;
+            box-sizing: border-box; /* Incluir el relleno en el ancho total */
+        }
+
+        /* Columna derecha */
+        .columna-derecha {
+            position: absolute;
+            left: 30%; /* Ancho de la columna izquierda */
+            width: 70%; /* Ancho de la columna derecha */
+            background-color: #ddd;
+            padding: 20px;
+            box-sizing: border-box; /* Incluir el relleno en el ancho total */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Párrafo después de las columnas */
+        .ignorar-columnas {
+            margin-top: 100px; /* Espaciado superior y con esto ignoramos las columnas*/
+            padding: 10px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Encabezado de la Página</h1>
+    </header>
+
+    <div class="contenedor">
+        <!-- Columna izquierda -->
+        <div class="columna-izquierda">
+            <h2>Columna Izquierda</h2>
+            <p>Contenido de la columna izquierda...</p>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="columna-derecha">
+            <h2>Columna Derecha</h2>
+            <p>Contenido de la columna derecha...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Pie de Página</p>
+    </footer>
+
+    <!-- Párrafo después de las columnas -->
+    <p class="ignorar-columnas">Este párrafo ignora las columnas y aparece debajo de ellas.</p>
+
+</body>
+</html>
