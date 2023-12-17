@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM</title>
+</head>
+
+<body>
+    <h1 id="titulo">Manipulación del DOM</h1>
+
+    <!-- Un párrafo con un id "parrafo" -->
+    <p id="parrafo">Este es un párrafo de ejemplo.</p>
+
+    <!-- Una lista desordenada con un id "miLista" -->
+    <ul id="miLista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <script>
+        // Acceso y modificación del título h1
+        var tituloElemento = document.getElementById("titulo");
+        tituloElemento.innerHTML = "DOM Modificado";
+
+        // Acceso y modificación del contenido del párrafo
+        var parrafoElemento = document.getElementById("parrafo");
+        parrafoElemento.textContent = "Este párrafo ha sido modificado con DOM.";
+
+        // Acceso a la lista desordenada y cambio del contenido del segundo elemento de la lista
+        var listaElemento = document.getElementById("miLista");
+        var segundoElemento = listaElemento.getElementsByTagName("li")[1];
+        segundoElemento.innerHTML = "Elemento Modificado";
+
+        // Creación de un nuevo elemento de párrafo
+        var nuevoParrafo = document.createElement("p");
+        nuevoParrafo.textContent = "Este es un nuevo párrafo creado con JavaScript.";
+
+        // Agregando el nuevo párrafo al cuerpo del documento
+        document.body.appendChild(nuevoParrafo);
+    </script>
+</body>
+
+</html>
