@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>    
+    <head>        
+        <title>Método</title>
+        <script>            
+            var employee = {  //objeto empleado       
+                empname: "Rahul",                 
+                    department : "sales",                
+                    details : function() {                    
+                        return this.empname +                         
+                            " works with Department " +                         
+                            this.department;                
+                    }        
+                };            
+            console.log(employee.details());        
+        </script>    
+    </head>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Métodos para Strings</title>
+</head>
+<body>
+
+<script>
+    // Crear una cadena
+    var miCadena = "Hola, mundo!";
+
+    // Obtener la longitud de la cadena
+    console.log("Longitud de la cadena:", miCadena.length);
+
+    // Concatenar cadenas
+    var nuevaCadena = miCadena.concat(" ¿Cómo estás?");
+    console.log("Cadena concatenada:", nuevaCadena);
+
+    // Convertir la cadena a mayúsculas
+    var mayusculas = miCadena.toUpperCase();
+    console.log("Cadena en mayúsculas:", mayusculas);
+
+    // Convertir la cadena a minúsculas
+    var minusculas = miCadena.toLowerCase();
+    console.log("Cadena en minúsculas:", minusculas);
+
+    // Obtener el carácter en una posición específica
+    var caracterEnPosicion = miCadena.charAt(0);
+    console.log("Carácter en la posición 0:", caracterEnPosicion);
+
+    // Encontrar la posición de un substring
+    var posicionSubstring = miCadena.indexOf("mundo");
+    console.log("Posición de 'mundo':", posicionSubstring);
+
+    // Verificar si la cadena incluye ciertos caracteres
+    var incluyeTexto = miCadena.includes("Hola");
+    console.log("¿Incluye 'Hola'?:", incluyeTexto);
+
+    // Encontrar la última posición de un substring
+    var ultimaPosicion = miCadena.lastIndexOf("o");
+    console.log("Última posición de 'o':", ultimaPosicion);
+
+    // Obtener un substring de la cadena
+    var subcadena = miCadena.substring(0, 4);
+    console.log("Substring (0-4):", subcadena);
+
+    // Dividir la cadena en un array de substrings
+    var arrayDeSubcadenas = miCadena.split(" ");
+    console.log("Array de subcadenas:", arrayDeSubcadenas);
+
+    // Convertir una cadena a entero
+    var entero = parseInt("123");
+    console.log("Entero:", entero);
+
+    // Convertir una cadena a punto flotante
+    var flotante = parseFloat("3.14");
+    console.log("Flotante:", flotante);
+</script>
+
+</body>
+</html>
