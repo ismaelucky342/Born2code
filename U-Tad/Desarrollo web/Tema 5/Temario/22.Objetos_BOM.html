@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Propiedades de Window
+        console.log(window.closed);            // Verifica si la ventana está cerrada
+        console.log(window.innerHeight);        // Altura interna de la ventana del navegador
+        console.log(window.innerWidth);         // Ancho interno de la ventana del navegador
+        console.log(window.outerHeight);        // Altura externa de la ventana del navegador (incluyendo la barra de direcciones)
+        console.log(window.outerWidth);         // Ancho externo de la ventana del navegador (incluyendo la barra de herramientas)
+
+        // Propiedades de Location
+        console.log(location.hostname);         // Nombre del host del documento actual
+
+        // Propiedades de Screen
+        console.log(screen.colorDepth);          // Profundidad de color de la pantalla
+        console.log(screen.height);              // Altura de la pantalla
+        console.log(screen.width);               // Ancho de la pantalla
+
+        // Cambia el color de fondo del documento según la altura de la pantalla
+        switch (screen.height) {
+            case 1:
+                document.bgColor = "black";
+                break;
+            case 8:
+                document.bgColor = "blue";
+                break;
+            case 1080:
+                document.bgColor = "orange";
+                break;
+            default:
+                document.bgColor = "white";
+        }
+    </script>
+</body>
+
+</html>
