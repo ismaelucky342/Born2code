@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Métodos para el Objeto Date</title>
+</head>
+<body>
+
+<script>
+    // Crear una nueva instancia del objeto Date (representa la fecha y hora actuales)
+    var fechaActual = new Date();
+
+    // Obtener el día de la semana (0 para Domingo, 1 para Lunes, ..., 6 para Sábado)
+    var diaSemana = fechaActual.getDay();
+    console.log("Día de la Semana:", diaSemana);
+
+    // Obtener el día del mes
+    var diaMes = fechaActual.getDate();
+    console.log("Día del Mes:", diaMes);
+
+    // Obtener el mes (0 para Enero, 1 para Febrero, ..., 11 para Diciembre)
+    var mes = fechaActual.getMonth();
+    console.log("Mes:", mes);
+
+    // Obtener el año
+    var anio = fechaActual.getFullYear();
+    console.log("Año:", anio);
+
+    // Obtener la hora (0-23)
+    var horas = fechaActual.getHours();
+    console.log("Hora:", horas);
+
+    // Obtener los minutos (0-59)
+    var minutos = fechaActual.getMinutes();
+    console.log("Minutos:", minutos);
+
+    // Obtener los segundos (0-59)
+    var segundos = fechaActual.getSeconds();
+    console.log("Segundos:", segundos);
+</script>
+
+</body>
+</html>

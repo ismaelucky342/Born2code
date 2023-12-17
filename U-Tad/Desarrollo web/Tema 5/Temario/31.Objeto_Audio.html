@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Métodos para el Elemento de Audio</title>
+</head>
+<body>
+
+<audio id="miAudio" controls>
+    <source src="ruta/a/tu/archivo-de-audio.mp3" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+    // Obtener referencia al elemento de audio
+    var miAudio = document.getElementById('miAudio');
+
+    // Reproducir el audio
+    function reproducir() {
+        miAudio.play();
+        console.log("Audio reproduciéndose...");
+    }
+
+    // Pausar el audio
+    function pausar() {
+        miAudio.pause();
+        console.log("Audio en pausa.");
+    }
+
+    // Recargar el audio
+    function recargar() {
+        miAudio.load();
+        console.log("Audio recargado.");
+    }
+</script>
+
+<button onclick="reproducir()">Reproducir</button>
+<button onclick="pausar()">Pausar</button>
+<button onclick="recargar()">Recargar</button>
+
+</body>
+</html>

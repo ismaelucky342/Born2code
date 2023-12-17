@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Métodos para Numbers</title>
+</head>
+<body>
+
+<script>
+    // Crear un número
+    var miNumero = 42;
+
+    // Verificar si es NaN (Not a Number)
+    console.log("¿Es NaN?:", isNaN(miNumero));
+
+    // Verificar si es un número finito
+    console.log("¿Es un número finito?:", isFinite(miNumero));
+
+    // Obtener el valor Infinity
+    var infinitoPositivo = Infinity;
+    console.log("Infinito Positivo:", infinitoPositivo);
+
+    // Redondear el número a un número fijo de decimales
+    var numeroDecimal = 3.14159;
+    var redondeado = numeroDecimal.toFixed(2);
+    console.log("Número Redondeado:", redondeado);
+
+    // Convertir el número a una cadena
+    var numeroComoCadena = miNumero.toString();
+    console.log("Número como cadena:", numeroComoCadena);
+</script>
+
+</body>
+</html>
+

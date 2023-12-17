@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Métodos para el Objeto Math</title>
+</head>
+<body>
+
+<script>
+    // Generar un número aleatorio entre 0 (inclusive) y 1 (exclusive)
+    var numeroAleatorio = Math.random();
+    console.log("Número Aleatorio:", numeroAleatorio);
+
+    // Redondear hacia abajo al entero más cercano
+    var numeroDecimal = 5.678;
+    var redondeoAbajo = Math.floor(numeroDecimal);
+    console.log("Redondeo hacia Abajo:", redondeoAbajo);
+
+    // Elevar un número a una potencia
+    var base = 2;
+    var exponente = 3;
+    var potencia = Math.pow(base, exponente);
+    console.log("Potencia:", potencia);
+
+    // Redondear al entero más cercano
+    var numeroDecimal2 = 9.123;
+    var redondeo = Math.round(numeroDecimal2);
+    console.log("Redondeo:", redondeo);
+
+    // Calcular la raíz cuadrada
+    var numeroPositivo = 25;
+    var raizCuadrada = Math.sqrt(numeroPositivo);
+    console.log("Raíz Cuadrada:", raizCuadrada);
+
+    // Obtener el valor absoluto
+    var numeroNegativo = -7;
+    var valorAbsoluto = Math.abs(numeroNegativo);
+    console.log("Valor Absoluto:", valorAbsoluto);
+
+    // Encontrar el mínimo entre dos o más números
+    var minimo = Math.min(4, 8, 1, 6);
+    console.log("Mínimo:", minimo);
+
+    // Calcular el logaritmo natural
+    var numeroLogaritmo = 100;
+    var logaritmoNatural = Math.log(numeroLogaritmo);
+    console.log("Logaritmo Natural:", logaritmoNatural);
+
+    // Encontrar el máximo entre dos o más números
+    var maximo = Math.max(4, 8, 1, 6);
+    console.log("Máximo:", maximo);
+
+    // Calcular el exponencial
+    var exponenteExponencial = 2;
+    var resultadoExponencial = Math.exp(exponenteExponencial);
+    console.log("Exponencial:", resultadoExponencial);
+
+    // Redondear hacia arriba al entero más cercano
+    var numeroDecimal3 = 3.14;
+    var redondeoArriba = Math.ceil(numeroDecimal3);
+    console.log("Redondeo hacia Arriba:", redondeoArriba);
+
+    // Calcular el seno de un ángulo (en radianes)
+    var anguloEnRadianes = Math.PI / 2; // 90 grados
+    var senoAngulo = Math.sin(anguloEnRadianes);
+    console.log("Seno del Ángulo:", senoAngulo);
+</script>
+
+</body>
+</html>
