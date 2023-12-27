@@ -1,0 +1,12 @@
+Algoritmo_calculo_area_y_perimetro_rectangulo 
+var 
+    Decimal : base, altura, perimetro, area 
+const 
+    C1 = 2 
+Inicio 
+    Escribir ("ingrese base y altura del rectangulo")
+    Leer (base, altura)
+    area = base*altura
+    perimetro = C1 *(base + altura)
+    Escribir ("el area de este rectangulo es: ", area )
+Fin

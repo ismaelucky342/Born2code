@@ -1,0 +1,9 @@
+Algoritmo
+var
+    Tipo_de_dato: lista de VARIABLES
+const 
+    identificador = valor 
+Inicio 
+    Instruccion 1 
+    Instruccion N
+Fin
