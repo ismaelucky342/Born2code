@@ -11,3 +11,4 @@
 	cresino@VMLRSO:~$ id -G 
 *    Conocer los nombres de los grupos:
 	cresino@VMLRSO:~$ id -Gn
+*
