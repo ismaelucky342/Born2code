@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 12:42:46 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/09 12:44:05 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/09 14:52:50 by ismherna          #+#    #+#             */
+/*   Updated: 2024/01/09 15:04:39 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include<libft.h>
 
-int	ft_strlen(char *str)
+void	ft_bzero(void *s, size_t n)
 {
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	ft_memsets(s, 0, n);
 }
-
-/*COMENTARIOS*/
-/*creas un indicce que recorre el string y cuando llega al nulo para*/

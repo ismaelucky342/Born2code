@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
+/*   By: shzhu <shzhu@student.42madrid.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 12:42:46 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/09 12:44:05 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/09 15:29:45 by shzhu             #+#    #+#             */
+/*   Updated: 2024/01/09 16:55:22 by shzhu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include<libft.h>
 
-int	ft_strlen(char *str)
+char *ft_strrchr(const char *str, int c)
 {
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+    int idx = ft_strlen((char *)str) + 1;
+    while (idx--)
+    {
+        if (*(str + idx) == c)
+            return (char *)(str + idx);
+    }
+    return NULL;
 }
-
-/*COMENTARIOS*/
-/*creas un indicce que recorre el string y cuando llega al nulo para*/

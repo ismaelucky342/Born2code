@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
+/*   By: shzhu <shzhu@student.42madrid.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 12:42:46 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/09 12:44:05 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/09 14:54:31 by shzhu             #+#    #+#             */
+/*   Updated: 2024/01/09 15:05:46 by shzhu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-int	ft_strlen(char *str)
+char ft_tolower(char c)
 {
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+   if (c >= 'A' && c <= 'Z') {
+       return c + 32;
+   } else {
+       return c;
+   }
 }
 
-/*COMENTARIOS*/
-/*creas un indicce que recorre el string y cuando llega al nulo para*/
+/*int main() {
+   char ch = 'g';
+   printf("%c",ft_tolower(ch));
+   return 0;
+}*/

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   isalnum.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 12:42:46 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/09 12:44:05 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/09 12:35:56 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/09 12:38:35 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	isalnum (int c)
 {
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
+	if ((c >= 'A' && C <= 'Z') || (c >= 'a' && c <= 'b') 
+									|| (c >= '0' && c <= '9'))
 	{
-		i++;
+		return (1);
 	}
-	return (i);
+	return (0);
 }
-
 /*COMENTARIOS*/
-/*creas un indicce que recorre el string y cuando llega al nulo para*/
+/*La funcion comprueba si el caracter es alfanumerico*/
+/*Si esta entre a/z tanto minuscula como mayuscula o un nuumero entre 0 y 9*/
+/*devuelve 1, en caso contrario devuelve 0*/

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   isprint.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 12:42:46 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/09 12:44:05 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/09 12:40:54 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/09 12:42:13 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_isprint (int c)
 {
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
+	if (c >= 32 && c <= 126)
 	{
-		i++;
+		return (1);
 	}
-	return (i);
+	return (0);
 }
-
 /*COMENTARIOS*/
-/*creas un indicce que recorre el string y cuando llega al nulo para*/
+/*caracteres imprimibles: incluyen todos 
+los caracteres que no son ni letras ni números*/
+/*La funcion comprubea si el caracter es un caracter que imprimible
+entre espacio y ~ */

@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   isalpha.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 12:42:46 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/09 12:44:05 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/09 12:31:40 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/09 12:33:28 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_isalpha(int c)
 {
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
+	if ((c >= 'A' && C <= 'Z') || (c >= 'a' && c <= 'b'))
 	{
-		i++;
+		return (1);
 	}
-	return (i);
+	return (0);
 }
 
 /*COMENTARIOS*/
-/*creas un indicce que recorre el string y cuando llega al nulo para*/
+/*La funcion comprueba si el caracter es alfabetico */
+/*Si lo es ddevuelve 1 sino devuelve 0*/

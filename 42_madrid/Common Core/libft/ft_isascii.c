@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   isascii.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 12:42:46 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/09 12:44:05 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/09 12:38:52 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/09 12:40:34 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_isascii (int c)
 {
-	int i;
-	
-	i = 0;
-	while (str[i] != '\0')
+	if (c >= 0 && c <= 127)
 	{
-		i++;
+		return (1);
 	}
-	return (i);
+	return (0);
 }
 
 /*COMENTARIOS*/
-/*creas un indicce que recorre el string y cuando llega al nulo para*/
+/*La funcion calcula si el caracer esta dentro del codigo ascii*/
+/*Devuelve 1 si es asi, devuelve 0 en caso contrario*/
