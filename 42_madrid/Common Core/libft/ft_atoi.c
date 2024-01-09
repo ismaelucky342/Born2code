@@ -45,4 +45,4 @@ int ft_atoi(const char *str)
     
 
 
-/*ATOI: ascii to integer*/
+/*ATOI: ascii to integeer*/
