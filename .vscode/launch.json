@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/vclem/Desktop/Software/Born2code/U-Tad/Programación-1/Tema-6/Temario",
-      "program": "c:/Users/vclem/Desktop/Software/Born2code/U-Tad/Programación-1/Tema-6/Temario/build/Debug/outDebug",
+      "cwd": "c:/Users/vclem/Desktop/Software/Born2code/42_madrid/piscina_2023/C04/ex03",
+      "program": "c:/Users/vclem/Desktop/Software/Born2code/42_madrid/piscina_2023/C04/ex03/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
