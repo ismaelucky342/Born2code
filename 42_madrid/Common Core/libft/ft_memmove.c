@@ -12,10 +12,14 @@
 
 #include <libft.h>
 
-void *memmove(void *dest, const void *src, size_t n)
+
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    unsigned char *dest_cpy = (unsigned char *)dest;
-    const unsigned char *src_cpy = (const unsigned char *)src;
+    unsigned char *dest_cpy;
+    const unsigned char *src_cpy;
+
+    dest_cpy = (unsigned char *)dest;
+    src_cpy = (const unsigned char *)src;
 
     if (dest <= src)
     {
@@ -33,6 +37,8 @@ void *memmove(void *dest, const void *src, size_t n)
 
     return dest;
 }
+
+
 
 /*COMENTARIOS*/
 /*Se crean dos punteros: dest_cpy que apunta a la ubicación de 

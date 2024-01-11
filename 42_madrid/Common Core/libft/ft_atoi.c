@@ -45,4 +45,8 @@ int ft_atoi(const char *str)
     
 
 
-/*ATOI: ascii to integeer*/
+/*ATOI: ascii to integer*/
+/*Atoi declara 3 variables para almacenar el valor numerico despues de convertir a cadena, 
+para representar el signo 1 o -1 y un idice para recorrer la cadena */
+/*con el primer while ignoramos espacios en blanco, tabuladores, saltos, avances de linea,etc*/
+/*el if recorre el string buscando el signo positivo o negativo, para considerarlo 1 o -1*/

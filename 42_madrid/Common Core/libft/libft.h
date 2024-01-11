@@ -10,97 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int	ft_strlen(char *str)
-{
-	int i;
+# include <stddef.h>
 
-	i =  0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
+// Funciones de clasificación de caracteres
+int     ft_isalpha(int c);
+int     ft_isdigit(int c);
+int     ft_isalnum(int c);
+int     ft_isascii(int c);
+int     ft_isprint(int c);
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
-{
-	size_t i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i] && i < n)
-	{
-		i++;
-	}
-	if (i == n)
-		return 0;
-	return (s1[i] - s2[i]);
-}
+// Funciones de cadena
+size_t  ft_strlen(const char *s);
+void    *ft_memset(void *s, int c, size_t n);
+void    ft_bzero(void *s, size_t n);
+void    *ft_memcpy(void *dest, const void *src, size_t n);
+void    *ft_memmove(void *dest, const void *src, size_t n);
+size_t  ft_strlcpy(char *dest, const char *src, size_t size);
+size_t  ft_strlcat(char *dest, const char *src, size_t size);
 
-size_t	ft_strcpy(char *dst, const char *src, size_t dstsize)
-{
-	size_t srcsize;
-	size_t i;
+// Funciones de conversión de caracteres
+int     ft_toupper(int c);
+int     ft_tolower(int c);
 
-	if (!dst || !src)
-		return (0);
-	srcsize = ft_strlen(src);
-	i = 0;
-	if (dstsize != 0)
-	{
-		while (src[i] != '\0' && i < (dstsize - 1))
-		{
-			dst[i] = src[i];
-		}
-		dst[i] = '\0';
-	}
-	return (srcsize);
-}
+// Funciones de búsqueda de caracteres en cadenas
+char    *ft_strchr(const char *s, int c);
+char    *ft_strrchr(const char *s, int c);
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	{
-		return (1);
-	}
-	return (0);
-}
+// Funciones de comparación de cadenas y memoria
+int     ft_strncmp(const char *s1, const char *s2, size_t n);
+void    *ft_memchr(const void *s, int c, size_t n);
+int     ft_memcmp(const void *s1, const void *s2, size_t n);
 
-int	ft_isdigit(int c)
-{
-	if((c >= '0' && c <= '9'))
-	{
-		return (1);
-	}
-	return (0);
-}
+// Funciones de búsqueda de subcadenas
+char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 
-int	ft_isalnum (int c)
-{
-	if (( c >= 'A' && c <= 'Z') || (c >= 'a' && c <= '2') || (c >= '0' && c <= '9'))
-	{
-		return (1);
-	}
-	return (0);
-}
+// Función de conversión de cadena a entero
+int     ft_atoi(const char *str);
 
-int	ft_isascii (int c)
-{
-	if (c >= 0 && c <= 127)
-	{
-		return (1);
-	}
-	return (0);
-}
-
-int	ft_isprint (int c)
-{
-	if (c >= 32 && c <= 126)
-	{
-		return (1);
-	}
-	return (0);
-}
-
-int	ft_memset (int c)
-{
-
+#endif
