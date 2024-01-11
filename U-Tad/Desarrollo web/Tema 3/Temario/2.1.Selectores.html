@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Selectores CSS</title>
+    <style>
+        /*EJEMPLOS SELECTORES*/
+
+        /* Este selector apunta al elemento que tiene el atributo id con el valor "miId". */
+        /* En el ejemplo HTML, el único elemento con este ID es el <div> inicial. */
+        /* Le aplica un color azul al texto dentro de ese elemento. */
+        #miId {
+            color: rgb(0, 255, 149);
+        }
+
+        /* Este selector apunta a todos los elementos que tienen el atributo class con el valor "miClase". */
+        /* En el ejemplo HTML, se aplica a los dos párrafos. */
+        /* Les da un estilo de negrita al texto. */
+        .miClase {
+            font-weight: bold;
+        }
+
+        /* Este selector afecta a todos los elementos de la página y establece los márgenes y rellenos en cero. */
+        /* En otras palabras, elimina cualquier margen y relleno predeterminado que algunos navegadores pueden aplicar por defecto a ciertos elementos. */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Este selector limita el efecto del selector universal (*) a todos los elementos que son descendientes directos del elemento <body>. */
+        /* En este caso, aplica un borde de 1 píxel sólido de color gris a todos los elementos descendientes directos del <body>. */
+        /* Esto significa que se aplica a los tres párrafos en el ejemplo HTML. */
+        body * {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="miId">
+        <p class="miClase">Este es un párrafo con la clase "miClase".</p>
+        <p class="miClase">Este es otro párrafo con la clase "miClase".</p>
+    </div>
+
+    <p>Este párrafo no tiene ninguna clase ni ID.</p>
+
+</body>
+</html>
