@@ -21,8 +21,8 @@ char ft_toupper(char c)
    }
 }
 
-int main() {
+/*int main() {
    char ch = 'g';
    printf("%c",ft_toupper(ch));
    return 0;
-}
+}*/
