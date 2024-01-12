@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
-char *custom_strchr(const char *str, int c) {
+char *ft_strchr(const char *str, int c) {
     while (*str != '\0') {
         if (*str == c) {
             return (char *)str; 
@@ -23,7 +23,7 @@ char *custom_strchr(const char *str, int c) {
     return NULL; 
 }
 
-/*int main() {
+int main() {
     const char *str = "Hello, World!";
     char target = 'H';
 
@@ -33,4 +33,4 @@ char *custom_strchr(const char *str, int c) {
         printf("posición %ld de la cadena.\n", result - str);
     }
     return 0;
-}*/
+}
