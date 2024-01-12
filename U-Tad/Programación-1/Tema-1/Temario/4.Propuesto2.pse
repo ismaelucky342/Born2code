@@ -1,0 +1,19 @@
+var 
+
+Entero  x, suma
+    Inicio
+    Escribir("Dime un numero")
+    Leer(x)
+    suma <- 0
+
+    Mientras (x<>0) Hacer
+    suma <- suma + x
+    Escribir ("La suma es", suma)
+    Escribir ("Dime otro numero")
+        Leer (x)
+
+    FinMientras
+
+    Escribir ("Terminado")
+    Escribir ("La suma totoal es:" suma)
+Fin

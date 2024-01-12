@@ -3,13 +3,19 @@
 #define NUM_FILAS 5
 #define NUM_COLUMNAS 4
 
-void imprimeMatriz(int matriz[][NUM_COLUMNAS], int n_filas, int n_columnas);
-int esElementoValle(int matriz[][NUM_COLUMNAS], int n_filas, int n_columnas, int f, int c);
-void imprimeValle(int matriz[][NUM_COLUMNAS], int n_filas, int n_columnas, int f, int c);
-int calculaTraza(int matriz[][NUM_COLUMNAS], int n_filas, int n_columnas);
+void imprimeMatriz(int matrix[][NUM_COLUMNAS], int num_filas, int num_columnas);
+int esElementoValle(int matrix[][NUM_COLUMNAS], int num_filas, int num_columnas, int f, int c);
+void imprimeValle(int matrix[][NUM_COLUMNAS], int num_filas, int num_columnas, int f, int c);
+int calculaTraza(int matrix[][NUM_COLUMNAS], int num_filas, int num_columnas);
 
 int main() {
-    int matriz[NUM_FILAS][NUM_COLUMNAS] = {
+    // Check that the number of rows and columns are positive
+    if (NUM_FILAS <= 0 || NUM_COLUMNAS <= 0) {
+        printf("Error: The number of rows and columns must be positive.\n");
+        return 1;
+    }
+
+    int matrix[NUM_FILAS][NUM_COLUMNAS] = {
         {7, 3, 5, 3},
         {4, 2, 1, 6},
         {8, 3, 9, 4},
@@ -18,14 +24,20 @@ int main() {
     };
 
     printf("==> Valores de la Matriz Original:\n");
-    imprimeMatriz(matriz, NUM_FILAS, NUM_COLUMNAS);
+    imprimeMatriz(matrix, NUM_FILAS, NUM_COLUMNAS);
 
-    printf("==>La traza de la matriz es: %d\n", calculaTraza(matriz, NUM_FILAS, NUM_COLUMNAS));
+    // Check that the matrix is square
+    if (NUM_FILAS != NUM_COLUMNAS) {
+        printf("Error: The matrix must be square.\n");
+        return 1;
+    }
+
+    printf("==> La traza de la matriz es: %d\n", calculaTraza(matrix, NUM_FILAS, NUM_COLUMNAS));
 
     for (int i = 0; i < NUM_FILAS; i++) {
         for (int j = 0; j < NUM_COLUMNAS; j++) {
-            if (esElementoValle(matriz, NUM_FILAS, NUM_COLUMNAS, i, j)) {
-                imprimeValle(matriz, NUM_FILAS, NUM_COLUMNAS, i, j);
+            if (esElementoValle(matrix, NUM_FILAS, NUM_COLUMNAS, i, j)) {
+                imprimeValle(matrix, NUM_FILAS, NUM_COLUMNAS, i, j);
             }
         }
     }
@@ -33,50 +45,67 @@ int main() {
     return 0;
 }
 
-void imprimeMatriz(int matriz[][NUM_COLUMNAS], int n_filas, int n_columnas) {
-    for (int i = 0; i < n_filas; i++) {
-        for (int j = 0; j < n_columnas; j++) {
-            printf("%d ", matriz[i][j]);
+void imprimeMatriz(int matrix[][NUM_COLUMNAS], int num_filas, int num_columnas) {
+    // Check that the matrix is not null
+    if (matrix == NULL) {
+        printf("Error: The matrix is null.\n");
+        return;
+    }
+
+    for (int i = 0; i < num_filas; i++) {
+        for (int j = 0; j < num_columnas; j++) {
+            printf("%3d ", matrix[i][j]);
         }
         printf("\n");
     }
 }
 
-int esElementoValle(int matriz[][NUM_COLUMNAS], int n_filas, int n_columnas, int f, int c) {
-    int valor = matriz[f][c];
-
-    if (f > 0 && f < n_filas - 1 && c > 0 && c < n_columnas - 1) {
-        for (int i = f - 1; i <= f + 1; i++) {
-            for (int j = c - 1; j <= c + 1; j++) {
-                if (matriz[i][j] >= valor) {
-                    return 0; // No es un elemento valle
-                }
-            }
-        }
-        return 1; // Es un elemento valle
+int calculaTraza(int matrix[][NUM_COLUMNAS], int num_filas, int num_columnas) {
+    // Check that the matrix is square
+    if (num_filas != num_columnas) {
+        printf("Error: The matrix must be square.\n");
+        return -1;
     }
 
-    return 0; // No tiene 8 vecinos adyacentes
-}
-
-void imprimeValle(int matriz[][NUM_COLUMNAS], int n_filas, int n_columnas, int f, int c) {
-    printf("==>Hay un elemento Valle en fila %d columna %d:\n", f, c);
-
-    for (int i = f - 1; i <= f + 1; i++) {
-        for (int j = c - 1; j <= c + 1; j++) {
-            printf("%d ", matriz[i][j]);
-        }
-        printf("\n");
-    }
-}
-
-int calculaTraza(int matriz[][NUM_COLUMNAS], int n_filas, int n_columnas) {
     int traza = 0;
+    for (int i = 0; i < num_filas; i++) {
+        traza += matrix[i][i];
+    }
+    return traza;
+}
 
-    // Solo se consideran las 4 primeras filas para la traza
-    for (int i = 0; i < 4 && i < n_filas; i++) {
-        traza += matriz[i][i];
+int esElementoValle(int matrix[][NUM_COLUMNAS], int num_filas, int num_columnas, int f, int c) {
+    // Check that the matrix is not null
+    if (matrix == NULL) {
+        printf("Error: The matrix is null.\n");
+        return -1;
     }
 
-    return traza;
+    // Check that the current element is not on the edge of the matrix
+    if (f == 0 || f == num_filas - 1 || c == 0 || c == num_columnas - 1) {
+        return 0;
+    }
+
+    // Check that the current element is lower than its neighbors
+    if (matrix[f][c] < matrix[f-1][c] && matrix[f][c] < matrix[f+1][c] &&
+        matrix[f][c] < matrix[f][c-1] && matrix[f][c] < matrix[f][c+1]) {
+        return 1;
+    }
+
+    return 0;
+}
+
+void imprimeValle(int matrix[][NUM_COLUMNAS], int num_filas, int num_columnas, int f, int c) {
+    // Check that the matrix is not null
+    if (matrix == NULL) {
+        printf("Error: The matrix is null.\n");
+        return;
+    }
+
+    // Check that the current element is actually a valle
+    if (!esElementoValle(matrix, num_filas, num_columnas, f, c)) {
+        return;
+    }
+
+    printf("El elemento (%d, %d) es un valle con valor %d\n", f, c, matrix[f][c]);
 }

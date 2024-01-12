@@ -1,0 +1,26 @@
+var    
+    entero A,B,C 
+
+Inicio
+    leer (A, B, C)
+    Si(A>=0, B>= 0 y C>=0) Entonces
+
+        Si (A<>B y B<>C y A<>C) Entonces
+
+            Si (A > B y A > C)Entonces
+            Escribir ("El numero mayor es A", A)
+                De lo contrario
+                     Si (B > A y B > C)Entonces
+                            Escribir ("El numero mayor es B", B)
+                            De lo contrario
+                            Si (C > A y C > B)Entonces
+                                Escribir ("El numero mayor es C", C)
+                            FinSi 
+                     FinSi 
+             FinSi 
+        FinSi 
+        Escribir("Hay numeros iguales")
+    
+    de lo contrario
+        Escribir("Los numeros no son positivos")
+    FinSi 
