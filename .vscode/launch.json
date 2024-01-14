@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/vclem/Desktop/Software/Born2code/42_madrid/piscina_2023/C04/ex03",
-      "program": "c:/Users/vclem/Desktop/Software/Born2code/42_madrid/piscina_2023/C04/ex03/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
