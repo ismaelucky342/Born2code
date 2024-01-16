@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+#include <libft.h>
 
 char *ft_substr(const char *s, unsigned int start, int len) {
     if (s == NULL) {
@@ -43,7 +43,7 @@ char *ft_substr(const char *s, unsigned int start, int len) {
     return substring;
 }
 
-int main() {
+/* int main() {
     const char *cadena = "Hola, mundo!";
 
     // Utilizar ft_substr para extraer una subcadena
@@ -61,5 +61,4 @@ int main() {
     free(subcadena);
 
     return 0;
-}
-
+}*/
