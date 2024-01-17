@@ -10,18 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <libft.h>
 
-#include "libft.h"
-
-int	ft_isdigit(int c)
+char	*ft_itoa(int n)
 {
-	if((c >= '0' && '9'))
-	{
-		return (1);
-	}
-	return (0);
-}
+	char	*str;
+	int		len;
+	int		sign;
 
-/*COMENTARIOS*/
-/*La funcion compreba si c es numerico*/
-/*Si es asi devuelve 1 sino 0*/
+	sign = (n < 0) ? -1 : 1;
+	len = 1;
+	while (n / 10)
+	{
+		len++;
+		n /= 10;
+	}
+	str = (char *)malloc(sizeof(char) * (len + 1 + (sign == -1)));
+	if (!str)
+		return (NULL);
+	str[len + (sign == -1)] = '\0';
+	while (len--)
+	{
+		str[len + (sign == -1)] = (n % 10) * sign + '0';
+		n /= 10;
+	}
+	if (sign == -1)
+		str[0] = '-';
+	return (str);
+}

@@ -10,18 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if((c >= '0' && '9'))
-	{
-		return (1);
-	}
-	return (0);
-}
+	char	*str;
+	size_t	len;
 
-/*COMENTARIOS*/
-/*La funcion compreba si c es numerico*/
-/*Si es asi devuelve 1 sino 0*/
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	len = ft_strlen(s1);
+	while (len && ft_strchr(set, s1[len - 1]))
+		len--;
+	str = ft_substr(s1, 0, len);
+	return (str);
+}

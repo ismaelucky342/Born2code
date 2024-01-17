@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: shzhu <shzhu@student.42madrid.co>          +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 17:37:31 by shzhu             #+#    #+#             */
-/*   Updated: 2024/01/11 17:45:43 by shzhu            ###   ########.fr       */
+/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
+/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+//#include <stdio.h>
+#include <libft.h>
 
 char *ft_substr(const char *s, unsigned int start, int len) {
     if (s == NULL) {
@@ -43,7 +43,7 @@ char *ft_substr(const char *s, unsigned int start, int len) {
     return substring;
 }
 
-int main() {
+/* int main() {
     const char *cadena = "Hola, mundo!";
 
     // Utilizar ft_substr para extraer una subcadena
@@ -61,5 +61,4 @@ int main() {
     free(subcadena);
 
     return 0;
-}
-
+}*/

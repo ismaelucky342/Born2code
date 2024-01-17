@@ -10,18 +10,38 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	**ft_split(char const *s, char c)
 {
-	if((c >= '0' && '9'))
-	{
-		return (1);
-	}
-	return (0);
-}
+	char	**split;
+	size_t	i;
+	size_t	j;
 
-/*COMENTARIOS*/
-/*La funcion compreba si c es numerico*/
-/*Si es asi devuelve 1 sino 0*/
+	split = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
+	if (!split)
+		return (NULL);
+	i = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			j = 0;
+			while (s[j] && s[j] != c)
+				j++;
+			split[i] = ft_substr(s, 0, j);
+			if (!split[i++])
+			{
+				while (i--)
+					free(split[i]);
+				free(split);
+				return (NULL);
+			}
+			s += j;
+		}
+		else
+			s++;
+	}
+	split[i] = NULL;
+	return (split);
+}

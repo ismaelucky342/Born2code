@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 15:58:26 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/12 15:38:51 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
+/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #ifndef	LIBFT_H
 #define	LIBFT_H
-#include <stddef.h>
+#include <stdlib.h>
 
 /*Funciones de clasificación de carácteres */
 int	ft_isalpha(int c);
@@ -54,7 +55,8 @@ int ft_atoi(const char *str);
 
 void	*ft_calloc(size_t count, size_t, size);
 char	*ft_strdup(const char *s1);
-
+char	**ft_split(char const *s, char c);
+char      *ft_itoa(int n); 
 
 
 
