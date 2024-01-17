@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/vclem/Desktop/Software/Born2code/U-Tad/Programación-1/Tema-2/Temario",
+      "program": "c:/Users/vclem/Desktop/Software/Born2code/U-Tad/Programación-1/Tema-2/Temario/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

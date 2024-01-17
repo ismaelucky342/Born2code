@@ -1,0 +1,80 @@
+# Variables
+precio_total = 0
+productos_seleccionados = []
+
+# Funciones
+def AlmacenarProducto(producto):
+    productos_seleccionados.append(producto)
+
+def MostrarProductosAlmacenados():
+    for producto in productos_seleccionados:
+        MostrarMensaje(producto)
+
+def ImprimirTicket():
+    MostrarMensaje("Precio total: " + str(precio_total))
+    MostrarProductosAlmacenados()
+
+def BorrarProductosSeleccionados():
+    productos_seleccionados.clear()
+
+def MostrarMensaje(mensaje):
+    print(mensaje)
+
+def LeerSeleccion():
+    return input("Ingrese su selección: ")
+
+# Menú principal
+while True:
+    MostrarMensaje("1. Menú hamburguesas")
+    MostrarMensaje("2. Menú pizzas")
+    MostrarMensaje("3. Salir")
+
+    seleccion_menu = LeerSeleccion()
+
+    if seleccion_menu == "1":
+        AlmacenarProducto("Hamburguesa")
+        precio_total += 4
+
+        while True:
+            MostrarMensaje("1. Lechuga")
+            MostrarMensaje("2. Tomate")
+            MostrarMensaje("3. Cebolla")
+            MostrarMensaje("4. Terminar pedido")
+
+            seleccion_extra = LeerSeleccion()
+
+            if seleccion_extra == "4":
+                break
+
+            AlmacenarProducto("Extra " + seleccion_extra.lower())
+            precio_total += 1
+
+    elif seleccion_menu == "2":
+        AlmacenarProducto("Pizza")
+        precio_total += 7
+
+        while True:
+            MostrarMensaje("1. Hawaiana")
+            MostrarMensaje("2. Margarita")
+            MostrarMensaje("3. 4 quesos")
+            MostrarMensaje("4. Terminar pedido")
+
+            seleccion_extra = LeerSeleccion()
+
+            if seleccion_extra == "4":
+                break
+
+            AlmacenarProducto("Pizza " + seleccion_extra)
+    
+    elif seleccion_menu == "3":
+        MostrarMensaje("Precio total: " + str(precio_total))
+        MostrarProductosAlmacenados()
+
+        MostrarMensaje("¿Está de acuerdo con el pedido? (Sí/No)")
+        confirmacion = LeerSeleccion().lower()
+
+        if confirmacion == "si":
+            ImprimirTicket()
+            break
+        else:
+            BorrarProductosSeleccionados()
