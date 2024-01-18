@@ -21,7 +21,7 @@ int	main()
     resultado2 = num1 - num2; 
     resultado3 = num1 * num2; 
     resultado4 = num1 / num2; 
-    resultado5 = a*(num1 * num2)-b ; 
+    resultado5 = a*(num1 * num2)*b ; 
 	printf("el resultado es: %d\n", resultado1);
     printf("el resultado es: %d\n", resultado2);
     printf("el resultado es: %d\n", resultado3);
