@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <form id="travelForm">
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="age">Edad:</label><br>
+        <input type="number" id="age" name="age" required><br>
+        <label for="birthProvince">Provincia de nacimiento:</label><br>
+        <input type="text" id="birthProvince" name="birthProvince" required><br>
+        <label for="favDestination">Destino de viaje favorito:</label><br>
+        <input type="text" id="favDestination" name="favDestination"><br>
+        <label for="accommodation">Tipo de alojamiento preferido:</label><br>
+        <input type="text" id="accommodation" name="accommodation"><br>
+        <label for="transportation">Medio de transporte favorito:</label><br>
+        <input type="text" id="transportation" name="transportation"><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        document.getElementById('travelForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var inputs = this.getElementsByTagName('input');
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].value === '') {
+                    alert('Por favor, rellena el campo ' + inputs[i].name);
+                    return;
+                }
+            }
+            alert('Los datos introducidos están correctos');
+        });
+    </script>
+</body>
+</html>
