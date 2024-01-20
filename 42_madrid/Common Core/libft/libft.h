@@ -53,12 +53,17 @@ int ft_atoi(const char *str);
 
 /*Funciones de asignación dinámica de memoria*/
 
-void	*ft_calloc(size_t count, size_t, size);
+void	ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	**ft_split(char const *s, char c);
 char      *ft_itoa(int n); 
 
 
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
 
 
 
