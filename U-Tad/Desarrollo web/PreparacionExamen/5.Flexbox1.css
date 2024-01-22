@@ -1,0 +1,11 @@
+.container {
+    display: flex; /* Establece el contenedor como flex */
+}
+
+.item {
+    flex-grow: 1; /* Los elementos flexibles crecerán de manera uniforme para ocupar el espacio disponible */
+}
+
+.item-especial {
+    flex-grow: 2; /* Este elemento crecerá el doble que los demás */
+}
