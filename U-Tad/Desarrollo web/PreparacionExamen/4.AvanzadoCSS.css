@@ -1,0 +1,31 @@
+/* Esto es un comentario */
+
+body { 
+    background-color: lightblue; 
+    font-family: Arial, sans-serif; /* Define la fuente para todo el cuerpo del documento */
+}
+
+h1 { 
+    color: white; 
+    text-align: center; 
+    border-bottom: 2px solid black; /* Añade una línea debajo del encabezado */
+}
+
+p.intro { /* Selecciona todos los elementos <p> con la clase "intro" */
+    font-size: 18px; /* Cambia el tamaño de la fuente a 18px */
+    color: navy; /* Cambia el color del texto a azul marino */
+}
+
+#special { /* Selecciona el elemento con el id "special" */
+    background-color: yellow; /* Cambia el color de fondo a amarillo */
+    padding: 10px; /* Añade un relleno alrededor del elemento */
+}
+
+a:hover { 
+    color: red; 
+}
+
+div.container {
+    width: 80%; /* Define el ancho del contenedor al 80% del ancho de su contenedor padre */
+    margin: auto; /* Centra el contenedor en la página */
+}

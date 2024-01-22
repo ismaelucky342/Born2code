@@ -1,0 +1,14 @@
+.container {
+    display: flex; /* Establece el contenedor como flex */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no hay suficiente espacio */
+    justify-content: space-between; /* Distribuye el espacio de manera uniforme entre los elementos */
+}
+
+.item {
+    flex-grow: 1; /* Los elementos flexibles crecerán de manera uniforme para ocupar el espacio disponible */
+    flex-basis: 200px; /* Establece el tamaño base de los elementos antes de que crezcan o se reduzcan */
+}
+
+.item-especial {
+    flex-grow: 2; /* Este elemento crecerá el doble que los demás */
+}

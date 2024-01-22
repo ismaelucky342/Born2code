@@ -1,0 +1,19 @@
+/* Esto es un comentario */
+
+body { /* Selecciona todos los elementos <body> */
+    background-color: lightblue; /* Cambia el color de fondo a azul claro */
+}
+
+h1 { /* Selecciona todos los elementos <h1> */
+    color: white; /* Cambia el color del texto a blanco */
+    text-align: center; /* Centra el texto */
+}
+
+p { /* Selecciona todos los elementos <p> */
+    font-family: verdana; /* Cambia la fuente a Verdana */
+    font-size: 20px; /* Cambia el tamaño de la fuente a 20px */
+}
+
+a:hover { /* Selecciona todos los enlaces cuando se pasa el ratón por encima */
+    color: red; /* Cambia el color del enlace a rojo */
+}
