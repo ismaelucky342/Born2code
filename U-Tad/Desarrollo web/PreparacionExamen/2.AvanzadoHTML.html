@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mi sitio web avanzado</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="estilos.css"> <!-- Enlaza una hoja de estilos externa -->
+        <style> /* Define estilos internos */
+            body {background-color: powderblue;}
+            h1   {color: blue;}
+            p    {color: red;}
+        </style>
+    </head>
+    <body>
+        <h1>¡Bienvenido a mi sitio web avanzado!</h1>
+        <p>Este es un párrafo.</p>
+        <a href="https://www.bing.com" target="_blank">Este es un enlace a Bing</a> <!-- El atributo target="_blank" abre el enlace en una nueva pestaña -->
+        <img src="imagen.jpg" alt="Descripción de la imagen" width="500" height="600"> <!-- Los atributos width y height especifican el ancho y alto de la imagen -->
+        <div> <!-- Define una sección en un documento -->
+            <h2>Subtítulo</h2>
+            <p>Este es otro párrafo.</p>
+        </div>
+        <form action="/submit_form.php"> <!-- Define un formulario HTML -->
+            <label for="fname">Nombre:</label><br> <!-- Define una etiqueta para un elemento de entrada -->
+            <input type="text" id="fname" name="fname"><br> <!-- Define un campo de entrada controlable -->
+            <input type="submit" value="Enviar"> <!-- Define un botón de envío -->
+        </form>
+        <script> /* Define un script JavaScript */
+            document.getElementById("fname").value = "Juan"; /* Cambia el valor del campo de entrada a "Juan" */
+        </script>
+    </body>
+</html>
