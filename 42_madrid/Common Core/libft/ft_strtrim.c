@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/18 16:54:22 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,28 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	size_t	len;
+	size_t	start;
+	size_t	end;
 
+	start = 0;
 	if (!s1 || !set)
 		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	len = ft_strlen(s1);
-	while (len && ft_strchr(set, s1[len - 1]))
-		len--;
-	str = ft_substr(s1, 0, len);
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_strchr(set, s1[end - 1]))
+		end--;
+	str = ft_substr(s1, start, end - start);
 	return (str);
 }
+
+/*int main(void)
+{
+	const char *str1 = "delen";
+	const char *str2 = "e";
+
+	char result = *ft_strtrim(str1, str2);
+
+		printf("%c", result);
+	return (0);
+	}*/

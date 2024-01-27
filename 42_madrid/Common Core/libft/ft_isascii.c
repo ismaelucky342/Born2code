@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/09 12:38:52 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int	ft_isascii (int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 	{
@@ -21,7 +20,3 @@ int	ft_isascii (int c)
 	}
 	return (0);
 }
-
-/*COMENTARIOS*/
-/*La funcion calcula si el caracer esta dentro del codigo ascii*/
-/*Devuelve 1 si es asi, devuelve 0 en caso contrario*/

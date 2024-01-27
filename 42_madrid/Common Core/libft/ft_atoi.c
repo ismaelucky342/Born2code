@@ -1,53 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/12 13:00:39 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/26 00:05:58 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+/*#include <stdio.h>
+#include <stdlib.h>*/
 
-#include<libft.h>
-
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-    int num;
-    int sign;
-    int i;
+	int	num;
+	int	sign;
+	int	i;
 
-    num = 0;
-    sign = 1;
-    i = 0;
-
-    while (str[i] == ' ' || str[i] == '\t'
-            || str[i] == '\n' || str[i] == '\v' 
-                || str[i] == '\f' || str[i] == '\r')
-        i++;
-
-    if (str[i] == '+' || str[i] == '-')
-    {
-        if (str[i] == '-')
-            sign = -1;
-        i++;
-    }
-
-    while (str[i] >= '0' && str[i] <= '9')
-    {
-        num = num * 10 + (str[i] - '0');
-        i++;
-    }
-
-    return (num * sign);
+	num = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' 
+    || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+		/*while (str[i] == '+' || str[i] == '-')
+			i++;*/
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		num = num * 10 + (str[i] - '0');
+		i++;
+	}
+	return (num * sign);
 }
-    
 
+/*int main()
+{
+	const char *str = "   -123-45";
 
-/*ATOI: ascii to integer*/
-/*Atoi declara 3 variables para almacenar el valor numerico despues de convertir a cadena, 
-para representar el signo 1 o -1 y un idice para recorrer la cadena */
-/*con el primer while ignoramos espacios en blanco, tabuladores, saltos, avances de linea,etc*/
-/*el if recorre el string buscando el signo positivo o negativo, para considerarlo 1 o -1*/
+	int result;
+
+	result = ft_atoi(str);
+	printf("%d\n", result);
+	return (0);
+}*/

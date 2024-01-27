@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/10 15:24:34 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-//#include "libft.h"//
-#include <stdio.h>
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
-	size_t	i;
+	size_t			i;
 
-	str = (unsigned char)s;
+	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
@@ -32,17 +28,17 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-int	main()
+/*int	main(void)
 {
 	char	str[] = "Hola Mundo";
-	char	ch = 'M';
+	char	ch = 'W';
+	size_t n = strlen(str);
 
-	void *result = ft_memchr(str, ch, size_t(str));
+	void *result = ft_memchr(str, ch, n);
 
 	if (result != NULL)
-		printf("Se encontro 'M' en la posicion: %ld\n", result - str);
+		printf("Se encontro 'M' en la posicion: %ld\n", (char *)result - str);
 	else
 		printf(" 'M' no se encontro en la cadena\n");
-	return 0;
-}
-
+	return (0);
+}*/

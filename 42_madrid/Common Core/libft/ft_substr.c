@@ -1,64 +1,67 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/09 12:42:46 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 21:30:49 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-#include <libft.h>
+#include "libft.h"
 
-char *ft_substr(const char *s, unsigned int start, int len) {
-    if (s == NULL) {
-        return NULL;  // No se puede extraer una subcadena de una cadena nula
-    }
 
-    // Calcular la longitud original de la cadena
-    int original_len = 0;
-    while (s[original_len] != '\0') {
-        ++original_len;
-    }
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	size_t	i;
+	char	*str;
+	size_t	max_len;
 
-    // Ajustar el valor de "len" si es mayor que la longitud restante desde "start"
-    len = (len > original_len - start) ? original_len - start : len;
+	if (!s || start > ft_strlen(s))
+		return (ft_strdup(""));
 
-    // Utilizar malloc para asignar memoria para la subcadena
-    char *substring = (char *)malloc(len + 1);  // +1 para el carácter nulo al final
+	max_len = ft_strlen(s) - start;
+	if (len > max_len)
+		len = max_len;
 
-    if (substring != NULL) {
-        // Copiar la subcadena en la memoria asignada
-        for (int i = 0; i < len; ++i) {
-            substring[i] = s[start + i];
-        }
+	str = (char*)malloc(sizeof(*s) * (len + 1));
+	if (!str)
+		return (NULL);
+	
+	i = 0;
+	while (i < len)
+	{
+		str[i] = s[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}	
+/*int main()
+{
+	const char *original = "Hello, World!";
+	char	*substring = ft_substr(original, 7, 5);
 
-        // Agregar el carácter nulo al final de la subcadena
-        substring[len] = '\0';
-    }
 
-    return substring;
-}
+	printf("%s\n", original);
+	printf("%s\n", substring);
 
-/* int main() {
-    const char *cadena = "Hola, mundo!";
+	free(substring);
 
-    // Utilizar ft_substr para extraer una subcadena
-    char *subcadena = ft_substr(cadena, 0, 5);  // Desde el índice 0, con longitud 5
-
-    if (subcadena == NULL) {
-        // Manejar el error si la asignación de memoria falla
-        return 1;
-    }
-
-    // Imprimir la subcadena
-    printf("Subcadena: %s\n", subcadena);
-
-    // Liberar la memoria asignada con malloc
-    free(subcadena);
-
-    return 0;
+	return (0);
 }*/
+
+/*COMENTARIOS
+
+
+	- Se declaran dos variables que sob el char puntero str que representa la subcadena resultante e i que será el indice para rastrear la posición actual de la cadena str
+   - Se verifica si la cadena de entrada s es nula, en cuyo caso devuelve NULL.
+  
+	- Se manejan casos especiales como por ejemplo que si el indice de inicio "start" es mayor que la cadena s se devuelve una cadena vacía utilizando la función ft_strdup
+  
+	- Se copia la subcadena utilizando un bucle se copia len desde la posicion start de la cadena s a la cadena str
+   - Se agrega el caracter nuclo al final de la cadena str
+  
+	- Se retorna el resultado a str que ser a la nueva cadena que contendra la subcadena de la cadena principal  */

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/19 13:45:46 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,31 +17,33 @@ char	**ft_split(char const *s, char c)
 	char	**split;
 	size_t	i;
 	size_t	j;
+	size_t	k;
 
-	split = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1));
-	if (!split)
+	if (s == NULL)
+		return (NULL);
+	j = 0;
+	k = 0;
+	while (s[j])
+		if (s[j++] != c && (s[j] == c || s[j] == '\0'))
+			k++;
+	split = (char **)malloc(sizeof(char *) * (k + 1));
+	if (split == NULL)
 		return (NULL);
 	i = 0;
-	while (*s)
+	k = 0;
+	while (s[i])
 	{
-		if (*s != c)
+		if (s[i] != c)
 		{
-			j = 0;
-			while (s[j] && s[j] != c)
+			j = i;
+			while (s[j] != c && s[j] != '\0')
 				j++;
-			split[i] = ft_substr(s, 0, j);
-			if (!split[i++])
-			{
-				while (i--)
-					free(split[i]);
-				free(split);
-				return (NULL);
-			}
-			s += j;
+			split[k++] = ft_substr(s, i, j - i);
+			i = j;
 		}
 		else
-			s++;
+			i++;
 	}
-	split[i] = NULL;
+	split[k] = NULL;
 	return (split);
 }

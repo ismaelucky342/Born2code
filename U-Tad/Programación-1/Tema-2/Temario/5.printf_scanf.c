@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 // Función principal del programa
-int main(void){
+int main(void)
+{
+   
    char car;
    int var;
 

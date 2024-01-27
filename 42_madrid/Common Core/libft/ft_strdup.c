@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/12 15:10:06 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char	ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	size_t	len; 
-	char *duplicate;
+	size_t	len;
+	char	*duplicate;
 
-    len	= ft_strlen(s1) + 1;
-    duplicate = (char *)malloc(len);
-
-	if (duplicate == NULL) {
-		
-		retunr NULL; 
+	len = ft_strlen(s1) + 1;
+	duplicate = (char *)malloc(len);
+	if (duplicate == NULL)
+	{
+		return (NULL);
 	}
-	ft_memory(duplicate, s1, len); 
-
-	return duplicate; 
-
+	ft_memcpy(duplicate, s1, len);
+	return (duplicate);
 }
-

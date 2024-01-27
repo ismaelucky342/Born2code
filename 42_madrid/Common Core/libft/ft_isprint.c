@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/09 12:40:54 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-int	ft_isprint (int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{
@@ -21,8 +20,3 @@ int	ft_isprint (int c)
 	}
 	return (0);
 }
-/*COMENTARIOS*/
-/*caracteres imprimibles: incluyen todos 
-los caracteres que no son ni letras ni números*/
-/*La funcion comprubea si el caracter es un caracter que imprimible
-entre espacio y ~ */

@@ -3,39 +3,44 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/17 18:35:56 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <libft.h>
+#include "libft.h"
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		len;
-	int		sign;
+	char		*str;
+	int			len;
+	long int	copy;
+	int			temp;
 
-	sign = (n < 0) ? -1 : 1;
-	len = 1;
-	while (n / 10)
+	copy = (long int)n;
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	len = (n < 0) ? 1 : 0;
+	copy = (n < 0) ? -copy : copy;
+	temp = copy;
+	while (temp)
 	{
 		len++;
-		n /= 10;
+		temp /= 10;
 	}
-	str = (char *)malloc(sizeof(char) * (len + 1 + (sign == -1)));
-	if (!str)
+	if (!(str = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	str[len + (sign == -1)] = '\0';
+	str[len] = '\0';
 	while (len--)
 	{
-		str[len + (sign == -1)] = (n % 10) * sign + '0';
-		n /= 10;
+		str[len] = (copy % 10) + '0';
+		copy /= 10;
 	}
-	if (sign == -1)
+	if (n < 0)
 		str[0] = '-';
 	return (str);
 }

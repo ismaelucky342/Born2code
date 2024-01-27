@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/09 12:35:56 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 19:11:05 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 'A' && C <= 'Z') || (c >= 'a' && c <= 'b') 
-									|| (c >= '0' && c <= '9'))
-	{
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
+		|| (c >= '0' && c <= '9'))
 		return (1);
-	}
 	return (0);
 }
-/*COMENTARIOS*/
-/*La funcion comprueba si el caracter es alfanumerico*/
-/*Si esta entre a/z tanto minuscula como mayuscula o un nuumero entre 0 y 9*/
-/*devuelve 1, en caso contrario devuelve 0*/
+/*int main(void)
+{
+	int	result;
+
+	result = ft_isalnum('a');
+	printf("%d\n", result);
+	return (0);
+}*/

@@ -1,79 +1,79 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 19:19:51 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/16 19:20:10 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/12 17:03:17 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <stdio.h>
-#include <stdlib.h>
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*str;
+	int		a;
+	int		b;
+	int		i;
 
-
-char *ft_strjoin(const char *s1, const char *s2) {
-    if (s1 == NULL || s2 == NULL) {
-        return NULL;  // No se puede concatenar cadenas nulas
-    }
-
-    // Calcular la longitud de la primera cadena
-    int len_s1 = 0;
-    while (s1[len_s1] != '\0') {
-        ++len_s1;
-    }
-
-    // Calcular la longitud de la segunda cadena
-    int len_s2 = 0;
-    while (s2[len_s2] != '\0') {
-        ++len_s2;
-    }
-
-    // Calcular la longitud total de la cadena resultante
-    int total_len = len_s1 + len_s2;
-
-    // Utilizar malloc para asignar memoria para la cadena resultante
-    char *result = (char *)malloc(total_len + 1);  // +1 para el carácter nulo al final
-
-    if (result != NULL) {
-        // Copiar la primera cadena en la memoria asignada
-        for (int i = 0; i < len_s1; ++i) {
-            result[i] = s1[i];
-        }
-
-        // Concatenar la segunda cadena al final de la primera
-        for (int i = 0; i < len_s2; ++i) {
-            result[len_s1 + i] = s2[i];
-        }
-
-        // Agregar el carácter nulo al final de la cadena resultante
-        result[total_len] = '\0';
-    }
-
-    return result;
+	if (!s1 || !s2)
+		return (NULL);
+	a = ft_strlen(s1);
+	b = ft_strlen(s2);
+	i = 0;
+	if (!(str = malloc((a + b + 1))) || !str)
+		return (NULL);
+	while (s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2[i - a])
+	{
+		str[i] = s2[i - a];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
 
-int main() {
-    const char *cadena1 = "Hola, ";
-    const char *cadena2 = "mundo!";
+/*int	main(void)
+{
+	char	*s1 = "Hola";
+	char	*s2 = "mundo!";
+	char	*result;
 
-    // Utilizar ft_strjoin para concatenar dos cadenas
-    char *concatenada = ft_strjoin(cadena1, cadena2);
+	result = ft_strjoin(s1,s2);
 
-    if (concatenada == NULL) {
-        // Manejar el error si la asignación de memoria falla
-        return 1;
-    }
+	if (result)
+	{
+		printf("%s\n", result);
+		free(result);
+	}
+	else
+	{
+		printf("Error\n");
+	}
+	return (0);
+}*/
 
-    // Imprimir la cadena concatenada
-    printf("Concatenada: %s\n", concatenada);
+/*COMENTARIOS
 
-    // Liberar la memoria asignada con malloc
-    free(concatenada);
-
-    return 0;
-}
- 
+ * - Primero delcaramos las variables un char puntero,
+	las dos cadenas y un índice
+ *
+	- Se verifica si alguna de las dos cadenas es NULL o esta vavia y si es asi devuelve NULL.
+ * - Se utiliza la funcion strlen para calcular la longitud de las cadenas.
+ *
+	- Se utiliza la función malloc para asignar memoria dinámica para la nueva cadena. La longitud necesara sera la suma de a
+	+ b + uno.
+ *
+	- Se cpia cada caracter de la cadena s1 a la cadena str y posteriormente se restablece el indice y se copian los caracteres de la cadena s2 a continuacion de la cadena s1 en str.
+ * - Se agrega el caracter nulo para indicar el final de la cadena.
+ *
+	- Por ultimo la funcion devuelve str que sera la concatenacion de las cadenas s1 y s2.
+ *
+	- Ventajas: No modifica las cadenas originales y permite crear una cadena nueva que tiene exactamente el tamaño necesario para contener ambas cadenas lo que evita desperdiciar memoria.*/

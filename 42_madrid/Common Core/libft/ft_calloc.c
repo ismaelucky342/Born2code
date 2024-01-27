@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   calloc.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 12:34:37 by ismherna          #+#    #+#             */
-/*   Updated: 2024/01/11 12:56:21 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/12 14:44:43 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
-#include<stdlib.h>
+#include "libft.h"
 
-void	ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	total_size; 
+	size_t	total_size;
+	void	*ptr;
 
-	total_size = count * size; 
-
-	if (count != 0 && total_size / count != size) {
-        return NULL;    
-   	}
-	
-	void *ptr = malloc(total_size);
-
-	if (ptr != NULL){
-		
-		ft_bzero(ptr, total_size); 
-		
+	total_size = count * size;
+	if (size == 0 || count > (size_t)-1 / size)
+	{
+		return (NULL);
 	}
-	
-	return	ptr; 
+	ptr = malloc(total_size);
+	if (ptr != NULL)
+	{
+		ft_bzero(ptr, total_size);
+	}
+	return (ptr);
 }
