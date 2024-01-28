@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Estamos a $( date )."
+
+MI_DIR=`pwd`
+
+echo $MI_DIR
+
+CURR_DIR=$( pwd )
+
+ls -la ${CURR_DIR}

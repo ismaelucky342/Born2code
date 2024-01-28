@@ -1,0 +1,9 @@
+#!/bin/bash
+readonly NUM=42
+echo ">>> NUM=${NUM}"
+
+# Se produce un error porque readonly es inalterable
+
+NUM=56
+
+echo ">>> NUM = ${NUM}"

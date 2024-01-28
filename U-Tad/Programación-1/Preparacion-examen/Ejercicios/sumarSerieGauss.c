@@ -33,7 +33,7 @@ int		main()
 	{
 		suma -= --i; 
 	}
-	printf("se han umado %d numeros y la suma es %d.\n", i-1, suma);
+	printf("se han sumado %d numeros y la suma es %d.\n", i-1, suma);
     printf("Comprobacion con la formula de gauss: %d\n", arithmeticSeries(i-1));
 
 	return 0;    

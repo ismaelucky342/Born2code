@@ -13,6 +13,20 @@
 #include<stdio.h>
 
 #define MAX_LENGTH 20
+int rellenarCadena(char cadena[]);
+void	imprimirPalabras(char	cadena[]); 
+
+int main() {
+    char cadena[MAX_LENGTH + 1];
+    int longitud;
+    printf("Introduce varias palabras separadas por comas:\n");
+    while ((longitud = rellenarCadena(cadena)) == 0) {
+        printf("La cadena es demasiado larga. Inténtalo de nuevo.\n");
+    }
+    printf("La longitud de la cadena es: %d\n", longitud);
+    imprimirPalabras(cadena);
+    return 0;
+}
 
 int rellenarCadena(char cadena[])
 {
@@ -50,14 +64,4 @@ void	imprimirPalabras(char	cadena[])
     printf("%s\n", palabra);
 }
 
-int main() {
-    char cadena[MAX_LENGTH + 1];
-    int longitud;
-    printf("Introduce varias palabras separadas por comas:\n");
-    while ((longitud = rellenarCadena(cadena)) == 0) {
-        printf("La cadena es demasiado larga. Inténtalo de nuevo.\n");
-    }
-    printf("La longitud de la cadena es: %d\n", longitud);
-    imprimirPalabras(cadena);
-    return 0;
-}
+
