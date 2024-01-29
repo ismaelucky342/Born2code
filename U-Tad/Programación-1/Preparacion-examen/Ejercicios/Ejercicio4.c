@@ -5,7 +5,7 @@ int main()
 	int suma = 0; 
 	int numero; 
 	
-	while(suma <= 30);
+	while(suma <= 30)
 	{
 		printf("introduce un numero");
 		scanf("%d", numero);
