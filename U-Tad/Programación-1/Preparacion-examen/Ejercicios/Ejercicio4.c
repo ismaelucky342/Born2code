@@ -2,13 +2,12 @@
 
 int main()
 {
-	int suma = 0; 
-	int numero; 
+	int suma = 0, numero; 
 	
 	while(suma <= 30)
 	{
 		printf("introduce un numero");
-		scanf("%d", numero);
+		scanf("%d", &numero);
 		suma= suma+numero; 
 	}
 	printf("la suma total es: %d", suma);
