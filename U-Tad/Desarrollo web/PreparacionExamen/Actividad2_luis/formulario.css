@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('degradado.jpg');
+    background-size: cover;
+}
+#Formulario-Registro {
+    width: 400px;
+    background: #24303C;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family:'calibri';
+    color: white;
+}
+#Formulario-Registro h4{
+font-size: 22px;
+margin-bottom: 20px;
+}
+.controlador{
+width: 100%;
+background: #24303C;
+padding: 10px;
+border-radius: 4px;
+margin-bottom: 16px;
+border: 1px solid #1f53c5;
+font-family: 'calibri';
+font-size: 18px;
+color: white;
+}
+
+#Formulario-Registro .botones{
+    width: 100%;
+    background:#1f53c5;
+    border: none;
+    padding:12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+
+}
+h4{
+    color:chartreuse;
+}
+#Fecha{
+    color:grey;
+}

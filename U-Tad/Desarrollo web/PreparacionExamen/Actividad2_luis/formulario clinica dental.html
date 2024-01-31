@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+<script>localStorage.clear()</script>
+    <form id="Formulario-Registro">
+    <h4>Registro DentalDent</h4>
+    <input class="controlador" type="text" name="Nombre" id="Nombre" placeholder="Ingrese su Nombre">
+    <input class="controlador" type="text" name="Apellidos" id="Apellidos" placeholder="Ingrese sus Apellidos">
+    <input class="controlador" type="text" name="Edad" id="Edad" placeholder="Ingrese su Edad">
+    <input class="controlador" type="text" name="Dni" id="Dni" placeholder="Ingrese su Dni">
+    <input class="controlador" type="date" name="Fecha" id="Fecha" placeholder="Ingrese su Fecha">
+    <input class="controlador" type="text" name="Residencia" id="Residencia" placeholder="Ingrese su Residencia">
+    <input class="controlador" type="text" name="CodigoPostal" id="CodigoPostal" placeholder="Ingrese el Código postal">
+    <input class="controlador" type="text" name="Telefono" id="Telefono" placeholder="Ingrese su Número de Telefono">
+    <input class="controlador" type="text" name="Correo" id="Correo" placeholder="Ingrese su Correo Electrónico">
+    <a href="DatosFormulario.html"><input class="botones" type="submit" value="Darse de Alta"></a>
+
+</form>
+</body>
+<script>
+    document.getElementById("Formulario-Registro").addEventListener("submit" , function(e){
+            e.preventDefault();
+        
+        var Nombre= document.getElementById("Nombre").value;
+        var Apellidos= document.getElementById("Apellidos").value;
+        var Edad= document.getElementById("Edad").value;
+        var Dni= document.getElementById("Dni").value;
+        var Fecha= document.getElementById("Fecha").value;
+        var Residencia= document.getElementById("Residencia").value;
+        var CodigoPostal= document.getElementById("CodigoPostal").value;
+        var Telefono= document.getElementById("Telefono").value;
+        var Correo= document.getElementById("Correo").value;
+        
+        localStorage.setItem("Nombre", Nombre);
+        localStorage.setItem("Apellidos",document.getElementById("Apellidos").value);
+        localStorage.setItem("Edad",document.getElementById("Edad").value);
+        localStorage.setItem("Dni",document.getElementById("Dni").value);
+        localStorage.setItem("Fecha",document.getElementById("Fecha").value);
+        localStorage.setItem("Residencia",document.getElementById("Residencia").value);
+        localStorage.setItem("CodigoPostal",document.getElementById("CodigoPostal").value);
+        localStorage.setItem("Telefono",document.getElementById("Telefono").value);
+        localStorage.setItem("Correo",document.getElementById("Correo").value);        
+        
+        window.location.href = "DatosFormulario.html"
+    });
+</script>
+</html>

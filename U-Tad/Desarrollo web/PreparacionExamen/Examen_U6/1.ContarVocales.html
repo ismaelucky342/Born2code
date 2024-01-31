@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Contar Vocales</title>
+</head>
+	<body>
+		<h1>Contar vocales</h1>
+		
+		<script>
+		
+			texto = prompt("Escribe una frase");
+
+				
+			numero_a = 0;
+			numero_e = 0;
+			numero_i = 0;
+			numero_o = 0;
+			numero_u = 0;
+						
+			// Recorremos el texto escrito con un bucle for y contamos las vocales con un bucle switch
+			for(i=0;i<texto.length;i++){
+				
+				switch(texto[i]){
+					case "a":
+					case "á":
+					case "A":
+					case "Á":
+						numero_a++;
+						break;
+					case "e":
+					case "é":
+					case "E":
+					case "É":
+						numero_e++;
+						break;
+					case "i":
+					case "í":
+					case "I":
+					case "Í":
+						numero_i++;
+						break;
+					case "o":
+					case "ó":
+					case "O":
+					case "Ö":
+						numero_o++;
+						break;
+					case "u":
+					case "ú":
+					case "ü":
+					case "U":
+					case "Ú":
+					case "Ü":
+						numero_u++;
+						break;				
+					}				
+				
+				}
+			
+			// Mostramos los resultados
+			document.write("Texto: " + texto + "<br/>");
+			document.write("Número total de Caracteres: " + texto.length + "<br/>");
+			document.write("Número de letras a: " + numero_a + "<br/>");
+			document.write("Número de letras e: " + numero_e + "<br/>");
+			document.write("Número de letras i: " + numero_i + "<br/>");
+			document.write("Número de letras o: " + numero_o + "<br/>");
+			document.write("Número de letras u: " + numero_u + "<br/>");
+			total = numero_a + numero_e + numero_i + numero_o + numero_u;
+			document.write("Número total de vocales: " + total + "<br/>");	
+	
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body onload="PrimerEvento()">  
+
+    <button onclick="alert('Hola este es un manejador de evento en línea se dispara cuando hago click')">Pulsa</button>
+
+
+
+
+    <h1 id="Encabezado">Eventos con JavaScript</h1>
+    <p id="Rojo">Color Rojo</p>
+   
+    <script>
+        function PrimerEvento(){
+                let Roja;
+                Roja = document.getElementById("Rojo");
+                Roja.addEventListener("click", Rojoclick);
+        }
+        function Rojoclick(){
+                let titulo;
+                titulo = document.getElementById("Encabezado");
+                titulo.style.color = "red";
+        }
+    </script>
+</body>
+</html>

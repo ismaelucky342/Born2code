@@ -1,0 +1,24 @@
+<html>
+<head>
+   <title>Método </title>
+   <script>
+      function Accion(Tipo) {
+            var elem = document.getElementById('DivBotones');
+            if (Tipo == "Ocultar")
+               elem.style.display = 'none';
+            else  
+            elem.style.display = '';
+         };
+         
+   </script>
+</head>
+<body>
+
+   <div>
+         <p id="DivBotones">Seccion Ocultar/Mostrar</p>
+         <button onclick="Accion('Ocultar');">Ocultar</button>
+         <button onclick="Accion('Mostrar');">Mostrar</button>
+   </div>
+
+</body>
+</html>

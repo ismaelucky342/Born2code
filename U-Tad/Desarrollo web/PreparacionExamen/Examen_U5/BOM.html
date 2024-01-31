@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+   <INPUT type="button" value="pulsame" onclick="alert('Hola')">
+    <script>
+        let lan = window.navigator.language;
+        alert(lan);
+        /*Objetos del navegador: 
+                	Objeto Window:
+                            •	Objeto location
+                            •	Objeto history
+                            •	Objeto document
+                            •	Objeto navigator
+                            •	Objeto screen */
+        /*Propiedades de Window*/
+                console.log(window.closed);
+                console.log(window.innerHeight);
+                console.log(window.innerWidth);
+                console.log(window.outerHeight);
+                console.log(window.outerWidth);
+
+        /*Propiedades de Location*/
+                console.log(location.hostname);
+
+
+        /*Propiedades de Screen*/
+                console.log(screen.colorDepth);
+                console.log(screen.height);
+                console.log(screen.width);
+
+                /*colorDepth es la cantidad de información de color se mide por bits
+                cuanto más bits mayor cantidad de colores disponibles*/
+
+                switch(screen.height) {
+
+                            case 1: 
+                                document.bgColor = "black"; 
+                                break;
+
+                            case 8:                             
+                                document.bgColor = "blue"; 
+                               break;
+
+                            case 1080:
+                                document.bgColor = "orange"; 
+                                break;
+
+                            default: 
+                                document.bgColor = "white";
+
+                }
+
+                 
+    </script>
+</body>
+</html>
