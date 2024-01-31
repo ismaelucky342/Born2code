@@ -78,3 +78,4 @@ int main() {
 } 
 /*ISMAEL HERNANDEZ | 16/01/2024*/
 // En la función principal, se declara e inicializa la matriz. Luego, se imprime la matriz original, se calcula e imprime la traza de la matriz y se buscan e imprimen los elementos valle de la matriz.
+    
