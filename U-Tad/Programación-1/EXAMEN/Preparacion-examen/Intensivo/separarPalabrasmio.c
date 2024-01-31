@@ -37,16 +37,17 @@ int rellenaCadena(char cadena[])
 		c = getchar(); 
 		longitud++; 
 	} 
-	if(c == '\n'){
-	cadena[longitud] = '\0';
-	printf("%d\n", longitud);
-	}
-	else{
-		limpiarbuffer();
-		longitud = 0; 
-	}
+		if(c == '\n'){
+		cadena[longitud] = '\0';
+		printf("%d\n", longitud);
+		}
+		else{
+			limpiarbuffer();
+			longitud = 0; 
+		}
 	return longitud;
 }
+
 void imprimirPalabras(char cadena[])
 {
 	int i = 0; 
@@ -66,5 +67,5 @@ void imprimirPalabras(char cadena[])
 }
 void limpiarbuffer()
 {
-	while  (getchar()!='\n');
+	while  (getchar()!='\n')
 }
