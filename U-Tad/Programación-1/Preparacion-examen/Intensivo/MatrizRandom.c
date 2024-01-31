@@ -3,22 +3,21 @@
 #include<math.h>
 #include<time.h>
 
-#define SIZE 4
 #define MAX_LENGHT 999
 
-void printMatrix(int matrix[SIZE][SIZE]);
+void printMatrix(int matrix[4][4]);
 
 int main()
 {
 	srand(time(NULL)); 
 	
-	int matrix[SIZE][SIZE]; 
+	int matrix[4][4]; 
 	int max_value = 0; 
 	int max_row = 0; 
 	int max_col = 0; 
 	
-	for(int i = 0; i < SIZE; i++){
-		for(int j = 0; j < SIZE; j++){
+	for(int i = 0; i < 4; i++){
+		for(int j = 0; j < 4; j++){
 			matrix[i][j] = rand() % (MAX_LENGHT + 1); 
 			
 			if(matrix[i][j] > max_value){
@@ -35,9 +34,9 @@ int main()
 	return 0; 
 }
 
-void printMatrix(int matrix[SIZE][SIZE]){
-	for(int i = 0; i < SIZE; i++){
-		for(int j = 0; j < SIZE; j++){
+void printMatrix(int matrix[4][4]){
+	for(int i = 0; i < 4; i++){
+		for(int j = 0; j < 4; j++){
 			printf("%3d  ", matrix[i][j]);
 		}
 		printf("\n");
