@@ -18,7 +18,7 @@ int		main()
 	scanf("%s", &correo);
 	
 	printf("el correo es: %s\n", correo);
-	
+
 	GenerarUsuario(correo, usuario);
 	printf("El id del empleado es: %s\n", usuario);
 	
