@@ -30,12 +30,10 @@ int		rellenarCadena(char cadena[])
 	int	longitud = 0; 
 	
 	printf("Introduzca una lista de palabras que no supere los 20 caracteres: \n");
-	c = getchar(); 
-	
+	scanf("%c", &c);
 	while((c != '\n') && longitud < MAX)
 	{
 		cadena[longitud] = c;
-		c = getchar(); 
 		longitud++; 
 	}
 	if (c == '\n'){
@@ -57,10 +55,10 @@ void	imprimirCadena(char cadena[])
 	
 	c = cadena[i]; 
 	while(c != '\0'){
+			printf("\n");
 		if(c == ',')
-			putchar('\n'); 
 		else{
-			putchar(c);		
+			printf("%c", c);
 		}
 		c = cadena[i]; 
 		i++; 
