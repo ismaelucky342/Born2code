@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+         #
+#    By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/17 18:46:32 by rde-migu          #+#    #+#              #
-#    Updated: 2024/01/30 14:56:27 by rde-migu         ###   ########.fr        #
+#    Created: 2024/02/06 00:20:40 by ismherna          #+#    #+#              #
+#    Updated: 2024/02/06 00:40:45 by ismherna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
