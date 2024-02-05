@@ -9,8 +9,8 @@ body {
     width: 300px;
     height: 150px;
     padding-top: 10px;    /* Relleno en la parte superior */
-    padding-right: 20px;  /* Relleno en el lado derecho */
-    padding-bottom: 10px; /* Relleno en la parte inferior */
+    padding-right: 20px;    /* Relleno en el lado derecho */
+    padding-bottom: 10px;   /* Relleno en la parte inferior */
     padding-left: 20px;   /* Relleno en el lado izquierdo */
     border: 2px solid #333;
     background-color: #f4f4f4;
