@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/vclem/Desktop/Software/Born2code/U-Tad/Programación-1/Preparacion-examen/Ejercicios",
-      "program": "c:/Users/vclem/Desktop/Software/Born2code/U-Tad/Programación-1/Preparacion-examen/Ejercicios/build/Debug/outDebug",
+      "cwd": "c:/Users/vclem/Desktop/Software/Born2code/U-Tad/Programación-1/EXAMEN/Mis_Practicas",
+      "program": "c:/Users/vclem/Desktop/Software/Born2code/U-Tad/Programación-1/EXAMEN/Mis_Practicas/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
