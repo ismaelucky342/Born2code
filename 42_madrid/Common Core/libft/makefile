@@ -6,7 +6,7 @@
 #    By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/17 18:46:32 by rde-migu          #+#    #+#              #
-#    Updated: 2024/01/26 00:07:24 by rde-migu         ###   ########.fr        #
+#    Updated: 2024/01/30 14:56:27 by rde-migu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,17 @@ SRC = ft_tolower.c ft_putstr_fd.c ft_putendl_fd.c ft_isalnum.c ft_isalpha.c ft_i
 OBJ = $(SRC:.c=.o)
 INCLUDE = libft.h
 
+SRCBONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+
+OBJBONUS = $(SRCBONUS:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ) $(INCLUDE) 
 	$(LIB) $(NAME) $(OBJ)
+
+bonus: $(OBJ) $(OBJBONUS) $(INCLUDE)
+	$(LIB) $(NAME) $(OBJBONUS) $(OBJ)
 
 
 %.o: %.c $(INCLUDE) 	
@@ -31,12 +38,13 @@ $(NAME): $(OBJ) $(INCLUDE)
 .PHONY: clean fclean re 
 
 clean:	
-	$(RM) $(OBJ) 
+	$(RM) $(OBJ) $(OBJBONUS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
-	
+
+rebonus: fclean bonus
 
 

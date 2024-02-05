@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/26 15:20:53 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/30 19:42:26 by rde-migu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -24,23 +36,26 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	{
 		dst[i + j] = '\0';
 	}
-	else
-	{
-		if (size > 0)
+	else if (size > 0)
 		dst[size - 1] = '\0';
-	}
-	
 	return (dst_len + src_len);
 }
 
 /*COMENTARIOS
-llamamos al strlen del destino y origen para calcular su tamaño y los almacena
-luego mientras i mas j mas uno (por el nulo) sean menores al size j recorre el origen
+llamamos al strlen del destino y origen para calcular 
+su tamaño y los almacena
+luego mientras i mas j mas uno (por el nulo) sean menores al 
+size j recorre el origen
 se encuentra la posicion en que termina la cadena destino*
 
 CORRECCION
-- Se ha agregado una corrección mas antes de iniciar la copia desde src a dst.
-- Si i es igual a size, significa que ya hemos alcanzado el límite de dst,
+- Se ha agregado una corrección mas antes de iniciar 
+la copia desde src a dst.
+- Si i es igual a size, significa que ya hemos 
+alcanzado el límite de dst,
 	y en este caso, simplementew devolvemos size + srclen,
-	lo cual significa que dado que la cadena de destino dst ya ha alcanzado su capacidad máxima size,
-	el resultado sería igual a esa capacidad size más la longitud de la cadena de origen src_len lo qque indica que la cadena resultante sería de esa longitud si no hubiera restricciones de tamaño.*/
+	lo cual significa que dado que la cadena de destino dst 
+	ya ha alcanzado su capacidad máxima size,
+	el resultado sería igual a esa capacidad size más la longitud de 
+	la cadena de origen src_len lo qque indica que la cadena resultante sería de 
+	esa longitud si no hubiera restricciones de tamaño.*/

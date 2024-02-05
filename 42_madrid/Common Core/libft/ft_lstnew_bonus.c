@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 13:44:20 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/30 16:55:20 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/26 17:27:36 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/30 19:28:31 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	ft_memset(s, 0, n);
+	t_list	*new_node;
+
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = (NULL);
+	return (new_node);
 }
-/* Definición de la función bzero donde se define al puntero *s
- * que apunta al inicio del bloque de memoria que se va a anular,
- * y size_t n se determinará la cantidad de bytes que se anularan*/

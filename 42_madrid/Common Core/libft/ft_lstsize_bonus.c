@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 13:44:20 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/30 16:55:20 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/01/30 14:16:14 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/30 19:17:58 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	ft_memset(s, 0, n);
+	int	count;
+
+	if (!lst)
+		return (0);
+	count = (0);
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
 }
-/* Definición de la función bzero donde se define al puntero *s
- * que apunta al inicio del bloque de memoria que se va a anular,
- * y size_t n se determinará la cantidad de bytes que se anularan*/

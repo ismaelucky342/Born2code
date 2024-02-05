@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:51:35 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/01/26 19:23:21 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,15 @@ COMENTARIOS
 * - Comprueba si la subcadena es una cadena vacia o NULL,
 	en cuyo caso devuelve el puntero a la cadena original.
 *
-	- Recorre la cadena principal (haystack) hasta el final o hasta alcanzar la ongitud máxima (len)
+	- Recorre la cadena principal (haystack) hasta el final o 
+	hasta alcanzar la ongitud máxima (len)
 *
-	- Inicializa j para comenzar la comparación de la subcadena desde el principio.
+	- Inicializa j para comenzar la comparación de la subcadena 
+	desde el principio.
 *
-	- Compara la subcadea (needle) con la porción correspondiente de la cadena principal (haystack) mientras no se alcance el final de la cadena principal (haystack) ni la longitud máxima (len),
+	- Compara la subcadea (needle) con la porción correspondiente de 
+	la cadena principal (haystack) mientras no se alcance el final 
+	de la cadena principal (haystack) ni la longitud máxima (len),
 * - si se encuentra una coinciencia completa de la subcadena,
 	devuelve el puntero a la posición actual en la cadena principal.
 * - Incrementa j para comparar el siguiente carácter de la subcadena.

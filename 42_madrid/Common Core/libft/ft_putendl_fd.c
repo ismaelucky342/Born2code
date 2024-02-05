@@ -6,7 +6,7 @@
 /*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:54:41 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/25 18:57:52 by rde-migu         ###   ########.fr       */
+/*   Updated: 2024/01/30 16:44:22 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,14 @@ void	ft_putendl_fd(char *s, int fd)
 }*/
 
 /*COMENTARIOS
- * - Llamamos a la función ft_putstr_fd que es la función que se encarga
- *   de imprimir un string en un descriptor de archivo específico.
+ * - Llamamos a la función ft_putstr_fd que es 
+ *   la función que se encarga
+ *   de imprimir un string en un descriptor 
+ *   de archivo específico.
  *
-	- Luego utilizamos la función write para ecribir un salto de línea seguido del string.
+	- Luego utilizamos la función write para ecribir 
+	un salto de línea seguido del string.
  *
-	- El objetivo de esta función es que se se imprima una cadena seguida de un sato de linea
+	- El objetivo de esta función es que se se 
+	imprima una cadena seguida de un sato de linea
  *   dentro de un descriptor de archivo específico.*/
