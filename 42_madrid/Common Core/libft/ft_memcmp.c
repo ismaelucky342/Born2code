@@ -24,11 +24,16 @@ int	ft_memcmp(const void *dst, const void *str, size_t n)
 	i = 0;
 	diff = 0;
 	if (n)
-		while (n--)
-			if (*dst2++ != *str2++)
-				return (*(--dst2) - *(--str2));
+		while (i < n)
+		{
+			diff = dst2[i] - str2[i];
+			if (diff != 0)
+				return diff;
+			i++;
+		}
 	return (0);
 }
+
 
 /*int main()
 {

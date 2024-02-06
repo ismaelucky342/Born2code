@@ -19,8 +19,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 
 	start = 0;
-	if (!s1 || !set)
+	if (!s1 || !set){
 		return (NULL);
+	}
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	end = ft_strlen(s1);
