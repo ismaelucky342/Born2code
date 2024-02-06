@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int     main(int argc, char *argv[]){
+    if(argc != 3){
+        printf("Introduce exactamente dos números");
+        return 1; 
+    }
+        int num1 = atoi(argv[1]);
+        int num2 = atoi(argv[2]);
+        int suma = num1 + num2; 
+
+        printf("la suma de %d mas %d es %d\n", num1, num2, suma);
+        return 0; 
+    
+
+}
