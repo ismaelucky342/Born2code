@@ -3,56 +3,81 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 00:20:40 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/06 00:40:45 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/17 18:35:56 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/01/31 14:57:11 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	digit_counter(int n)
+{
+	int	i;
+	int	copy;
+
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n == -2147483648)
+		return (11);
+	if (n < 0)
+	{
+		n = -n;
+		i++;
+	}
+	copy = n;
+	while (copy > 0)
+	{
+		copy = copy / 10;
+		i++;
+	}
+	return (i);
+}
+
+int	exp_counter(int n)
+{
+	int	exp;
+	int	digits;
+
+	if (n == 0)
+		return (1);
+	if (n == -2147483648)
+		return (1000000000);
+	digits = digit_counter(n);
+	if (n < 0)
+		digits--;
+	exp = 1;
+	while (--digits)
+		exp = exp * 10;
+	return (exp);
+}
+
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int	len;
+	char		*str;
+	int			exp;
+	int			i;
 	long int	copy;
 
-	len = 0;
 	copy = (long int)n;
-	if (n == 0)
-	{
-		return (ft_strdup("0"));
-	}
-	if (n == -2147483648)
-	{
-		return (ft_strdup("-2147483648"));
-	}
+	exp = exp_counter(n);
+	i = 0;
+	str = malloc(digit_counter(n) + 1);
+	if (!str)
+		return (NULL);
 	if (n < 0)
 	{
-		len = 1;
+		str[i++] = '-';
 		copy = -copy;
 	}
-	int temp = copy;
-	while (temp)
+	while (exp > 0)
 	{
-		len++;
-		temp /= 10;
+		str[i++] = (copy / exp) + 48;
+		copy = copy % exp;
+		exp = exp / 10;
 	}
-	if (!(str = malloc(sizeof(char) * (len + 1))))
-	{
-		return (NULL);
-	}
-	str[len] = '\0';
-
-	while (len--)
-	{
-		str[len] = (copy % 10) + '0';
-		copy /= 10;
-	}
-	if (n < 0)
-	{
-		str[0] = '-';
-	}
+	str[i] = '\0';
 	return (str);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: rde-migu <rde-migu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 00:20:40 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/06 00:40:45 by ismherna         ###   ########.fr       */
+/*   Created: 2024/01/30 14:07:38 by rde-migu          #+#    #+#             */
+/*   Updated: 2024/02/08 20:53:50 by rde-migu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,25 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list;
-	t_list	*current;
+	t_list	*new_lst;
+	t_list	*node;
+	void	*mapped_content;
 
-	if (!f || !del)
+	if (!lst || !f || !del)
 		return (NULL);
-	new_list = NULL;
+	new_lst = NULL;
 	while (lst)
 	{
-		(current = ft_lstnew((*f)(lst->content)))
-			if (!current)
+		mapped_content = f(lst->content);
+		node = ft_lstnew(mapped_content);
+		if (!node)
 		{
-			while (new_list)
-		{
-			current = new_list->next;
-			(*del)(new_list->content);
-			free(new_list);
-			new_list = current;
-			}
-			lst = NULL;
+			del(mapped_content);
+			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new_list, current);
+		ft_lstadd_back(&new_lst, node);
 		lst = lst->next;
 	}
-	return (new_list);
+	return (new_lst);
 }
