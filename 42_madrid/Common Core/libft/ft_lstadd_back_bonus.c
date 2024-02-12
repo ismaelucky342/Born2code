@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rde-migu <rde-migu@student.42madrid>       +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/30 17:56:31 by rde-migu          #+#    #+#             */
-/*   Updated: 2024/01/30 18:09:03 by rde-migu         ###   ########.fr       */
+/*   Created: 2024/02/12 10:57:52 by ismherna          #+#    #+#             */
+/*   Updated: 2024/02/12 11:51:58 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
