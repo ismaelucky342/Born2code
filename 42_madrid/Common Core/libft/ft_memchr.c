@@ -27,18 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-/*int	main(void)
-{
-	char	str[] = "Hola Mundo";
-	char	ch = 'W';
-	size_t n = strlen(str);
-
-	void *result = ft_memchr(str, ch, n);
-
-	if (result != NULL)
-		printf("Se encontro 'M' en la posicion: %ld\n", (char *)result - str);
-	else
-		printf(" 'M' no se encontro en la cadena\n");
-	return (0);
-}*/

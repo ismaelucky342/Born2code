@@ -29,24 +29,3 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)&str[i]);
 	return (NULL);
 }
-/*int main() {
-	const char *str = "Hello, World!";
-	char target = 'H';
-
-	char *result = custom_strchr(str, target);
-
-	if (result != NULL) {
-		printf("posición %ld de la cadena.\n", result - str);
-	}
-	return (0);
-}
-
-COMENTARIOS
-CORRECCIONES:
-- Básicamente se han realizado dos correcciones siendo la primera 
-al principio de la función para ver si str es NULL. 
-de lo contrario procede a buscar el caracter c en str.
-- La segunda correccion se basa básicamente comrpueba 
-si el último caracter del string es igual a c despues del bucle while. 
-si es asi devuelve el puntero a ese caracter y por lo contrario retornara 
-en NULL indicando que c no se encontro en str.*/

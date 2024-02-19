@@ -26,11 +26,3 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (dst);
 }
-
-/*Básicamente utilizamos esta función para copiar un bloque de memoria
- * desde una ubicación de origen hasta una ubicación de destino.
- * Primero verificamos que dst y src sean punteros nulos y si es 
- * asi la función retorna a cero.
- * Entramos en el bucle donde copiamos cada bloque de memoria de src 
- * a dst y vamos incrementando
- * con i mientras sea menor que n que es a longitud especificada.*/

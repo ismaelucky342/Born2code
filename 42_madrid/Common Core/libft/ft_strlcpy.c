@@ -28,9 +28,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
-
-/*COMENTARIOS*/
-/* Obtenemos la longitud de la cadena de origen
-Copiamos la cadena de origen al destino hasta alcanzar el tamaño especificado*/
-/*Aseguramos que el destino esté terminado con un carácter nulo
-Devolvemos la longitud original de la cadena de origen*/

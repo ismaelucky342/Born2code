@@ -29,14 +29,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, start, end - start);
 	return (str);
 }
-
-/*int main(void)
-{
-	const char *str1 = "delen";
-	const char *str2 = "e";
-
-	char result = *ft_strtrim(str1, str2);
-
-		printf("%c", result);
-	return (0);
-	}*/

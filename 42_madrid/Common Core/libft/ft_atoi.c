@@ -37,14 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (num * sign);
 }
-
-/*int main()
-{
-	const char *str = "   -123-45";
-
-	int result;
-
-	result = ft_atoi(str);
-	printf("%d\n", result);
-	return (0);
-}*/
