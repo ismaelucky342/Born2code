@@ -12,6 +12,19 @@
 
 #include "libft.h"
 
+int	ft_atoi(const char *str): //prototipado
+
+int main()
+{
+	const char *str = "   -123-45";
+
+	int result;
+
+	result = ft_atoi(str);
+	printf("%d\n", result);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
 	int	num;

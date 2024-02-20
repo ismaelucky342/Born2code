@@ -82,3 +82,21 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
+
+int main() 
+{
+    const char *str = "Hola, soy, radfer";
+    char c = ' ';
+    char **result = ft_split(str, c);
+
+    int i =  0;
+    while (result[i] != NULL) 
+    {
+        printf("%s\n", result[i]);
+        free(result[i]);
+        i++;
+    }
+    free(result);
+
+    return  0;
+}

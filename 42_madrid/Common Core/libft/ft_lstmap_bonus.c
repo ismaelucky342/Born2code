@@ -36,3 +36,22 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_lst);
 }
+
+int main() {
+    t_list *lst = ft_lstnew("Hello");
+    ft_lstadd_back(&lst, ft_lstnew("World"));
+
+    void *map_function(void *content) {
+    t_list *mapped_lst = ft_lstmap(lst, map_function, free);
+
+	while (mapped_lst) {
+        printf("%s ", (char *)mapped_lst->content);
+        mapped_lst = mapped_lst->next;
+    }
+	
+    ft_lstclear(&lst, free);
+    ft_lstclear(&mapped_lst, free);
+
+    return 0;
+}
+}

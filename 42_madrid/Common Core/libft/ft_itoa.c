@@ -6,68 +6,90 @@
 /*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:57:52 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/19 13:19:36 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/02/12 11:51:58 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_digit_counter(int n)
+int	digit_counter(int n)
 {
-	int		count;
+	int	i;
+	int	copy;
 
-	count = 0;
+	i = 0;
 	if (n == 0)
 		return (1);
+	if (n == -2147483648)
+		return (11);
 	if (n < 0)
-		count++;
-	while (n != 0)
 	{
-		n /= 10;
-		count++;
+		n = -n;
+		i++;
 	}
-	return (count);
+	copy = n;
+	while (copy > 0)
+	{
+		copy = copy / 10;
+		i++;
+	}
+	return (i);
+}
+
+int	exp_counter(int n)
+{
+	int	exp;
+	int	digits;
+
+	if (n == 0)
+		return (1);
+	if (n == -2147483648)
+		return (1000000000);
+	digits = digit_counter(n);
+	if (n < 0)
+		digits--;
+	exp = 1;
+	while (--digits)
+		exp = exp * 10;
+	return (exp);
 }
 
 char	*ft_itoa(int n)
 {
-	int		ncpy;
-	int		i;
-	char	*str;
+	char		*str;
+	int			exp;
+	int			i;
+	long int	copy;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
-	ncpy = n;
-	if (n < 0)
-		ncpy = -n;
-	i = ft_digit_counter(n);
-	str = malloc(sizeof(char) * (i + 1));
+	copy = (long int)n; // lo cambiamos a long y lo guardamos en copy para evitar desbordamiento 
+	exp = exp_counter(n);
+	i = 0;
+	str = malloc(digit_counter(n) + 1); // reserva de memoria 
 	if (!str)
 		return (NULL);
-	str[i] = '\0';
-	i--;
-	if (ncpy == 0)
-		str[i] = '0';
-	while (ncpy > 0)
+
+	if (n < 0) 
 	{
-		str[i--] = (ncpy % 10) + '0';
-		ncpy /= 10;
+		str[i++] = '-';
+		copy = -copy;
 	}
-	if (n < 0)
-		str[0] = '-';
+	while (exp > 0)
+	{
+		str[i++] = (copy / exp) + 48;
+		copy = copy % exp;
+		exp = exp / 10;
+	}
+	str[i] = '\0';
 	return (str);
 }
-/*
-int main()
-{
-    int n = -2147483648;
-    char *str = ft_itoa (n);
+int main() {
+    int number = 12345;
 
-    if (str == NULL)
-    printf("Error al convertir el número %d a cadena.\n",(n));
+    // Convert integer to string
+    char* result = itoa(number);
 
-    printf("%s\n", str);
-    free(str);
+    // Print the result
+    printf("Integer: %d\nString: %s\n", number, result);
 
-    return (0);
-}*/
+    return 0;
+}
