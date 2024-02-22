@@ -6,12 +6,12 @@
 /*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:57:52 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/12 11:51:58 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/02/20 10:09:51 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//#include <stdio.h>
 char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
@@ -27,3 +27,17 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
+/*int		main(){
+	const	char *string1 = "fsdahsa";
+	int		byte =  'a';
+
+	char	*ultimaAparicion = ft_strrchr(string1, byte);
+
+	if(ultimaAparicion){
+		printf("Caracter %s encontrado en posicion %i", ultimaAparicion, ultimaAparicion-string1);
+
+	}else {
+		printf("ERROR");
+	}
+	return (0);
+}*/

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -35,3 +36,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*int		main(){
+
+	char	destino[] = "abcde";
+	char	origen[] = "poiss";
+	size_t	t = 5; 
+
+	void	*resultado = ft_memmove(destino, origen, t);
+	printf("la cadena resultante es: %s", (char *)resultado); 
+	return 0; 
+}*/

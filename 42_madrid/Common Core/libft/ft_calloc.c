@@ -25,23 +25,23 @@ void	*ft_calloc(size_t count, size_t size)
 	return (result);
 }
 
-int main() {
-    size_t num_elements = 5;
+/*int main() {
+    int *array;
+    int size = 5;
 
-    int *arr = (int *)calloc(num_elements, sizeof(int));
+    array = (int *)calloc(size, sizeof(int));
 
-    if (arr == NULL) {
-        fprintf(stderr, "Memory allocation failed\n");
-        return 1;
+    if (array == NULL) {
+        fprintf(stderr, "Error al asignar memoria\n");
+        return 1; 
     }
-
-    printf("Initialized array: ");
-    for (size_t i = 0; i < num_elements; ++i) {
-        printf("%d ", arr[i]);
+    for (int i = 0; i < size; i++) {
+        array[i] = i + 1;
     }
-    printf("\n");
-
-    free(arr);
-
-    return 0;
-}
+    printf("Contenido del array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    free(array);
+    return 0; 
+}*/

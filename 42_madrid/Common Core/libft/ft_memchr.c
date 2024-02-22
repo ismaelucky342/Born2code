@@ -27,3 +27,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+/*int		main(){
+	const char *string = "patata";
+	char	car = 'a';
+	size_t 	inicio = 6; 
+
+	void *resultado = ft_memchr(string, car, inicio);
+	printf("%s", resultado);
+	return 0; 
+}*/

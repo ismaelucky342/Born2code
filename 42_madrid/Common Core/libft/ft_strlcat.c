@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//#include <stdio.h>
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
@@ -40,3 +40,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[size - 1] = '\0';
 	return (dst_len + src_len);
 }
+/*int 	main()
+{
+	const	char *origen = "hola";
+	char 		 destino[20] = " mundo";
+	
+
+	size_t	resultado = ft_strlcat(destino, origen, 20);
+	if(resultado)
+	{
+		printf("el resultado es: %zu\n", resultado);
+		printf("%s\n", destino);
+		
+	}else{
+		printf("ERROR CADENA NULA");
+	}
+	return 0; 
+}*/

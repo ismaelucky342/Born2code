@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//#include <stdio.h>
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
@@ -26,3 +26,12 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(duplicate, s1, len);
 	return (duplicate);
 }
+
+/*int		main()
+{
+	const char *string1 = "hola mundo"; 
+
+	char	*resultado = ft_strdup(string1); 
+	printf("la original es: %s\n y la duplicada: %s\n ",string1, resultado);
+	return 0; 
+}*/

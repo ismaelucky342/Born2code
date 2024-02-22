@@ -23,3 +23,13 @@ int	ft_toupper(int c)
 		return (c);
 	}
 }
+/*int		main()
+{
+	char	ch = 'a'; 
+	
+	int lowerch = ft_tolower(ch); 
+
+	printf("%c\n", lowerch);
+
+	return 0;
+}*/

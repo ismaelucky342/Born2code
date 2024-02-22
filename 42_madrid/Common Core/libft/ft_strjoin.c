@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -41,23 +42,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-int	main(void)
+/*int 	main()
 {
-	char	*s1 = "Hola";
-	char	*s2 = "mundo!";
-	char	*result;
+	const	char *string1 = "hola";
+	const	char *string2 = " mundo";
 
-	result = ft_strjoin(s1,s2);
-
-	if (result)
+	char	*resultado = ft_strjoin(string1, string2);
+	if(resultado)
 	{
-		printf("%s\n", result);
-		free(result);
+		printf("la cadena unida es: %s", resultado);
+		free(resultado); 
+	}else{
+		printf("ERROR CADENA NULA");
 	}
-	else
-	{
-		printf("Error\n");
-	}
-	return (0);
-}
-
+	return 0; 
+}*/

@@ -6,12 +6,12 @@
 /*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:57:52 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/12 11:51:58 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/02/20 10:08:00 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//#include <stdio.h>
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
@@ -35,3 +35,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
+/*int		main(){
+
+	const	char *stringI = "hola muundo";
+	unsigned int   startI = 5;
+	size_t		lenI = 6;
+
+	char	*subcadena = ft_substr(stringI, startI, lenI);
+
+	if(subcadena){
+		printf("\n%s\n", subcadena);
+		free(subcadena);
+		}else {
+			printf("ERROR CADENA NO VALIDA");
+
+	}
+	return 0;
+}*/

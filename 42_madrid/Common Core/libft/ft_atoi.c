@@ -11,19 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_atoi(const char *str): //prototipado
-
-int main()
-{
-	const char *str = "   -123-45";
-
-	int result;
-
-	result = ft_atoi(str);
-	printf("%d\n", result);
-	return (0);
-}
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -50,3 +38,23 @@ int	ft_atoi(const char *str)
 	}
 	return (num * sign);
 }
+
+/*int		main()
+{
+	
+    const char *str1 = "123";
+    const char *str2 = "-456";
+    const char *str3 = "   789";
+    const char *str4 = "   +987";
+    const char *str5 = "   -654";
+    const char *str6 = "   123abc";
+
+    printf("'%s' convertido a entero: %d\n", str1, ft_atoi(str1));
+    printf("'%s' convertido a entero: %d\n", str2, ft_atoi(str2));
+    printf("'%s' convertido a entero: %d\n", str3, ft_atoi(str3));
+    printf("'%s' convertido a entero: %d\n", str4, ft_atoi(str4));
+    printf("'%s' convertido a entero: %d\n", str5, ft_atoi(str5));
+    printf("'%s' convertido a entero: %d\n", str6, ft_atoi(str6));
+
+    return 0;
+}*/

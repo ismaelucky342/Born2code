@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -28,3 +29,14 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (ft_strlen(src));
 }
+/*int		main(){
+
+	char	destino[] = "mundo"; 
+	const	char *origen = "hola"; 
+	size_t	t = 5; 
+
+	size_t resultado = ft_strlcpy(destino, origen, t);
+	printf("el resultado es: %zu\n", resultado);
+	printf("la cadena copiada es: %s", destino);
+	return 0; 
+}*/

@@ -6,12 +6,12 @@
 /*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:57:52 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/12 11:51:58 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/02/20 09:32:28 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//#include <stdio.h>
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
@@ -29,3 +29,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, start, end - start);
 	return (str);
 }
+/*int		main(){
+
+	const char *string = "	hola mundo  ";
+	const char *trimeo = " \t\n";
+
+	char	*cadena = ft_strtrim(*string, *trimeo);
+
+	printf("La cadena original es: %s\n", string);
+	printf("la cadena recortada es: %s\n", cadena);
+	free(cadena);
+	return 0;
+}*/

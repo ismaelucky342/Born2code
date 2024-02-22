@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -30,4 +31,13 @@ char	*ft_strchr(const char *str, int c)
 	return (NULL);
 }
 
-int		main()
+
+/*int		main(){
+
+	const	char *string = "hola mundo";
+	int		busqueda = 'u'; 
+
+	char	*resultado =  ft_strchr(string, busqueda);
+	printf("Caracter '%c' encontrado en la posicion: %ld\n", *resultado, resultado - string);
+	return 0; 
+}*/

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
@@ -30,3 +31,13 @@ void	printchari(unsigned int i, char *c)
 {
 	printf("%u: %c\n", i, *c);
 }
+
+/*int		main()
+{
+	char	string1[] = "hola que tal";
+
+	printf("La cadena original es: %s\n",string1);
+	ft_striteri(string1, &printchari);
+
+	return 0; 
+}*/

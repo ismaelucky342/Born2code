@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//#include <stdio.h>
 static int	wordlen(const char *s, char c)
 {
 	int	len;
@@ -82,21 +82,21 @@ char	**ft_split(char const *s, char c)
 	}
 	return (strs);
 }
-
-int main() 
+/*int		main()
 {
-    const char *str = "Hola, soy, radfer";
-    char c = ' ';
-    char **result = ft_split(str, c);
+	const	char *string1 = "hola me llamo ismael";
+	char	c = ' '; 
+	int i = 0; 
 
-    int i =  0;
-    while (result[i] != NULL) 
-    {
-        printf("%s\n", result[i]);
-        free(result[i]);
-        i++;
-    }
-    free(result);
+	char	**resultado = ft_split(string1, c);
 
-    return  0;
-}
+	while(resultado[i] != '\0')
+	{
+		printf("%s", resultado[i]);
+		free(resultado[i]);
+		i++;
+	}
+	free(resultado);
+	
+	return 0; 
+}*/

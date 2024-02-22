@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
@@ -26,3 +27,13 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (dst);
 }
+/*int		main(){
+
+	char	destino[] = "hola";
+	char	origen[] = "mundo";
+	size_t	t = 5; 
+
+	void	*resultado = ft_memcpy(destino, origen, t);
+	printf("la cadena resultante es: %s", resultado); 
+	return 0; 
+}*/

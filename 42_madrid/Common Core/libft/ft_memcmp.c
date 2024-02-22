@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+//#include <stdio.h>
 int	ft_memcmp(const void *dst, const void *str, size_t n)
 {
 	unsigned char	*str2;
@@ -25,3 +25,17 @@ int	ft_memcmp(const void *dst, const void *str, size_t n)
 				return (*(--dst2) - *(--str2));
 	return (0);
 }
+
+/*int		main(){
+
+	const char *destino = "holaa";
+	const char *origen = "holap";
+
+	int		resultado = ft_memcmp(destino, origen, 5);
+    if (resultado != 0) {
+        printf("Strings are different, and the difference is: %d\n", resultado);
+    } else {
+        printf("Strings are identical\n");
+    }
+	return 0; 
+}*/
