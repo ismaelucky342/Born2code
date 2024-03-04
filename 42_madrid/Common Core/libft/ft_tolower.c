@@ -6,11 +6,12 @@
 /*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:57:52 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/15 10:56:17 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/02/12 11:51:58 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+//#include <stdio.h>//uy
+
 
 int	ft_tolower(int c)
 {
@@ -23,13 +24,9 @@ int	ft_tolower(int c)
 		return (c);
 	}
 }
-/*int		main()
-{
-	char	ch = 'A'; 
-	
-	int lowerch = ft_tolower(ch); 
 
-	printf("%c\n", lowerch);
-
-	return 0;
+/*int main() {
+   char ch = 'g';
+   printf("%c",ft_tolower(ch));
+   return (0);
 }*/
