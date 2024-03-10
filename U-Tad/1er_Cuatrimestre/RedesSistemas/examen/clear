@@ -1,8 +1,0 @@
-#!/bin/bash 
-
-echo "valor primer parametro ${1}"
-echo "valor segundo parametro ${2}"
-echo "valor tercero parametro ${3}"
-echo "valor cuarto parametro ${4}"
-echo "valor quinto parametro ${5}"
-
