@@ -1,118 +1,107 @@
-#include <unistd.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/08 17:25:43 by ismherna          #+#    #+#             */
+/*   Updated: 2024/03/12 14:45:05 by ismherna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#define BUFFER_SIZE 1024
+#include "get_next_line_bonus.h"
+#include <limits.h>
 
-char	*ft_free(char *buffer, char *buf)
+char	*ft_strchr(char *str, int c)
 {
-	char	*temp;
+	unsigned char	b;
+	int				i;
 
-	temp = ft_strjoin(buffer, buf);
-	free(buffer);
-	return (temp);
-}
-
-char	*ft_next(char *buffer)
-{
-	int		i;
-	int		j;
-	char	*line;
-
+	b = (unsigned char)c;
 	i = 0;
-	while (buffer[i] && buffer[i] != '\n')
-		i++;
-
-	if (!buffer[i])
+	while (str[i] != '\0')
 	{
-		free(buffer);
-		return (NULL);
-	}
-
-	line = ft_calloc((ft_strlen(buffer) - i + 1), sizeof(char));
-	i++;
-	j = 0;
-
-	while (buffer[i])
-		line[j++] = buffer[i++];
-	free(buffer);
-	return (line);
-}
-
-char	*ft_line(char *buffer)
-{
-	char	*line;
-	int		i;
-
-	i = 0;
-
-	if (!buffer[i])
-		return (NULL);
-
-	while (buffer[i] && buffer[i] != '\n')
-		i++;
-
-	line = ft_calloc(i + 2, sizeof(char));
-	i = 0;
-
-	while (buffer[i] && buffer[i] != '\n')
-	{
-		line[i] = buffer[i];
+		if ((unsigned char)str[i] == b)
+			return ((char *)&str[i]);
 		i++;
 	}
-
-	if (buffer[i] && buffer[i] == '\n')
-		line[i++] = '\n';
-
-	return (line);
+	if (b == '\0')
+		return ((char *)&str[i]);
+	return (NULL);
 }
 
-char	*read_file(int fd, char *res)
+static char	*ft_set_line(char *line_buffer)
 {
-	char	*buffer;
-	int		byte_read;
+	char		*left_c;
+	ssize_t		i;
 
-	if (!res)
-		res = ft_calloc(1, 1);
-
-	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
-	byte_read = 1;
-
-	while (byte_read > 0)
+	i = 0;
+	while (line_buffer[i] != '\n' && line_buffer[i] != '\0')
+		i++;
+	if (line_buffer[i] == 0 || line_buffer[1] == 0)
+		return (NULL);
+	left_c = ft_substr(line_buffer, i + 1, ft_strlen(line_buffer) - i);
+	if (*left_c == 0)
 	{
-		byte_read = read(fd, buffer, BUFFER_SIZE);
+		free(left_c);
+		left_c = NULL;
+	}
+	line_buffer[i + 1] = 0;
+	return (left_c);
+}
 
-		if (byte_read == -1)
+static char	*ft_fill_line_buffer(int fd, char *left_c, char *buffer)
+{
+	ssize_t	b_read;
+	char	*tmp;
+
+	b_read = 1;
+	while (b_read > 0)
+	{
+		b_read = read(fd, buffer, BUFFER_SIZE);
+		if (b_read == -1)
 		{
-			free(buffer);
+			free(left_c);
 			return (NULL);
 		}
-
-		buffer[byte_read] = 0;
-		res = ft_free(res, buffer);
-
+		else if (b_read == 0)
+			break ;
+		buffer[b_read] = 0;
+		if (!left_c)
+			left_c = ft_strdup("");
+		tmp = left_c;
+		left_c = ft_strjoin(tmp, buffer);
+		free(tmp);
+		tmp = NULL;
 		if (ft_strchr(buffer, '\n'))
-			break;
+			break ;
 	}
-
-	free(buffer);
-	return (res);
+	return (left_c);
 }
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer[OPEN_MAX];
+	static char	*left_c[OPEN_MAX];
 	char		*line;
+	char		*buffer;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
+	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
+	if (fd < 0 || BUFFER_SIZE <= 0)
+	{
+		free(left_c[fd]);
+		free(buffer);
+		buffer = NULL;
+		left_c[fd] = NULL;
 		return (NULL);
-
-	buffer = read_file(fd, buffer);
-
+	}
 	if (!buffer)
 		return (NULL);
-
-	line = ft_line(buffer);
-	buffer = ft_next(buffer);
-
+	line = ft_fill_line_buffer(fd, left_c[fd], buffer);
+	free(buffer);
+	buffer = NULL;
+	if (!line)
+		return (left_c[fd] = NULL, NULL);
+	left_c[fd] = ft_set_line(line);
 	return (line);
 }
