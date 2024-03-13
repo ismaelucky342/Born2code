@@ -17,7 +17,7 @@ Rank 01:
 - Born2beroot
 - get_next_line
 
-Rank 02: (comming soon)
+Rank 02:
 - push_swap
 - pipex
 - fract-ol
