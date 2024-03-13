@@ -9,37 +9,34 @@ In this repository, 42 projects will be uploaded when they have been delivered, 
   <img src="https://github.com/ismaelucky342/Born2code/assets/153450550/ddbe9c21-b3bf-4733-8af8-2cfe845e8cf3)https://github.com/ismaelucky342/Born2code/assets/153450550/ddbe9c21-b3bf-4733-8af8-2cfe845e8cf3" alt="Descripción de la imagen">
 </p>
 
-Rank 00:
-- LIBFT
-  
-Rank 01:
-- ft_printf
-- Born2beroot
-- get_next_line
 
-Rank 02:
-- push_swap
-- pipex
-- fract-ol
-- Exam Rank 02
-
-Rank 03: (comming soon)
-- minishell
-- Philosophers
-- Exam Rank 03
-
-Rank 04: (comming soon)
-- Net Practice
-- miniRT
-- C++ 0-4 modules
-- Exam Rank 04
-
-Rank 05: (comming soon)
-- C++ 5-9
-- webserv
-- Inception
-- Exam Rank 05
-
-Rank 06: (comming soon)
-- ft_trascendence
-- Exam Rank 06
+| Projects | Score | Rank |
+|--------|--------|---------------|
+| [**Libft**](https://github.com/ismaelucky342/Libft) | ![125%](https://progress-bar.dev/125) | Rank 00 |
+| [**get_next_line**](https://github.com/ismaelucky342/get_next_line) | ![125%](https://progress-bar.dev/125) | Rank 01 |
+| [**ft_printf**](https://github.com/ismaelucky342/ft_printf) | ![100%](https://progress-bar.dev/100) | Rank 01 |
+| [**Born2beroot**](https://github.com/ismaelucky342/ft_printf) |  | Rank 01 |
+| [**fract-ol**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
+| [**pipex**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
+| [**push_swap**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
+| [**Exam Rank 02**] | coming soon | Rank 02 |
+| [**Philosophers**] | coming soon | Rank 03 |
+| [**minishell**] | coming soon | Rank 03 |
+| [**Exam Rank 03**] | coming soon | Rank 03 |
+| [**NetPractice**] | coming soon | Rank 04 |
+| [**miniRT**] | coming soon | Rank 04 |
+| [**CPP module 00**] | coming soon | Rank 04 |
+| [**CPP module 01**] | coming soon | Rank 04 |
+| [**CPP module 02**] | coming soon | Rank 04 |
+| [**CPP module 03**] | coming soon | Rank 04 |
+| [**CPP module 04**] | coming soon | Rank 04 | 
+| [**Exam Rank 04**] | coming soon | Rank 04 |
+| [**Inception**] | coming soon | Rank 05 |
+| [**webserv**] | coming soon | Rank 05 |
+| [**CPP module 05**] | coming soon | Rank 05 |
+| [**CPP module 06**] | coming soon | Rank 05 |
+| [**CPP module 07**] | coming soon | Rank 05 |
+| [**CPP module 08**] | coming soon | Rank 05 |
+| [**CPP module 09**] | coming soon | Rank 05 |  
+| [**ft_trascendence**] | coming soon | Rank 06 |
+| [**Exam Rank 06**] | coming soon | Rank 06 |
