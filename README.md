@@ -1,5 +1,5 @@
 # My journey in School 42
-[![ismherna 42 stats](https://badge.mediaplus.ma/binary/ismherna?1337Badge=off&UM6P=off)](https://github.com/oakoudad/badge42)
+[![ismherna 42 stats](https://badge.mediaplus.ma/Darkblue/ismherna?1337Badge=off&UM6P=off)](https://github.com/oakoudad/badge42)
 
 
 In this repository, 42 projects will be uploaded when they have been delivered, corrected and well studied. This is my academic tour of the 42 Madrid programming school, which will consist of the mandatory part "Common core" and the future specialization branches "Outher core" organized by ranks.
