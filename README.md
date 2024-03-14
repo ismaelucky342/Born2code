@@ -15,7 +15,7 @@ In this repository, 42 projects will be uploaded when they have been delivered, 
 | [**Libft**](https://github.com/ismaelucky342/Libft) | ![125%](https://progress-bar.dev/125) | Rank 00 |
 | [**get_next_line**](https://github.com/ismaelucky342/get_next_line) | ![125%](https://progress-bar.dev/125) | Rank 01 |
 | [**ft_printf**](https://github.com/ismaelucky342/ft_printf) | ![100%](https://progress-bar.dev/100) | Rank 01 |
-| [**Born2beroot**](https://github.com/ismaelucky342/ft_printf) |  | Rank 01 |
+| [**Born2beroot**](https://github.com/ismaelucky342/ft_printf) | ![125%](https://progress-bar.dev/125) | Rank 01 |
 | [**fract-ol**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
 | [**pipex**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
 | [**push_swap**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
