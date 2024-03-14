@@ -16,9 +16,9 @@ In this repository, 42 projects will be uploaded when they have been delivered, 
 | [**get_next_line**](https://github.com/ismaelucky342/get_next_line) | ![125%](https://progress-bar.dev/125) | Rank 01 |
 | [**ft_printf**](https://github.com/ismaelucky342/ft_printf) | ![100%](https://progress-bar.dev/100) | Rank 01 |
 | [**Born2beroot**](https://github.com/ismaelucky342/ft_printf) | ![125%](https://progress-bar.dev/125) | Rank 01 |
-| [**fract-ol**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
-| [**pipex**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
-| [**push_swap**](https://github.com/ismaelucky342/ft_printf) |  | Rank 02 |
+| [**fract-ol**](https://github.com/ismaelucky342/fract-ol) |  | Rank 02 |
+| [**pipex**](https://github.com/ismaelucky342/pipex) |  | Rank 02 |
+| [**push_swap**](https://github.com/ismaelucky342/push_swap) |  | Rank 02 |
 | [**Exam Rank 02**] | coming soon | Rank 02 |
 | [**Philosophers**] | coming soon | Rank 03 |
 | [**minishell**] | coming soon | Rank 03 |
