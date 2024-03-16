@@ -40,3 +40,10 @@ The common core is the mandatory part of learning in school 42 where the most im
 | [**CPP module 09**] | coming soon | Rank 05 |  
 | [**ft_trascendence**] | coming soon | Rank 06 |
 | [**Exam Rank 06**] | coming soon | Rank 06 |
+
+
+# Extras 
+
+-born2code
+![image](https://github.com/ismaelucky342/ft_printf/assets/153450550/0ab002b6-139e-4b74-b2f9-931ae794fb68)
+
