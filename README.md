@@ -9,7 +9,9 @@ In this repository, 42 projects will be uploaded when they have been delivered, 
   <img src="https://github.com/ismaelucky342/Born2code/assets/153450550/ddbe9c21-b3bf-4733-8af8-2cfe845e8cf3)https://github.com/ismaelucky342/Born2code/assets/153450550/ddbe9c21-b3bf-4733-8af8-2cfe845e8cf3" alt="Descripción de la imagen">
 </p>
 
-The common core is the mandatory part of learning in school 42 where the most important things in programming are explored. After this stage the student can opt for the specialties in the "Outher core" where we find branches such as cybersecurity, AI, devops, systems...
+The common core of school 42 constitutes the elementary learning about programming that every student must acquire, it is organized around 6 rings from the initial project, from rank 0 to rank 6, from the second ring the student must not only face projects but to exams that will allow you to access higher levels.
+After the common core by passing transcendence and the rank 6 exam, the student has access as a "member" to the outer core, which is made up of a series of branches that represent the specialties: cybersecurity, algorithms and data, gaming, devops, etc.
+
 | Projects | Score | Rank |
 |--------|--------|---------------|
 | [**Libft**](https://github.com/ismaelucky342/Libft) | ![125%](https://progress-bar.dev/125) | Rank 00 |
