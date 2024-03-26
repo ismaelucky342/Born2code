@@ -10,7 +10,8 @@ In this repository, 42 projects will be uploaded when they have been delivered, 
 </p>
 
 The common core of school 42 constitutes the elementary learning about programming that every student must acquire, it is organized around 6 rings from the initial project, from rank 0 to rank 6, from the second ring the student must not only face projects but to exams that will allow you to access higher levels.
-After the common core by passing transcendence and the rank 6 exam, the student has access as a "member" to the outer core, which is made up of a series of branches that represent the specialties: cybersecurity, algorithms and data, gaming, devops, etc.
+
+After the common core by passing ft_transcendence project and the Exam Rank 06, the student has access as a "member" to the Outer Core, which is made up of a series of branches that represent the specialties: cybersecurity, algorithms and data, gaming, devops, etc.
 
 | Projects | Score | Rank |
 |--------|--------|---------------|
