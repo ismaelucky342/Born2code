@@ -35,6 +35,11 @@ Then simply run this command (change "xx" with desired buffer size) :
 gcc -Wall -Werror -Wextra -D BUFFER_SIZE=xx get_next_line.c get_next_line_utils.c && ./a.out
 ```
 
-Or you can also use this third party tester to fully test the project
+# Extra 
+This project and ft_printf should be included in our Libft (first project), because they will be essential in Rank 02 and future projects. Mastering these two functions will be a priority in the construction of other projects of much greater complexity.
 
-* [Tripouille/gnlTester](https://github.com/Tripouille/gnlTester)
+
+-born2code
+
+
+![image](https://github.com/ismaelucky342/ft_printf/assets/153450550/0ab002b6-139e-4b74-b2f9-931ae794fb68)

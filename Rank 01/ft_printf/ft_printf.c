@@ -6,7 +6,7 @@
 /*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 09:35:46 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/27 10:48:25 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/03/01 00:30:59 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -30,7 +30,7 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-		size += ft_print_char(str[i]);
+			size += ft_print_char(str[i]);
 		i++;
 	}
 	va_end(argument);
@@ -58,3 +58,27 @@ static int	ft_format(va_list argument, const char word)
 		size += ft_print_char(word);
 	return (size);
 }
+/*#include "ft_printf.h"
+
+
+int main() {
+    char caracter = 'A';
+    char cadena[] = "Hola, mundo!";
+    void *puntero = (void *)0x12345678;
+    int entero = 42;
+    unsigned int sin_signo = 123;
+    int hexadecimal = 0xABCD;
+
+    // Prueba de diferentes formatos de impresión
+    ft_printf("Caracter: %c\n", caracter);
+    ft_printf("Cadena: %s\n", cadena);
+    ft_printf("Puntero: %p\n", puntero);
+    ft_printf("Decimal: %d\n", entero);
+    ft_printf("Entero: %i\n", entero);
+    ft_printf("Sin signo: %u\n", sin_signo);
+    ft_printf("Hexadecimal (minúsculas): %x\n", hexadecimal);
+    ft_printf("Hexadecimal (mayúsculas): %X\n", hexadecimal);
+    ft_printf("Símbolo del porcentaje: %%\n");
+
+    return 0;
+}*/
