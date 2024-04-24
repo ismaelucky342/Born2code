@@ -10,7 +10,8 @@ Several natural phenomena such as Romanesco have some of the characteristics of 
 This project consists of multiple fractals:
 - Mandelbrot
 - Julia
-- BurningShip.
+- BurningShip
+- Mandelbox
 
 We must increase and decrease the maximum iteration for the calculation of the shape, as well as Enlarge and reduce the zoom, we also have multiple color patterns.
 
@@ -18,9 +19,10 @@ We must increase and decrease the maximum iteration for the calculation of the s
 
 ```
 $> make
-$> ./fractol mandelbrot
-$> ./fractol julia
-$> ./fractol burningship
+$> ./fractol Mandelbrot
+$> ./fractol Julia
+$> ./fractol Burningship
+$> ./fractol Mandelbox
 ```
 ## Pictures
 ### Mandelbrot
@@ -32,9 +34,9 @@ $> ./fractol burningship
 ### Julia
 ![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/0b21966e-207d-47d7-bb99-6bb1c8bad2fe)
 
-### Sierpiński triangle
+### Mandelbox
+![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/01d7bd1d-3fc8-4be1-b97b-27bc5ec4fee0)
 
-![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/784ed14e-b92a-4910-a6c1-7d16edb5a625)
 
 # Extras 
 This new project will be an opportunity to get familiar with miniLibX (complex function library provided by school 42).
@@ -42,4 +44,4 @@ In addition, it will be essential for us to know and apply the mathematical noti
 to the concept of CGI optimization and event management.
 
 -Born2code
-![image](https://github.com/ismaelucky342/ft_printf/assets/153450550/0ab002b6-139e-4b74-b2f9-931ae794fb68)
+![42madrid](https://github.com/ismaelucky342/Born2code/assets/153450550/3a377f34-9156-4eff-b04b-71c4b128523e)

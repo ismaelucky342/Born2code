@@ -5,89 +5,91 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/22 15:48:04 by ismherna          #+#    #+#              #
-#    Updated: 2024/03/22 12:40:17 by ismherna         ###   ########.fr        #
+#    Created: 2024/04/24 13:02:25 by ismherna          #+#    #+#              #
+#    Updated: 2024/04/24 14:06:16 by ismherna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fractol
+NAME	= fractol
 
-SRC_DIR = src
+CC		= gcc
+CFLAGS	= -Werror -Wextra -Wall
 
-SRCS = $(SRC_DIR)/main.c\
-       $(SRC_DIR)/colors.c\
-       $(SRC_DIR)/defaults.c\
-       $(SRC_DIR)/keys.c\
-       $(SRC_DIR)/presets.c\
-       $(SRC_DIR)/palette.c\
-       $(SRC_DIR)/mlx.c\
-       $(SRC_DIR)/hooks.c\
-       $(SRC_DIR)/mandelbrot.c\
-       $(SRC_DIR)/julia.c\
-       $(SRC_DIR)/parse.c\
-	   
-OBJS = $(SRCS:.c=.o)
+MLX_PATH	= mlx/
+MLX_NAME	= libmlx.a
+MLX			= $(MLX_PATH)$(MLX_NAME)
 
-LIBFT = libft
-LIBFT_LIB = $(LIBFT)/libft.a
+LIBFT_PATH	= libft/
+LIBFT_NAME	= libft.a
+LIBFT		= $(LIBFT_PATH)$(LIBFT_NAME)
 
-MLX = mlx
-MLX_LIB = $(MLX)/libmlx.a
+INC			=	-I ./includes/\
+				-I ./libft/\
+				-I ./mlx/
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Imlx
-MINILIBX = -Imlx -lmlx -framework OpenGL -framework AppKit
+SRC_PATH	=	src/
+SRC			=	fractol.c \
+				initialization.c \
+				utils.c \
+				key_events.c \
+				render.c \
+				colors.c \
+				parse_args.c \
+				help_msg.c \
+				fractal_sets/mandelbrot.c \
+				fractal_sets/julia.c \
+				fractal_sets/burning_ship.c \
+				fractal_sets/tricorn.c \
+				fractal_sets/mandelbox.c \
+				color_schemes/color_interpolated.c \
+				color_schemes/color_special.c \
+				color_schemes/color_striped.c
+SRCS		= $(addprefix $(SRC_PATH), $(SRC))
 
-LDFLAGS = -fsanitize=address
+# Objects
+OBJ_PATH	= obj/
+OBJ			= $(SRC:.c=.o)
+OBJS		= $(addprefix $(OBJ_PATH), $(OBJ))
 
-all: $(NAME)
+all: $(MLX) $(LIBFT) $(NAME)
 
-$(NAME): $(LIBFT_LIB) $(MLX_LIB) $(OBJS)
-	@$(CC) $(CFLAGS) $(OBJS) -L$(LIBFT) -L$(MLX) -lft $(MINILIBX) -o $(NAME) >/dev/null 2>&1
- 
- 
- █
-	@echo "	       "
-	@echo "	"
-	@echo "	"
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo "			\033[0;36mCompilation of $(NAME) completed!\033[0m"
+$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+	@$(CC) $(CFLAGS) -c $< -o $@ $(INC)
+
+$(OBJS): $(OBJ_PATH)
+
+$(OBJ_PATH):
+	@mkdir $(OBJ_PATH)
+	@mkdir $(OBJ_PATH)fractal_sets/
+	@mkdir $(OBJ_PATH)color_schemes/
+
+$(MLX):
+	@echo "Making MiniLibX..."
+	@make -sC $(MLX_PATH) 2>/dev/null
 
 
+$(LIBFT):
+	@echo "Making libft..."
+	@make -sC $(LIBFT_PATH)
 
-▒░▒ 
- █
-$(LIBFT_LIB):
-	@echo "Compiling Libft..."
-	@make -C $(LIBFT) >/dev/null 2>&1
-	@echo "\033[0;32mdone\033[0m"
+$(NAME): $(OBJS)
+	@echo "Compiling fractol..."
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(MLX) $(LIBFT) $(INC) -lXext -lX11 -lm
+	@echo "Fractol ready."
 
-$(MLX_LIB):
-	@echo "Compiling minilibx..."
-	@make -C $(MLX) >/dev/null 2>&1
-	@echo "\033[0;32mdone\033[0m"
-
-.c.o:
-	@ $(CC) $(CFLAGS) -c $< -o $@
+bonus: all
 
 clean:
-	make -C $(LIBFT) clean
-	make -C $(MLX) clean
-	rm -f $(OBJS)
+	@echo "Removing .o object files..."
+	@rm -rf $(OBJ_PATH)
+	@make clean -C $(MLX_PATH)
+	@make clean -C $(LIBFT_PATH)
 
 fclean: clean
-	make -C $(LIBFT) fclean
-	rm -f $(NAME)
+	@echo "Removing fractol..."
+	@rm -f $(NAME)
+	@rm -f $(LIBFT_PATH)$(LIBFT_NAME)
 
 re: fclean all
 
-asan: CC += $(LDFLAGS)
-asan: CFLAGS += -g3
-asan: re
-
-.PHONY: all clean fclean re asan
+.PHONY: all re clean fclean
