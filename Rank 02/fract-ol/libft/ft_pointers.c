@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pointers.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 09:35:46 by ismherna          #+#    #+#             */
-/*   Updated: 2024/02/27 10:48:25 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/04/30 23:59:05 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft_printf.h"
+
+#include "libft.h"
 
 static int	ft_length_ptr(unsigned long long ptr);
 

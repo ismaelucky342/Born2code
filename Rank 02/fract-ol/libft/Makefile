@@ -11,13 +11,12 @@
 # **************************************************************************** #
 
 NAME	=	libft.a
-INCLUDE	= 	pintf.h \
-			libft.h \
-			get_next_line_bonus.h \
-			get_next_line.h \
+INCLUDE	= 	libft.h \
 
 
 SRC		=	ft_printf.c			\
+			ft_ishexdigit.c     \
+			ft_isspace.c 		\
 			ft_string.c			\
 			ft_unsigned.c		\
 			ft_number.c			\
@@ -67,10 +66,6 @@ SRC		=	ft_printf.c			\
 			ft_lstclear_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c  \
-			get_next_line.c \
-			get_next_line_utils.c \
-			get_next_line_bonus.c \
-			get_next_line_utils_bonus.c \
 
 
 
@@ -95,9 +90,6 @@ MAGENTA     =   \033[0;95m
 CYAN        =   \033[0;96m
 WHITE       =   \033[0;97m
 
-all: $(NAME)
-	norminette 
-	
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 

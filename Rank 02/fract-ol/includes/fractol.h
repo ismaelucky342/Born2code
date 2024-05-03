@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   fractol.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mcombeau <mcombeau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:23:44 by mcombeau          #+#    #+#             */
-/*   Updated: 2022/04/21 21:50:56 by mcombeau         ###   ########.fr       */
+/*   Updated: 2024/05/01 10:36:49 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRACTOL_H
 # define FRACTOL_H
 
-# include "mlx.h"
+# include "../mlx/mlx.h"
 # include "libft.h"
 # include "keys.h"
 # include <stdio.h>
@@ -76,7 +76,7 @@ void	set_color_graphic(t_fractol *f, int color);
 int		get_percent_color(int color, double percent);
 
 /*  Events   */
-int		key_event(int keycode, t_fractol *mlx);
+int		keys(int keycode, t_fractol *mlx);
 int		mouse_event(int keycode, int x, int y, t_fractol *mlx);
 
 /* Initialization */

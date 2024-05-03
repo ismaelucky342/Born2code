@@ -6,7 +6,7 @@
 #    By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 13:02:25 by ismherna          #+#    #+#              #
-#    Updated: 2024/04/24 14:06:16 by ismherna         ###   ########.fr        #
+#    Updated: 2024/05/01 10:52:01 by ismherna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,19 +31,18 @@ SRC_PATH	=	src/
 SRC			=	fractol.c \
 				initialization.c \
 				utils.c \
-				key_events.c \
+				keys.c \
 				render.c \
 				colors.c \
-				parse_args.c \
+				parse.c \
 				help_msg.c \
-				fractal_sets/mandelbrot.c \
-				fractal_sets/julia.c \
-				fractal_sets/burning_ship.c \
-				fractal_sets/tricorn.c \
-				fractal_sets/mandelbox.c \
-				color_schemes/color_interpolated.c \
-				color_schemes/color_special.c \
-				color_schemes/color_striped.c
+				mandelbrot.c \
+				julia.c \
+				burning_ship.c \
+				mandelbox.c \
+				color_interpolated.c \
+				color_special.c \
+				color_striped.c
 SRCS		= $(addprefix $(SRC_PATH), $(SRC))
 
 # Objects
@@ -65,7 +64,7 @@ $(OBJ_PATH):
 
 $(MLX):
 	@echo "Making MiniLibX..."
-	@make -sC $(MLX_PATH) 2>/dev/null
+	@make -C $(MLX_PATH)
 
 
 $(LIBFT):
@@ -79,6 +78,8 @@ $(NAME): $(OBJS)
 
 bonus: all
 
+
+#remove objects and exeutable file 
 clean:
 	@echo "Removing .o object files..."
 	@rm -rf $(OBJ_PATH)

@@ -6,7 +6,7 @@
 /*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:57:52 by ismherna          #+#    #+#             */
-/*   Updated: 2024/04/24 16:53:43 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/04/30 23:56:48 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,21 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
+//new functions
+int		ft_ishexdigit(int c);
+int		ft_isspace(int c);
+
+//printf
+int		ft_print_char(int character);
+int		ft_printf(const char *str, ...);
+int		ft_print_str(char *str);
+int		ft_print_number(int n);
+int		ft_print_unsigned(unsigned int n);
+int		ft_print_hex(unsigned int num, const char word);
+int		ft_print_pointer(unsigned long long ptr);
+//libft
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

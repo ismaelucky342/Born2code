@@ -46,5 +46,4 @@ to the concept of CGI optimization and event management.
 -Born2code
 
 
-
 ![42madrid](https://github.com/ismaelucky342/Born2code/assets/153450550/3a377f34-9156-4eff-b04b-71c4b128523e)
