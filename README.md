@@ -2,7 +2,7 @@
 [![ismherna 42 stats](https://badge.mediaplus.ma/Darkblue/ismherna?1337Badge=off&UM6P=off)](https://github.com/oakoudad/badge42)
 
 
-In this repository, 42 projects will be uploaded when they have been delivered, corrected and well studied. This is my academic tour of the 42 Madrid programming school, which will consist of the mandatory part "Common core" and the future specialization branches "Outher core" organized by ranks.
+In this repository, 42 projects will be uploaded once they have been completed, revised, and thoroughly examined. This repository reflects my academic journey at the 42 Madrid programming school, encompassing both the obligatory "Common Core" segment and the forthcoming specialized tracks known as "Outer Core," organized according to ranks.
 
 # Common core
 <p align="center">
