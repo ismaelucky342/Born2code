@@ -9,9 +9,10 @@ In this repository, 42 projects will be uploaded once they have been completed, 
   <img src="https://github.com/ismaelucky342/Born2code/assets/153450550/ddbe9c21-b3bf-4733-8af8-2cfe845e8cf3)https://github.com/ismaelucky342/Born2code/assets/153450550/ddbe9c21-b3bf-4733-8af8-2cfe845e8cf3" alt="Descripción de la imagen">
 </p>
 
-The common core of school 42 constitutes the elementary learning about programming that every student must acquire, it is organized around 6 rings from the initial project, from rank 0 to rank 6, from the second ring the student must not only face projects but to exams that will allow you to access higher levels.
+The Common Core of School 42 comprises essential programming knowledge that every student must grasp. It is structured across six tiers, starting from the initial project, progressing from Rank 0 to Rank 6. Beyond the second tier, students are tasked not only with projects but also with examinations, enabling them to ascend to higher levels.
 
-After the common core by passing ft_transcendence project and the Exam Rank 06, the student has access as a "member" to the Outer Core, which is made up of a series of branches that represent the specialties: cybersecurity, algorithms and data, gaming, devops, etc.
+Upon completing the common core, marked by the ft_transcendence project and Exam Rank 06, students gain entry as "members" into the Outer Core. This segment encompasses various branches representing specialties such as cybersecurity, algorithms and data, gaming, devops, and more.
+
 
 | Projects | Score | Rank |
 |--------|--------|---------------|
