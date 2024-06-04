@@ -1,5 +1,5 @@
 # Fract-ol
-![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/59d0be7b-193b-4d10-b637-2ec0b085e3ae)
+![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/f89dfe8c-ea6d-4c11-a95e-308c67beda7f)
 
 The term fractal was first used by the mathematician Benoit Mandelbrot.
 in 1974, was based on the Latin word fractus, which means “broken” or “fractured.”
@@ -27,15 +27,20 @@ $> ./fractol Mandelbox
 ## Pictures
 ### Mandelbrot
 
-![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/868b9d19-cc03-484e-8f78-8a37f27668af)
+![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/5a15e18c-3d48-41e4-b269-f26d7179e6bd)
+
 ### BurningShip
-![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/d012a914-708e-4e92-9578-2563a0dbda2a)
+![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/e200b639-6a33-4c9a-9f54-aa3f719c91c1)
 
 ### Julia
-![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/0b21966e-207d-47d7-bb99-6bb1c8bad2fe)
+
+![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/7bc0f2af-ffcd-482a-9985-56a9504e6f30)
 
 ### Mandelbox
-![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/01d7bd1d-3fc8-4be1-b97b-27bc5ec4fee0)
+
+
+![image](https://github.com/ismaelucky342/fract-ol/assets/153450550/03598f0d-be9c-4b75-b445-cf4c14e6e797)
+
 
 
 # Extras 
