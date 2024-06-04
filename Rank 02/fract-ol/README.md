@@ -8,21 +8,41 @@ Several natural phenomena such as Romanesco have some of the characteristics of 
 
 ## Features
 This project consists of multiple fractals:
-- Mandelbrot
-- Julia
-- BurningShip
-- Mandelbox
+- Mandelbrot (M)
+- Julia (J)
+- BurningShip (B)
+- Mandelbox (X)
 
 We must increase and decrease the maximum iteration for the calculation of the shape, as well as Enlarge and reduce the zoom, we also have multiple color patterns.
 
 ## how to use fract-ol?
-
 ```
 $> make
-$> ./fractol Mandelbrot
-$> ./fractol Julia
-$> ./fractol Burningship
-$> ./fractol Mandelbox
+$> ./fractol M
+$> ./fractol J
+$> ./fractol B
+$> ./fractol X
+```
+
+### The Julia Set can also receive values as input: 
+```
+$> ./fractol J <number> <i_number>
+```
+
+### For all the previous fractals, we can also add a list of predefined colors:
+```
+$> ./fractol M <color>
+$> ./fractol J <color>
+$> ./fractol J <number> <i_number> <color>
+$> ./fractol B <color>
+$> ./fractol X <color>
+
+Colors List:
+- 
+-
+-
+-
+- 
 ```
 ## Pictures
 ### Mandelbrot

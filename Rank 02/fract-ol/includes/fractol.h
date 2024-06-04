@@ -6,7 +6,7 @@
 /*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 16:23:44 by mcombeau          #+#    #+#             */
-/*   Updated: 2024/05/01 10:36:49 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/05/02 00:00:32 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,4 @@ int		end_fractol(t_fractol *mlx);
 void	clean_exit(int error_code, t_fractol *f);
 int		msg(char *str1, char *str2, int errno);
 void	help_msg(t_fractol *f);
-void	print_controls(void);
-
 #endif
