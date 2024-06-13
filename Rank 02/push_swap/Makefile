@@ -6,12 +6,12 @@
 #    By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/20 07:34:35 by ismherna          #+#    #+#              #
-#    Updated: 2024/05/24 12:37:06 by ismherna         ###   ########.fr        #
+#    Updated: 2024/06/10 01:12:25 by ismherna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC      = gcc
-CFLAGS  = -Werror -Wextra -Wall
+CFLAGS  = -Werror -Wextra -Wall -g
 
 LIBFT_PATH  = libft/
 LIBFT_NAME  = libft.a
@@ -62,7 +62,7 @@ $(NAME): $(OBJS) $(LIBFT)
 	@echo "██████  █████   ██        ██  ██    ██  ██████   ██    ██   ██     █ ██  ██       ██      "
 	@echo "▒ ▒▓▒ ▒ ░░ ▒░▓  ░░░ ▒░ ░ ░▒   ▒  ▒▒   ▓▒█░░ ▒▓ ░▒▓░░▓  ▒ ▒▓▒ ▒ ░▓░░▓  ▒ ▒▓▒ ▒ ░▓░░▓  ▒ ▒▓▒"
 	@echo " ░░ ▒░▓  ░░░ ▒░ ░ ░▒   ▒  ▒▒    ░░ ▒░▓  ░░░ ▒░ ░ ░▒   ▒  ▒▒    ░░ ▒░▓  ░░░ ▒░ ░ ░▒   ▒  ▒▒"
-	@echo "                        2024/04/24 - ismherna@student.42.fr - 42 Madrid - Ismael Hernández"
+	@echo "                        2024/05/25 - ismherna@student.42.fr - 42 Madrid - Ismael Hernández"
 
 clean:
 	@echo "Removing .o object files..."

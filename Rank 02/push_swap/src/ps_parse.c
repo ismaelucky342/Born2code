@@ -6,7 +6,7 @@
 /*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 07:34:35 by ismherna          #+#    #+#             */
-/*   Updated: 2024/05/24 12:37:43 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/05/29 10:39:25 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	check_range(char **s_numbers, int *numbers)
 	}
 }
 
-int	*arg_parse(int argc, char **argv, int count)
+int	*parse(int argc, char **argv, int count)
 {
 	char	**s_numbers;
 	int		*numbers;

@@ -6,7 +6,7 @@
 /*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 07:34:35 by ismherna          #+#    #+#             */
-/*   Updated: 2024/05/24 12:43:11 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/05/29 10:53:57 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void	s_insertion_sort(t_stack *stack_a, t_stack *stack_b, int length)
 		push(stack_a, stack_b, 'a', TRUE);
 }
 
+//Ksort algorithm
 void	k_sort1(t_stack *stack_a, t_stack *stack_b, int length)
 {
 	int	i;

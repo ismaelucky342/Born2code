@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/05 05:57:33 by asioud            #+#    #+#             */
-/*   Updated: 2024/05/24 12:45:25 by ismherna         ###   ########.fr       */
+/*   Created: 2024/05/05 05:57:33 by ismherna          #+#    #+#             */
+/*   Updated: 2024/05/31 16:14:40 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 # define PUSH_SWAP_H
 
 # include <limits.h>
-
 # include "../libft/libft.h"
 
+//colors 
 # define RED "\e[0;31m"
 # define YEL "\e[0;33m"
 
+//push swap structures
 typedef struct s_node
 {
 	int				data;
@@ -33,7 +34,8 @@ typedef struct s_stack
 	int				size;
 }					t_stack;
 
-int			*arg_parse(int argc, char **argv, int length);
+//push swap functions 
+int			*parse(int argc, char **argv, int length);
 int			check_digits(int argc, char **argv);
 void		check_range(char **s_numbers, int *numbers);
 int			is_sorted(t_stack *stack);
@@ -52,8 +54,8 @@ void		s_insertion_sort(t_stack *stack_a, t_stack *stack_b, int i);
 void		k_sort1(t_stack *stack_a, t_stack *stack_b, int length);
 void		k_sort2(t_stack *stack_a, t_stack *stack_b, int length);
 void		simple_sort(t_stack *stack, int length);
-void		init_stack(t_stack *stack_a, t_stack *stack_b, int *nb, int c);
+void		init(t_stack *stack_a, t_stack *stack_b, int *nb, int c);
 void		push_stack(t_stack *stack, int index, int data);
 int			pop_stack(t_stack *stack);
 
-#endif // PUSH_SWAP_H
+#endif 
