@@ -24,7 +24,7 @@ Upon completing the common core, marked by the ft_transcendence project and Exam
 | [**minitalk**](https://github.com/ismaelucky342/minitalk/tree/main) |  | Rank 02 |
 | [**push_swap**](https://github.com/ismaelucky342/push_swap) | ![100%](https://progress-bar.dev/100) | Rank 02 |
 | [**Exam Rank 02**] | coming soon | Rank 02 |
-| [**minishell**](https://github.com/ismaelucky342/MiniShell) | coming soon | Rank 03 |
+| [**minishell**](https://github.com/ismaelucky342/MiniShell) |  | Rank 03 |
 | [**Philosophers**] | coming soon | Rank 03 |
 | [**Exam Rank 03**] | coming soon | Rank 03 |
 | [**NetPractice**] | coming soon | Rank 04 |
