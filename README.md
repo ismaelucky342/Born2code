@@ -23,7 +23,7 @@ Upon completing the common core, marked by the ft_transcendence project and Exam
 | [**fract-ol**](https://github.com/ismaelucky342/fract-ol) |  ![125%](https://progress-bar.dev/125) | Rank 02 |
 | [**minitalk**](https://github.com/ismaelucky342/minitalk/tree/main) | ![125%](https://progress-bar.dev/125)  | Rank 02 |
 | [**push_swap**](https://github.com/ismaelucky342/push_swap) | ![100%](https://progress-bar.dev/100) | Rank 02 |
-| [**Exam Rank 02**] | coming soon | Rank 02 |
+| [**Exam Rank 02**] |   | Rank 02 |
 | [**minishell**](https://github.com/ismaelucky342/MiniShell) |  | Rank 03 |
 | [**Philosophers**] | coming soon | Rank 03 |
 | [**Exam Rank 03**] | coming soon | Rank 03 |
