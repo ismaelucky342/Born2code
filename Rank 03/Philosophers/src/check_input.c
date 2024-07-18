@@ -1,44 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/18 09:18:38 by ismherna          #+#    #+#             */
-/*   Updated: 2024/07/18 09:29:31 by ismherna         ###   ########.fr       */
+/*   Created: 2024/07/18 09:17:57 by ismherna          #+#    #+#             */
+/*   Updated: 2024/07/18 09:40:10 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_lib.h"
 
-int	ft_isspace(char c)
+int	check_input(int ac, char *av[])
 {
-	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f'
-		|| c == '\r');
+	int	i;
+	int	val;
+
+	i = 1;
+	if (ac == 5 || ac == 6)
+	{
+		while (i < ac)
+		{
+			if (!ft_is_number(av[i]))
+				return (0);
+			val = ft_atoi(av[i]);
+			if (val <= 0 || val > INT_MAX || (i == 1
+					&& val > MAX_NUM_PHILOSOPHERS) || ((i == 2 || i == 3
+						|| i == 4) && val < 60))
+				return (0);
+			++i;
+		}
+	}
+	else
+		return (0);
+	return (1);
 }
 
-int	ft_atoi(char *s)
+void	input_error(void)
 {
-	size_t	i;
-	int		v;
-	int		sy;
-
-	i = 0;
-	v = 0;
-	sy = 1;
-	while (ft_isspace(s[i]))
-		i++;
-	if (s[i] == '-' || s[i] == '+')
-	{
-		if (s[i] == '-')
-			sy = -1;
-		i++;
-	}
-	while (s[i] >= '0' && s[i] <= '9')
-	{
-		v = (v * 10) + (s[i] - '0');
-		i++;
-	}
-	return (sy * v);
+	printf("Fatal error on input.\n");
 }

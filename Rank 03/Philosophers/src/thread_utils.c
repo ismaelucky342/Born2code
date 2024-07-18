@@ -1,41 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   thread_utils.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/18 09:16:15 by ismherna          #+#    #+#             */
+/*   Updated: 2024/07/18 09:34:35 by ismherna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo_lib.h"
 
-void *alive_philosopher_check(void *p)
+void	*philosopher_thread(void *arg)
 {
-    t_philosopher *philo = (t_philosopher *)p;
+	pthread_t		thread;
+	t_philosopher	*ph;
+	long long		i;
 
-    while (1)
-    {
-        pthread_mutex_lock(&philo->pause_mutex);
-        if (philo->remaining_time < get_current_time())
-        {
-            display_message(philo->sim, philo, DIED);
-            pthread_mutex_lock(&philo->sim->output_mutex);
-            pthread_mutex_unlock(&philo->sim->death_mutex);
-            return NULL;
-        }
-        pthread_mutex_unlock(&philo->pause_mutex);
-        usleep(1000);
-    }
-}
-
-void *philosopher_thread(void *arg)
-{
-    t_philosopher *philo = (t_philosopher *)arg;
-    pthread_t thread;
-    long long i = -1;
-
-    if (philo->philosopher_id % 2 == 0)
-        custom_usleep(philo->sim->eating_duration / 10);
-
-    philo->time_of_last_meal = get_current_time();
-    philo->remaining_time = philo->time_of_last_meal + philo->sim->death_time_threshold;
-
-    if (pthread_create(&thread, NULL, alive_checker, philo) != 0) return (void *)1;
-
-    while (philo->sim->required_meals == -1 || ++i < philo->sim->required_meals)
-    {
-        perform_actions(philo->sim, philo);
-    }
-    return NULL;
+	ph = arg;
+	i = -1;
+	if (ph->thread_id % 2 == 0)
+		ft_usleep(ph->pointer_program->eating_duration / 10);
+	ph->last_meal = get_current_time();
+	ph->time_remaining = ph->last_meal
+		+ ph->pointer_program->death_time_threshold;
+	if (pthread_create(&thread, NULL, alive_checker, ph) != 0)
+		return ((void *)1);
+	while (ph->pointer_program->required_meals == -1
+		|| ++i < ph->pointer_program->required_meals)
+	{
+		perform_actions(ph->pointer_program, ph);
+	}
+	return (NULL);
 }

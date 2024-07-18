@@ -1,20 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_exit.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/18 09:18:28 by ismherna          #+#    #+#             */
+/*   Updated: 2024/07/18 09:39:06 by ismherna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "philo_lib.h"
 
-void	exit_clean(t_simulation *p, int c)
+void	ft_exit(t_simulation *p, int c)
 {
 	size_t	i;
 
-	i = 0;
 	if (c)
-		return (exit(1));
+		exit(1);
 	while (i < p->number_of_philosophers)
 	{
-		pthread_mutex_lock(&p->philos[i].pause);
-		pthread_mutex_lock(&p->forks[i]);
-		p->philos[i].pr = NULL;
-		++i;
+		pthread_mutex_lock(&p->philosophers[i].pause);
+		pthread_mutex_lock(&p->fork_mutexes[i]);
+		p->philosophers[i].pointer_program = NULL;
+		i++;
 	}
-	pthread_mutex_lock(&p->write_lock);
+	pthread_mutex_lock(&p->output_mutex);
 	return (exit(1));
 }
-

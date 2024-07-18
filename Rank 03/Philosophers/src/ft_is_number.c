@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_usleep.c                                        :+:      :+:    :+:   */
+/*   ft_is_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/18 09:18:17 by ismherna          #+#    #+#             */
-/*   Updated: 2024/07/18 09:31:27 by ismherna         ###   ########.fr       */
+/*   Created: 2024/07/18 09:36:42 by ismherna          #+#    #+#             */
+/*   Updated: 2024/07/18 09:37:46 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_lib.h"
 
-void	ft_usleep(int milliseconds)
+int	ft_is_number(const char *str)
 {
-	long int	t;
-
-	t = get_current_time();
-	while (get_current_time() - t < milliseconds)
-		usleep(milliseconds / 10);
+	if (!str || *str == '\0')
+		return (0);
+	if (*str == '-' || *str == '+')
+		str++;
+	while (*str)
+	{
+		if (*str < '0' || *str > '9')
+			return (0);
+		str++;
+	}
+	return (1);
 }
