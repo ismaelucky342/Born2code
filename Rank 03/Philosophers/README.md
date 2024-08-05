@@ -1,5 +1,4 @@
 # Philosophers
-# Philosophers
 
 ![image](https://github.com/user-attachments/assets/e9cec3d6-5d9f-4ad7-984a-ceb9316b178b)
 
