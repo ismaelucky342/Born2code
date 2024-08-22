@@ -16,13 +16,13 @@ Upon completing the common core, marked by the ft_transcendence project and Exam
 
 | Projects | Score | Rank |
 |--------|--------|---------------|
-| [**Libft**](https://github.com/ismaelucky342/Libft) | ![125%](https://progress-bar.dev/125) | Rank 00 |
-| [**get_next_line**](https://github.com/ismaelucky342/get_next_line) | ![125%](https://progress-bar.dev/125) | Rank 01 |
-| [**ft_printf**](https://github.com/ismaelucky342/ft_printf) | ![100%](https://progress-bar.dev/100) | Rank 01 |
-| [**Born2beroot**](https://github.com/ismaelucky342/ft_printf) | ![125%](https://progress-bar.dev/125) | Rank 01 |
-| [**fract-ol**](https://github.com/ismaelucky342/fract-ol) |  ![125%](https://progress-bar.dev/125) | Rank 02 |
-| [**minitalk**](https://github.com/ismaelucky342/minitalk/tree/main) | ![125%](https://progress-bar.dev/125)  | Rank 02 |
-| [**push_swap**](https://github.com/ismaelucky342/push_swap) | ![100%](https://progress-bar.dev/100) | Rank 02 |
+| [**Libft**](https://github.com/ismaelucky342/Libft) | 125 | Rank 00 |
+| [**get_next_line**](https://github.com/ismaelucky342/get_next_line) |125 | Rank 01 |
+| [**ft_printf**](https://github.com/ismaelucky342/ft_printf) | 100 | Rank 01 |
+| [**Born2beroot**](https://github.com/ismaelucky342/ft_printf) | 125 | Rank 01 |
+| [**fract-ol**](https://github.com/ismaelucky342/fract-ol) | 125 | Rank 02 |
+| [**minitalk**](https://github.com/ismaelucky342/minitalk/tree/main) | 125 | Rank 02 |
+| [**push_swap**](https://github.com/ismaelucky342/push_swap) | 100 | Rank 02 |
 | [**Exam Rank 02**](https://github.com/ismaelucky342/Exam_Rank_02) |   | Rank 02 |
 | [**minishell**](https://github.com/ismaelucky342/MiniShell) |  | Rank 03 |
 | [**Philosophers**](https://github.com/ismaelucky342/Born2code/tree/main/Rank%2003/Philosophers) |  | Rank 03 |
