@@ -11,7 +11,7 @@ In this repository, 42 projects will be uploaded once they have been completed, 
 
 The Common Core of School 42 comprises essential programming knowledge that every student must grasp. It is structured across six tiers, starting from the initial project, progressing from Rank 0 to Rank 6. Beyond the second tier, students are tasked not only with projects but also with examinations, enabling them to ascend to higher levels.
 
-Upon completing the common core, marked by the ft_transcendence project and Exam Rank 06, students gain entry as "members" into the Outer Core. This segment encompasses various branches representing specialties such as cybersecurity, algorithms and data, gaming, devops, and more.
+Upon completing the common core, marked by the ft_transcendence project and Exam Rank 06, students gain entry as "members" into the Outer Core. This segment encompasses various branches representing specialties such as cybersecurity, algorithms and data, gaming, devops, and more. 
 
 
 | Projects | Score | Rank |
