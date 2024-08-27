@@ -28,7 +28,7 @@ Upon completing the common core, marked by the ft_transcendence project and Exam
 | [**Philosophers**](https://github.com/ismaelucky342/Born2code/tree/main/Rank%2003/Philosophers) |  | Rank 03 |
 | [**Exam Rank 03**] | coming soon | Rank 03 |
 | [**NetPractice**] | coming soon | Rank 04 |
-| [**miniRT**] | coming soon | Rank 04 |
+| [**Cube3D**] | coming soon | Rank 04 |
 | [**CPP module 00**] | coming soon | Rank 04 |
 | [**CPP module 01**] | coming soon | Rank 04 |
 | [**CPP module 02**] | coming soon | Rank 04 |
