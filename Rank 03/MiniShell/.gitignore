@@ -1,0 +1,6 @@
+*.o
+*.a
+.DS_*
+.vscode
+minishell
+objects
