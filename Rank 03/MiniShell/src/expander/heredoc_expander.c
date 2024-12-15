@@ -3,84 +3,57 @@
 /*                                                        :::      ::::::::   */
 /*   heredoc_expander.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dgomez-l <dgomez-l@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 16:19:00 by ismherna          #+#    #+#             */
-/*   Updated: 2024/10/27 17:28:07 by ismherna         ###   ########.fr       */
+/*   Created: 2024/10/25 00:34:15 by ismherna          #+#    #+#             */
+/*   Updated: 2024/12/07 22:30:49 by dgomez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
-static char	*generate_tmp_filename(int index)
-{
-	char	*tmp;
-	char	*name;
 
-	tmp = ft_itoa(index);
-	if (!tmp)
-		return (NULL);
-	name = ft_strjoin(H_DOC_TMP_BASE, tmp);
-	free(tmp);
-	return (name);
-}
-
-char	*get_tmp_filename(void)
-{
-	char	*name;
-	int		i;
-
-	i = 1;
-	while (i <= 1000)
-	{
-		name = generate_tmp_filename(i);
-		if (!name)
-			return (NULL);
-		if (access(name, F_OK) != 0)
-			return (name);
-		free(name);
-		i++;
-	}
-	return (NULL);
-}
-
-static void	handle_heredoc_error(t_redirection_token *tok)
-{
-	perror(tok->name);
-	free(tok->name);
-	exit(1);
-}
-
-static int	open_and_write_heredoc(int o_fd, t_redirection_token *tok,
-		char **envp)
+/**
+ * ft_expand_str_heredoc
+	- Expands a heredoc string and writes it to a temporary file.
+ * @o_fd: The fd to read the original heredoc from.
+ * @tok: A pointer to a t_rtoken structure containing the heredoc metadata.
+ * @envp: The env variables used for expanding the heredoc string.
+ *
+ * This function reads lines from the original heredoc fd, expands
+ * any env variables within those lines, and writes the expanded lines
+ * to a new temporary file. The temporary file's name is stored in the
+		tok structure.
+ * If any errors occur during this process,
+	appropriate error messages are printed
+ * and the function exits with a failure status.
+ *
+ * Return: The fd of the new temporary file containing the
+		expanded heredoc,
+ *         or -1 if an error occurs.
+ */
+int	ft_expand_str_heredoc(int o_fd, t_rtoken *tok, char **envp)
 {
 	int		fd;
 	char	*line;
 	char	*exp;
 
-	unlink(tok->name);
-	free(tok->name);
-	tok->name = get_tmp_filename();
-	if (!tok->name)
-	{
-		ft_putendl_fd("No heredoc tmp file available!", STDERR_FILENO);
-		return (exit(1), -1);
-	}
-	fd = open(tok->name, O_RDWR | O_CREAT | O_TRUNC, 0644);
+	unlink(tok->file_name);
+	freedom((void **)&tok->file_name);
+	tok->file_name = tmp_filename();
+	if (!tok->file_name)
+		return (ft_putendl_fd("No heredoc tmp file available!", 2),
+			exit(1), -1);
+	fd = open(tok->file_name, O_RDWR | O_CREAT | O_TRUNC, 0644);
 	if (fd < 0)
-		handle_heredoc_error(tok);
+		return (perror(tok->file_name), freedom((void **)&tok->file_name), exit(1), -1);
 	line = get_next_line(o_fd);
 	while (line)
 	{
-		exp = ft_expand(line, envp, 1);
+		exp = ft_expand_str(line, envp, 1);
 		ft_putstr_fd(exp, fd);
-		free(line);
-		free(exp);
+		freedom((void **)&line);
+		freedom((void **)&exp);
 		line = get_next_line(o_fd);
 	}
 	return (fd);
-}
-
-int	ft_expand_heredoc(int o_fd, t_redirection_token *tok, char **envp)
-{
-	return (open_and_write_heredoc(o_fd, tok, envp));
 }

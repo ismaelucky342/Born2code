@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 12:00:52 by ismherna          #+#    #+#             */
-/*   Updated: 2024/10/28 12:17:49 by ismherna         ###   ########.fr       */
+/*   Created: 2024/08/06 11:20:29 by ismherna          #+#    #+#             */
+/*   Updated: 2024/12/14 14:59:05 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,24 @@
 
 long	ft_atol(const char *str)
 {
-	long	num;
+	long	i;
 	int		sign;
+	long	digits;
 
-	num = 0;
 	sign = 1;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '-' || *str == '+')
-		if (*str++ == '-')
+	digits = 0;
+	i = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
 			sign = -1;
-	while (*str >= '0' && *str <= '9')
-		num = num * 10 + (*str++ - '0');
-	return (num * sign);
+		i++;
+	}
+	while (str[i] == '0')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
+		digits = digits * 10 + (str[i++] - 48);
+	return (digits * sign);
 }

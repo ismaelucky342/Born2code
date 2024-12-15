@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   monitoring_rutines.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:37:15 by ismherna          #+#    #+#             */
-/*   Updated: 2024/11/02 19:46:20 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/11/30 23:26:19 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

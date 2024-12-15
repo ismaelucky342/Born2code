@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dgomez-l <dgomez-l@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 13:18:04 by dgomez-l          #+#    #+#             */
-/*   Updated: 2024/01/24 13:18:05 by dgomez-l         ###   ########.fr       */
+/*   Created: 2024/02/12 10:57:52 by ismherna          #+#    #+#             */
+/*   Updated: 2024/02/12 11:51:58 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,22 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*res;
+	t_list	*ft_ast_new_node;
 
-	res = (t_list *)malloc(sizeof(t_list));
-	if (res == 0)
-		return (0);
-	res->content = content;
-	res->next = NULL;
-	return (res);
+	ft_ast_new_node = (t_list *)malloc(sizeof(t_list));
+	if (!ft_ast_new_node)
+		return (NULL);
+	ft_ast_new_node->content = content;
+	ft_ast_new_node->next = (NULL);
+	return (ft_ast_new_node);
 }
+
+/*//#include<stdio.h>
+int		main(){
+	int content = 42;
+	t_list *nodo = ft_lstnew(&content);
+
+	printf("nuevo nodo %d\n", *((int *)nodo->content));
+	free(nodo);
+	return (OK);
+}*/

@@ -3,28 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   dictionary.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dgomez-l <dgomez-l@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 15:50:33 by ismherna          #+#    #+#             */
-/*   Updated: 2024/11/02 22:40:14 by ismherna         ###   ########.fr       */
+/*   Created: 2024/07/05 12:29:40 by ismherna          #+#    #+#             */
+/*   Updated: 2024/12/05 15:30:07 by dgomez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/minishell.h"
 
 /**
- * @brief Extrae un substring desde una posición específica en una cadena.
+ * @brief Extracts a substring from the input string starting at 
+		the given position.
  *
- * La función busca en la cadena `str` desde el índice `needle_tip` y extrae un 
- * substring que termina en el primer espacio, comillas, o uno de los 
- * caracteres especiales (`|`, `;`, `&`, `$`). También maneja casos 
- * especiales para el signo de dólar (`$`) y el signo de interrogación (`?`).
+ * This function takes a string and a starting position (needle_tip)
+		and returns a 
+ * substring that ends at the first occurrence of a special character
+		or whitespace.
+ * The special characters considered are: space (' '), double quote ('"'),
+		single quote ('\''),
+ * pipe ('|'), semicolon (';'), ampersand ('&'), and dollar sign ('$').
  *
- * @param str Cadena de entrada desde la cual se extraerá el substring.
- * @param needle_tip Posición de inicio para la extracción.
- * @return char* Un nuevo substring extraído. Si se encuentra un caso especial 
- *               o no hay caracteres válidos, se devuelve una cadena vacía o 
- *               un puntero a `"$"` o `"?"`.
+ * @param str The input string from which the substring is extracted.
+ * @param needle_tip The starting position in the input string.
+ * @return A newly allocated string containing the extracted substring.
+ *         If the character at needle_tip is '$', returns "$".
+ *         If the character at needle_tip is '?', returns "?".
+ *         If the character at needle_tip is a whitespace, null terminator,
+	or double quote, returns an empty string.
  */
 char	*dictionary(char *str, int needle_tip)
 {

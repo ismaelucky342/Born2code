@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+         #
+#    By: ismherna <ismherna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/22 21:37:15 by ismherna          #+#    #+#              #
-#    Updated: 2024/10/28 12:01:20 by ismherna         ###   ########.fr        #
+#    Updated: 2024/12/11 17:40:15 by ismherna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ NAME =			philo
 
 CC =			gcc
 
-CFLAGS =		-Wall -Werror -Wextra
+CFLAGS =		-Wall -Werror -Wextra -fsanitize=thread -g
 
 SRC_FILES =		main.c \
 				utils/ft_allocate.c \

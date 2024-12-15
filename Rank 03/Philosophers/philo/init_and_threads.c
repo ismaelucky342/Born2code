@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_and_threads.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 21:37:15 by ismherna          #+#    #+#             */
-/*   Updated: 2024/11/02 21:31:33 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/12/14 14:58:20 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,16 @@ int	init_mutex(t_mutex *mutex, int n)
 
 int	ft_superman(pthread_t *th, t_global_info *data)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	if (data->params.total_philos == 1)
 	{
 		printf("0  \033[32mphilo[1]: \033[1;34mhas taken a fork\033[0m\n");
 		ft_usleep(data->params.time_to_die, data);
-		printf("%d  \033[32mphilo[1]:\033[0m \033[31mhas died\033[0m\n", data->params.time_to_die);
+		printf("%d ", data->params.time_to_die);
+		printf("\033[32mphilo[1]:\033[0m ");
+		printf("\033[31mhas died\033[0m\n");
 		return (1);
 	}
 	while (i < data->params.total_philos)
@@ -71,11 +73,11 @@ int	ft_superman(pthread_t *th, t_global_info *data)
 
 static int	init_dead_and_eat(int **dead, int **eat, t_input arg)
 {
-	*dead = (int *) malloc(sizeof(int));
+	*dead = (int *)malloc(sizeof(int));
 	if (!*dead)
 		return (printf("memory allocation error\n"), 1);
 	**dead = 0;
-	*eat = (int *) malloc(sizeof(int) * arg.total_philos);
+	*eat = (int *)malloc(sizeof(int) * arg.total_philos);
 	if (!*eat)
 		return (printf("memory allocation error\n"), 1);
 	memset(*eat, 0, sizeof(int) * arg.total_philos);
@@ -84,7 +86,7 @@ static int	init_dead_and_eat(int **dead, int **eat, t_input arg)
 
 int	init_g_info(t_global_info *data, t_mutex mutex, t_input arg)
 {
-	int	*dead;	
+	int	*dead;
 	int	*eat;
 	int	i;
 

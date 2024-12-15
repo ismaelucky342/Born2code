@@ -3,67 +3,76 @@
 /*                                                        :::      ::::::::   */
 /*   init_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ismherna <ismherna@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ismherna <ismherna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 11:46:47 by ismherna          #+#    #+#             */
-/*   Updated: 2024/10/28 12:18:59 by ismherna         ###   ########.fr       */
+/*   Created: 2024/08/06 11:17:10 by ismherna          #+#    #+#             */
+/*   Updated: 2024/12/14 14:58:32 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
-static void	init_values(t_data *data, char *argv[])
+static int	ft_init_semaphores(t_data *d)
 {
-	data->philo->id = 0;
-	data->start_time = ft_get_time();
-	data->last_meal = ft_get_time();
-	data->eat_flag = 0;
-	data->philo->times_eaten = 0;
-	data->num_of_philo = ft_atol(argv[1]);
-	data->time_to_die = ft_atol(argv[2]);
-	data->time_to_eat = ft_atol(argv[3]);
-	data->time_to_sleep = ft_atol(argv[4]);
-	if (argv[5])
-		data->num_of_meals = ft_atol(argv[5]);
-	else
-		data->num_of_meals = -1;
-	data->philo->dead_flag = &data->dead_flag;
+	sem_unlink("fork");
+	d->fork = sem_open("fork", O_CREAT | O_EXCL, 0644, d->num_of_philo);
+	sem_unlink("print");
+	d->print = sem_open("print", O_CREAT | O_EXCL, 0644, 1);
+	sem_unlink("mutex");
+	d->mutex = sem_open("mutex", O_CREAT | O_EXCL, 0644, 1);
+	sem_unlink("somebody_dead");
+	d->somebody_dead = sem_open("somebody_dead", O_CREAT | O_EXCL, 0644, 0);
+	if (d->fork == SEM_FAILED || d->print == SEM_FAILED
+		|| d->mutex == SEM_FAILED || d->somebody_dead == SEM_FAILED)
+		return (1);
+	return (0);
 }
 
-static void	initialization_semaphores(t_data *data)
+char	*ft_sem_name(char const *base, char *name, int pos)
 {
-	sem_unlink("/forks");
-	sem_unlink("/print_sem");
-	sem_unlink("/dead_sem");
-	data->forks = sem_open("/forks", O_CREAT, 0644, data->num_of_philo);
-	if (data->forks == SEM_FAILED)
+	int	i;
+
+	i = ft_strcpy(name, base);
+	while (pos > 0)
 	{
-		write(2, "Semaphore error\n", 16);
-		exit(1);
+		name[i++] = (pos % 10) + '0';
+		pos /= 10;
 	}
-	data->print_semaphore = sem_open("/print_sem", O_CREAT, 0644, 1);
-	if (data->print_semaphore == SEM_FAILED)
-	{
-		write(2, "Semaphore error\n", 16);
-		exit(1);
-	}
-	data->dead_semaphore = sem_open("/dead_sem", O_CREAT, 0644, 1);
-	if (data->dead_semaphore == SEM_FAILED)
-	{
-		write(2, "Semaphore error\n", 16);
-		exit(1);
-	}
+	name[i] = 0;
+	return (name);
 }
 
-void	start_philo(t_data *data, char *argv[])
+static int	ft_init_philo(t_data *d)
 {
-	data->dead_flag = 0;
-	data->philo = (t_philo *)malloc(sizeof(t_philo) * ft_atol(argv[1]));
-	if (!data->philo)
+	int		i;
+	char	name[250];
+
+	d->philo = malloc(sizeof(t_philo) * d->num_of_philo);
+	if (d->philo == NULL)
+		return (1);
+	i = 0;
+	while (i < d->num_of_philo)
 	{
-		write(2, "Malloc error\n", 13);
-		exit(1);
+		d->philo[i].d = d;
+		d->philo[i].pid = i + 1;
+		d->philo[i].id = 0;
+		d->philo[i].count_eat = 0;
+		d->philo[i].last_eat = ft_current_time();
+		ft_sem_name("stop_eat", (char *)name, i);
+		sem_unlink(name);
+		d->philo[i].stop_eat = sem_open(name, O_CREAT | O_EXCL, 0644, 0);
+		if (d->philo[i].stop_eat == SEM_FAILED)
+			return (1);
+		i++;
 	}
-	init_values(data, argv);
-	initialization_semaphores(data);
+	return (0);
+}
+
+int	ft_init(t_data *d)
+{
+	if (ft_init_semaphores(d) == 1)
+		return (1);
+	if (ft_init_philo(d) == 1)
+		return (1);
+	return (0);
 }
