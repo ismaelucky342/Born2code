@@ -24,24 +24,24 @@ Upon completing the common core, marked by the ft_transcendence project and Exam
 | [**minitalk**](https://github.com/ismaelucky342/minitalk/tree/main) | 125 | Rank 02 |
 | [**push_swap**](https://github.com/ismaelucky342/push_swap) | 100 | Rank 02 |
 | [**Exam Rank 02**](https://github.com/ismaelucky342/42_exams/tree/main/Exam_Rank_02) | 100  | Rank 02 |
-| [**minishell**](https://github.com/ismaelucky342/MiniShell) |  | Rank 03 |
+| [**minishell**](https://github.com/ismaelucky342/MiniShell) | 125 | Rank 03 |
 | [**Philosophers**](https://github.com/ismaelucky342/Born2code/tree/main/Rank%2003/Philosophers) | 125 | Rank 03 |
-| [**Exam Rank 03**] | coming soon | Rank 03 |
-| [**NetPractice**] | coming soon | Rank 04 |
-| [**Cube3D**] | coming soon | Rank 04 |
-| [**CPP module 00**] | coming soon | Rank 04 |
-| [**CPP module 01**] | coming soon | Rank 04 |
-| [**CPP module 02**] | coming soon | Rank 04 |
-| [**CPP module 03**] | coming soon | Rank 04 |
-| [**CPP module 04**] | coming soon | Rank 04 | 
-| [**Exam Rank 04**] | coming soon | Rank 04 |
-| [**Inception**] | coming soon | Rank 05 |
-| [**webserv**] | coming soon | Rank 05 |
-| [**CPP module 05**] | coming soon | Rank 05 |
-| [**CPP module 06**] | coming soon | Rank 05 |
+| [**Exam Rank 03**](https://github.com/ismaelucky342/42_exams/tree/main/Exam_Rank_03) |  | Rank 03 |
+| [**NetPractice**] |  | Rank 04 |
+| [**Cube3D**](https://github.com/ismaelucky342/Cub_3D) |  | Rank 04 |
+| [**CPP module 00**](https://github.com/ismaelucky342/CPP_Module_00) |  | Rank 04 |
+| [**CPP module 01**](https://github.com/ismaelucky342/CPP_Module_01) |  | Rank 04 |
+| [**CPP module 02**](https://github.com/ismaelucky342/CPP_Module_02) |  | Rank 04 |
+| [**CPP module 03**](https://github.com/ismaelucky342/CPP_Module_03) |  | Rank 04 |
+| [**CPP module 04**](https://github.com/ismaelucky342/CPP_Module_04) |  | Rank 04 | 
+| [**Exam Rank 04**] |  | Rank 04 |
+| [**CPP module 05**](https://github.com/ismaelucky342/CPP_Module_05) |  | Rank 05 |
+| [**CPP module 06**](https://github.com/ismaelucky342/CPP_Module_06) |  | Rank 05 |
 | [**CPP module 07**] | coming soon | Rank 05 |
 | [**CPP module 08**] | coming soon | Rank 05 |
 | [**CPP module 09**] | coming soon | Rank 05 |  
+| [**Inception**] | coming soon | Rank 05 |
+| [**webserv**] | coming soon | Rank 05 |
 | [**ft_trascendence**] | coming soon | Rank 06 |
 | [**Exam Rank 06**] | coming soon | Rank 06 |
 
