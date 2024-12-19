@@ -6,7 +6,7 @@
 /*   By: dgomez-l <dgomez-l@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 14:12:29 by dgomez-l          #+#    #+#             */
-/*   Updated: 2024/12/07 22:30:49 by dgomez-l         ###   ########.fr       */
+/*   Updated: 2024/12/18 11:50:30 by dgomez-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,8 +150,8 @@ static int	ft_exec_last_cmd(t_tree_node *node, t_mini *boogeyman, int inputfd)
 			ft_execbuiltin(node, boogeyman, 0);
 		ft_remove_env_variables(boogeyman);
 		if (execve(node->path, node->args, boogeyman->envp) == -1)
-			return (ft_close(inputfd), perror(node->path), freedom((void **)&node->path),
-				exit(126), 1);
+			return (ft_close(inputfd), perror(node->path),
+				freedom((void **)&node->path), exit(126), 1);
 	}
 	freedom((void **)&node->path);
 	return (0);

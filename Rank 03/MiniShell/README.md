@@ -1,5 +1,6 @@
 # MINISHELL
-![image](https://github.com/user-attachments/assets/026ca140-39c5-4fc5-8b51-1b39866beecc)
+![image](https://github.com/user-attachments/assets/74cdad66-ab91-4859-a986-552f75f73fc6)
+
 
 ## Description
 

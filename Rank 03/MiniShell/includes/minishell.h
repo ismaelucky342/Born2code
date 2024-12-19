@@ -6,7 +6,7 @@
 /*   By: ismherna <ismherna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 13:16:35 by ismherna          #+#    #+#             */
-/*   Updated: 2024/12/11 14:56:27 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/12/18 18:13:04 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void		freedom(void **ptr);
 
 /*---------------------------------ENVIRONMENT-------------------------------*/
 
-char		*ft_get_from_env(char **envp, char *key, int *exists);
+char		*ft_get_env_var(char **envp, char *key, int *exists);
 void		ft_search_and_replace_env(char **envp, char *passkey, char *key);
 int			ft_add_to_env(t_mini *boogeyman, char *passkey);
 char		*get_val_from_env(char **envp, char *key, int *exists);
@@ -102,7 +102,7 @@ char		*ft_get_left_token(char *str);
 char		*ft_get_right_token(char *str);
 void		ft_brackets(char *str, int *i);
 char		ft_has_brackets(char *str);
-void		ft_expansion_error(t_ast_tree *tree_node);
+void		ft_exp_error(t_ast_tree *tree_node);
 void		ft_fork(t_tree_node *node);
 t_tree_node	*ft_pipes_interpreter(t_ast_tree *tree_node, t_mini *boogeyman,
 				int *last_pid);

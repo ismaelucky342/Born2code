@@ -6,7 +6,7 @@
 /*   By: ismherna <ismherna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:53:50 by ismherna          #+#    #+#             */
-/*   Updated: 2024/12/11 19:03:53 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/12/18 17:00:24 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ static int	cd_management(t_mini *boogeyman, char **path)
 
 	cwd = cwd_str_status();
 	if (!cwd)
-		return (1);
+		return (-1);
 	ft_search_and_replace_env(boogeyman->envp, ft_strdup(cwd), "OLDPWD");
-	freedom((void **)&cwd);
+	free(cwd);
 	if (chdir(*path) == -1)
 		return (perror(*path), 1);
 	cwd = cwd_str_status();
 	if (!cwd)
-		return (1);
+		return (-1);
 	ft_search_and_replace_env(boogeyman->envp, ft_strdup(cwd), "PWD");
-	freedom((void **)&cwd);
 	freedom((void **)&boogeyman->aux_pwd);
 	boogeyman->aux_pwd = ft_strdup(cwd);
+	freedom((void **)&cwd);
 	update_prompt(boogeyman);
 	return (0);
 }
@@ -80,7 +80,7 @@ int	ft_cd_builtin(t_tree_node *node, t_mini *boogeyman)
 	}
 	else
 	{
-		path = ft_get_from_env(boogeyman->envp, "HOME", NULL);
+		path = ft_get_env_var(boogeyman->envp, "HOME", NULL);
 		if (!*path)
 			return (ft_putendl_fd("HOME is not set", STDERR_FILENO), 1);
 	}

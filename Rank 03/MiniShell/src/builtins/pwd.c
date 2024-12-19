@@ -6,7 +6,7 @@
 /*   By: ismherna <ismherna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 10:53:52 by ismherna          #+#    #+#             */
-/*   Updated: 2024/12/11 14:56:03 by ismherna         ###   ########.fr       */
+/*   Updated: 2024/12/18 17:48:48 by ismherna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_pwd_builtin(void)
 	if (pwd)
 		ft_putendl_fd(pwd, STDOUT_FILENO);
 	else
-		ft_putendl_fd("PWD error", STDERR_FILENO);
+		perror("PWD error");
 	free(pwd);
 	return (0);
 }
