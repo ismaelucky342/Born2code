@@ -1,3 +1,21 @@
 [submodule "Rank 00/ft_libft"]
 	path = Rank 00/ft_libft
 	url = https://github.com/ismaelucky342/ft_libft
+[submodule "Rank 01/ft_printf"]
+	path = Rank 01/ft_printf
+	url = https://github.com/ismaelucky342/ft_printf
+[submodule "Rank 01/get_next_line"]
+	path = Rank 01/get_next_line
+	url = https://github.com/ismaelucky342/get_next_line.git
+[submodule "Rank 01/Born2beroot"]
+	path = Rank 01/Born2beroot
+	url = https://github.com/ismaelucky342/Born2beroot.git
+[submodule "Rank 02/fract-ol"]
+	path = Rank 02/fract-ol
+	url = https://github.com/ismaelucky342/fract-ol.git
+[submodule "Rank 02/minitalk"]
+	path = Rank 02/minitalk
+	url = https://github.com/ismaelucky342/minitalk.git
+[submodule "Rank 02/push_swap"]
+	path = Rank 02/push_swap
+	url = https://github.com/ismaelucky342/push_swap.git
