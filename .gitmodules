@@ -19,3 +19,39 @@
 [submodule "Rank 02/push_swap"]
 	path = Rank 02/push_swap
 	url = https://github.com/ismaelucky342/push_swap.git
+[submodule "Rank 03/MiniShell"]
+	path = Rank 03/MiniShell
+	url = https://github.com/ismaelucky342/MiniShell
+[submodule "Rank 03/Philosophers"]
+	path = Rank 03/Philosophers
+	url = https://github.com/ismaelucky342/Philosophers
+[submodule "Rank 04/Cub_3D"]
+	path = Rank 04/Cub_3D
+	url = https://github.com/ismaelucky342/Cub_3D
+[submodule "Rank 04/NetPractice"]
+	path = Rank 04/NetPractice
+	url = https://github.com/ismaelucky342/NetPractice
+[submodule "Rank 04/CPP_Module_00"]
+	path = Rank 04/CPP_Module_00
+	url = https://github.com/ismaelucky342/CPP_Module_00
+[submodule "Rank 04/CPP_Module_01"]
+	path = Rank 04/CPP_Module_01
+	url = https://github.com/ismaelucky342/CPP_Module_01
+[submodule "Rank 04/CPP_Module_02"]
+	path = Rank 04/CPP_Module_02
+	url = https://github.com/ismaelucky342/CPP_Module_02
+[submodule "Rank 04/CPP_Module_03"]
+	path = Rank 04/CPP_Module_03
+	url = https://github.com/ismaelucky342/CPP_Module_03
+[submodule "Rank 04/CPP_Module_04"]
+	path = Rank 04/CPP_Module_04
+	url = https://github.com/ismaelucky342/CPP_Module_04
+[submodule "Rank 05/CPP_Module_05"]
+	path = Rank 05/CPP_Module_05
+	url = https://github.com/ismaelucky342/CPP_Module_05
+[submodule "Rank 05/CPP_Module_06"]
+	path = Rank 05/CPP_Module_06
+	url = https://github.com/ismaelucky342/CPP_Module_06
+[submodule "42_Common_Core_Exams/42_exams"]
+	path = 42_Common_Core_Exams/42_exams
+	url = https://github.com/ismaelucky342/42_exams
