@@ -55,3 +55,12 @@
 [submodule "42_Common_Core_Exams/42_exams"]
 	path = 42_Common_Core_Exams/42_exams
 	url = https://github.com/ismaelucky342/42_exams
+[submodule "Rank 05/CPP_Module_07"]
+	path = Rank 05/CPP_Module_07
+	url = https://github.com/ismaelucky342/CPP_Module_07
+[submodule "Rank 05/CPP_Module_08"]
+	path = Rank 05/CPP_Module_08
+	url = https://github.com/ismaelucky342/CPP_Module_08
+[submodule "Rank 05/CPP_Module_09"]
+	path = Rank 05/CPP_Module_09
+	url = https://github.com/ismaelucky342/CPP_Module_09
